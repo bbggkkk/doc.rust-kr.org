@@ -48,6 +48,15 @@ $ cargo run -- searchstring example-filename.txt
 <span class="caption">예제 12-1: 커맨드 라인 인수들을 벡터로 모으고
 출력하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch12-an-io-project/listing-12-01.js}}
+```
+
+</details>
+
 먼저 `use`를 사용하여 `std::env` 모듈을 스코프로 가져와서 `args`
 함수를 사용할 수 있게 합니다. `std::env::args` 함수는 두 단계로 중첩된
 모듈에 있는 점을 주목하세요. [7장][ch7-idiomatic-use]<!-- ignore -->에서
@@ -109,6 +118,15 @@ $ cargo run -- searchstring example-filename.txt
 
 <span class="caption">예제 12-2: 질의 (query) 인수와 파일 경로 인수를 담은
 변수 생성하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch12-an-io-project/listing-12-02.js}}
+```
+
+</details>
 
 벡터를 출력할 때 본 것처럼 프로그램의 이름이 벡터의 첫 번째 값 `args[0]`을
 사용하므로, 인덱스 `1`에 있는 인수부터 시작하고 있습니다.

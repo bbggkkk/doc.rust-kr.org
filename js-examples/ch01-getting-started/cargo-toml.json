@@ -1,0 +1,8 @@
+{
+  "name": "hello_cargo",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start": "node main.js"
+  }
+}

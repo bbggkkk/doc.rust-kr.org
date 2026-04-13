@@ -67,6 +67,15 @@ $ cargo test -- --test-threads=1
 <span class="caption">예제 11-10: `println!`을 호출하는
 함수 테스트</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch11-writing-automated-tests/listing-11-10.js}}
+```
+
+</details>
+
 `cargo test` 명령어를 실행하면 다음 결과가 나타납니다.
 
 ```console
@@ -110,6 +119,15 @@ $ cargo test -- --show-output
 
 <span class="caption">예제 11-11: 세 가지 서로 다른 이름의
 테스트</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch11-writing-automated-tests/listing-11-11.js}}
+```
+
+</details>
 
 앞서 살펴본 것처럼, 테스트를 아무 인수도 없이 실행하면
 모든 테스트가 병렬로 실행됩니다.
@@ -161,6 +179,15 @@ $ cargo test -- --show-output
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/no-listing-11-ignore-a-test/src/lib.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch11-writing-automated-tests/no-listing-11-ignore.js}}
+```
+
+</details>
 
 제외할 테스트의 `#[test]` 다음 줄에 `#[ignore]` 줄을 추가했습니다.
 이제 테스트를 실행하면 `it_works` 테스트는 실행되지만, `expensive_test` 테스트는 실행되지 않습니다.

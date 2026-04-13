@@ -66,6 +66,15 @@
 
 <span class="caption">예제 11-12: 비공개 함수 테스트하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch11-writing-automated-tests/listing-11-12.js}}
+```
+
+</details>
+
 `internal_adder` 함수는 `pub`으로 표시되지 않았습니다. 테스트는
 그냥 러스트 코드이며 `tests` 모듈도 그저 또 다른 모듈일 뿐입니다.
 [‘경로를 사용하여 모듈 트리의 아이템 참조하기’][paths]<!-- ignore -->절에서
@@ -116,6 +125,15 @@ adder
 
 <span class="caption">예제 11-13: `adder` 크레이트 내 함수를 테스트하는
 통합 테스트</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch11-writing-automated-tests/listing-11-13.js}}
+```
+
+</details>
 
 `tests` 디렉터리의 각 파일은 별개의 크레이트이므로, 각각의 테스트 크레이트의
 스코프로 우리가 만든 라이브러리를 가져올 필요가 있습니다. 이러한 이유로 코드

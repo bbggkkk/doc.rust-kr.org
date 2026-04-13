@@ -72,6 +72,15 @@ backyard
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/quick-reference-example/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch07-managing-growing-projects/backyard-modules.js}}
+```
+
+</details>
+
 `pub mod garden;` 라인이 컴파일러에게 *src/garden.rs*에 있는 코드를 포함할 것을
 알려주고, *src/garden.rs*는 아래와 같습니다:
 
@@ -120,6 +129,15 @@ backyard
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-01/src/lib.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch07-managing-growing-projects/restaurant-modules.js}}
+```
+
+</details>
 
 <span class="caption">예제 7-1: 함수를 포함하는 별도의 모듈을 포함한
 `front_of_house` 모듈</span>

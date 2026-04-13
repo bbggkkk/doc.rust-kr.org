@@ -17,6 +17,15 @@
 
 <span class="caption">예제 13-10: 반복자 생성하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-10.js}}
+```
+
+</details>
+
 반복자는 `v1_iter` 변수에 저장됩니다. 일단 반복자를 만들면, 다양한 방법으로
 사용할 수 있습니다. 3장의 예제 3-5에서는 각 아이템에 대해 어떤 코드를
 실행하기 위해 `for` 루프를 사용하여 어떤 배열에 대한 반복을 수행했습니다.
@@ -33,6 +42,15 @@
 ```
 
 <span class="caption">예제 13-11: `for` 루프에서 반복자 사용하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-11.js}}
+```
+
+</details>
 
 표준 라이브러리에서 반복자를 제공하지 않는 언어에서는, 아마도
 변수를 인덱스 0으로 시작하고, 그 변수를 인덱스로 사용하여
@@ -60,6 +78,15 @@ pub trait Iterator {
 }
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/iterator-trait.js}}
+```
+
+</details>
+
 이 정의에 새로운 문법 몇 가지가 사용된 것에 주목하세요: `type Item`과
 `Self::Item`은 이 트레이트에 대한 *연관 타입 (associated type)* 을 정의합니다.
 연관 타입에 대해서는 19장에서 더 자세히 이야기하겠습니다. 현재로서는
@@ -84,6 +111,15 @@ pub trait Iterator {
 
 <span class="caption">예제 13-12: 반복자의 `next` 메서드
 호출하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-12.js}}
+```
+
+</details>
 
 `v1_iter`를 가변으로 만들 필요가 있음을 주의하세요: 반복자에 대한 `next`
 메서드 호출은 반복자 내부의 상태를 변경하여 반복자가 현재 시퀀스의 어디에
@@ -124,6 +160,15 @@ pub trait Iterator {
 <span class="caption">예제 13-13: `sum` 메서드를 호출하여 반복자의
 모든 아이템에 대한 합계 구하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-13.js}}
+```
+
+</details>
+
 `sum`은 반복자를 소유하여 호출하므로, `sum`을 호출한 이후에는 `v1_iter`의
 사용이 허용되지 않습니다.
 
@@ -147,6 +192,15 @@ pub trait Iterator {
 
 <span class="caption">예제 13-14: 반복자 어댑터 `map`을 호출하여
 새로운 반복자 생성하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-14.js}}
+```
+
+</details>
 
 하지만 이 코드는 다음과 같은 경고를 발생시킵니다:
 
@@ -176,6 +230,15 @@ pub trait Iterator {
 <span class="caption">예제 13-15: `map`을 호출하여 새로운 반복자를
 생성한 다음 `collect` 메서드를 호출하여 이 반복자를 소비하고 새로운 벡터
 생성하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-15.js}}
+```
+
+</details>
 
 `map`이 클로저를 인수로 받기 때문에, 각 아이템에 대해 수행하고자 하는 어떤
 연산이라도 지정할 수 있습니다. 이는 `Iterator` 트레이트가 제공하는 반복 동작을
@@ -209,6 +272,15 @@ pub trait Iterator {
 
 <span class="caption">예제 13-16: `shoe_size`를 캡처하는 클로저로
 `filter` 메서드 사용하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-16.js}}
+```
+
+</details>
 
 `shoes_in_size` 함수는 매개변수로 신발들의 벡터에 대한 소유권과 신발
 크기를 받습니다. 이 함수는 지정된 크기의 신발들만을 담고 있는 벡터를

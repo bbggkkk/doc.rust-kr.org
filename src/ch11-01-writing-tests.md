@@ -63,6 +63,15 @@ cd ../../..
 <span class="caption">예제 11-1: `cargo new` 명령어로 자동 생성된
 테스트 모듈과 함수</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch11-writing-automated-tests/listing-11-01.js}}
+```
+
+</details>
+
 맨 위 두 줄은 무시하고 함수에 집중합시다. `#[test]` 어노테이션을 주목해 주세요:
 이 속성은 해당 함수가 테스트 함수임을 표시하며, 테스트 실행기는 이 표시를
 보고 해당 함수를 테스트로 다룰 수 있게 됩니다. `tests` 모듈 내에는 테스트
@@ -191,6 +200,15 @@ cd ../../..
 <span class="caption">예제 11-5: 5장 `Rectangle` 구조체와
 `can_hold` 메서드</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch11-writing-automated-tests/listing-11-05.js}}
+```
+
+</details>
+
 `can_hold` 메서드는 부울린 값을 반환하니
 `assert` 매크로 사용 예시로 쓰기에 딱 알맞습니다.
 예제 11-6은 `can_hold` 메서드를 시험하는 테스트를 작성한 모습입니다.
@@ -205,6 +223,15 @@ cd ../../..
 
 <span class="caption">예제 11-6: 큰 사각형이 작은 사각형을 정말로
 포함할 수 있는지 검사하는 `can_hold` 메서드 테스트</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch11-writing-automated-tests/listing-11-06.js}}
+```
+
+</details>
 
 `tests` 모듈에 `use super::*;` 줄이 추가되었습니다.
 `tests` 모듈 또한 7장
@@ -284,6 +311,15 @@ cd ../../..
 
 <span class="caption">예제 11-7: `assert_eq!` 매크로를 이용한
 `add_two` 함수 테스트</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch11-writing-automated-tests/listing-11-07.js}}
+```
+
+</details>
 
 테스트를 통과하는지 확인해 봅시다!
 
@@ -430,6 +466,15 @@ cd ../../..
 <span class="caption">예제 11-8: `panic!` 발생
 테스트</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch11-writing-automated-tests/listing-11-08.js}}
+```
+
+</details>
+
 `#[should_panic]` 속성은 `#[test]` 속성과
 적용할 함수 사이에 위치시켰습니다.
 테스트 성공 시 결과를 살펴봅시다.
@@ -473,6 +518,15 @@ cd ../../..
 <span class="caption">예제 11-9: 특정한 부분 문자열을 포함하는 패닉 메시지를
 사용한 `panic!`에 대한 테스트</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch11-writing-automated-tests/listing-11-09.js}}
+```
+
+</details>
+
 `should_panic` 속성의 `expected` 매개변숫값이
 `Guess::new` 함수에서 발생한 패닉 메시지 문자열의 일부이므로 테스트는 통과합니다.
 발생해야 하는 패닉 메시지 전체를 명시할 수도 있습니다.
@@ -511,6 +565,15 @@ cd ../../..
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/no-listing-10-result-in-tests/src/lib.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch11-writing-automated-tests/no-listing-10-result-in-tests.js}}
+```
+
+</details>
 
 이제 `it_works` 함수는 `Result<(), String>` 타입을 반환합니다.
 함수 본문에서는 `assert_eq!` 매크로를 호출하는 대신,

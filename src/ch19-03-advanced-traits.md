@@ -32,6 +32,15 @@
 <span class="caption">예제 19-12: 연관 타입 `Item`이 있는
 `Iterator` 트레이트의 정의</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-12.js}}
+```
+
+</details>
+
 타입 `Item`은 자리표시자이고, `next` 메서드의 정의는 `Option<Self::Item>`
 타입의 값을 반환할 것임을 보여줍니다. `Iterator` 트레이트의 구현자는
 `Item`의 구체적 타입을 지정하고, `next` 메서드는 해당 구체적 타입의 값을
@@ -107,6 +116,15 @@ API 문서에 연관 타입을 문서화하는 것이 좋습니다.
 <span class="caption">예제 19-14: `Add` 트레이트를 구현하여
 `Point` 인스턴스에 대한 `+` 연산자 오버로딩하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-14.js}}
+```
+
+</details>
+
 `add` 메서드는 두 `Point` 인스턴스의 `x` 값과 `y` 값을 더하여
 새로운 `Point`를 생성합니다. `Add` 트레이트에는 `Output`이라는
 연관 타입이 있는데, 이는 `add` 메서드에서 반환되는 타입을
@@ -153,6 +171,15 @@ trait Add<Rhs=Self> {
 <span class="caption">예제 19-15: `Millimeters`와 `Meters`를 더하기
 위하여 `Millimeters`에 대한 `Add` 트레이트 구현하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-15.js}}
+```
+
+</details>
+
 `Millimeters`와 `Meters`를 더하기 위해서, `impl Add<Meters>`라고 지정하여
 기본 타입인 `Self` 대신 `Rhs` 타입 매개변수의 값을 설정합니다.
 
@@ -195,6 +222,15 @@ trait Add<Rhs=Self> {
 <span class="caption">예제 19-16: 두 트레이트에는 `fly` 메서드가
 있도록 정의되어 `Human` 타입에 대해 구현되었고, `Human`에 직접 `fly`
 메서드가 구현되어 있습니다</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-16.js}}
+```
+
+</details>
 
 `Human`의 인스턴스에 `fly`를 호출하면, 예제 19-17에서 보시는 것처럼
 컴파일러는 기본적으로 타입에 직접 구현된 메서드를 호출합니다.
@@ -374,6 +410,15 @@ called a puppy`라고 출력하기를 원합니다. 예제 19-18에서 사용했
 <span class="caption">예제 19-22: `Display`의 기능을 요구하는
 `OutlinePrint` 트레이트 구현하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-22.js}}
+```
+
+</details>
+
 `OutlinePrint`에 `Display` 트레이트가 필요하다고 지정했으므로,
 `Display`를 구현하는 모든 타입에 대해 자동으로 구현되는 `to_string`
 함수를 사용할 수 있습니다. 트레이트 이름 뒤에 콜론 및 `Display` 트레이트를
@@ -439,6 +484,15 @@ called a puppy`라고 출력하기를 원합니다. 예제 19-18에서 사용했
 
 <span class="caption">예제 19-23: `Display` 구현을 위해서 `Vec<String>`을
 감싼 `Wrapper` 타입 만들기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-23.js}}
+```
+
+</details>
 
 `Wrapper`는 튜플 구조체이고 `Vec<T>`는 튜플의 인덱스 0에 있는 아이템이기
 때문에, `Display`의 구현체는 `self.0`을 사용하여 내부 `Vec<T>`에 액세스합니다.

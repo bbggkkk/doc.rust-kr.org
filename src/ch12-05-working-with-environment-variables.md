@@ -57,6 +57,15 @@
 <span class="caption">예제 12-21: 질의어와 라인을 비교하기 전에 소문자로
 만드는 `search_case_insensitive` 함수 정의하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch12-an-io-project/listing-12-21.js}}
+```
+
+</details>
+
 먼저 `query` 문자열을 소문자로 만들어서 같은 이름의 변수를 가리는
 방식으로 저장합니다. 질의어에 대해 `to_lowercase`가 호출되므로
 사용자의 질의어가 `"rust"`, `"RUST"`, `"Rust"`, 혹은 `"rUsT"`이든
@@ -125,6 +134,15 @@
 
 <span class="caption">예제 12-23: `IGNORE_CASE`라는 이름의 환경 변수의
 값을 검사하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch12-an-io-project/listing-12-23.js}}
+```
+
+</details>
 
 여기서는 `ignore_case`라는 새 변수를 만들었습니다. 이 값을 설정하기
 위해서 `env::var` 함수를 호출하고 환경 변수의 이름 `INGORE_CASE`를

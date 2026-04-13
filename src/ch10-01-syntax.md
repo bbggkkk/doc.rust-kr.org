@@ -25,6 +25,15 @@
 <span class="caption">예제 10-4: 이름과 타입 시그니처만 다른
 두 함수</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-04.js}}
+```
+
+</details>
+
 함수 `largest_i32`는  예제 10-3에서 봤던 슬라이스에서 가장 큰 `i32`를 찾는 함수이고,
 `largest_char` 함수는 슬라이스에서 가장 큰 `char`를 찾는 함수입니다.
 이 두 함수의 본문은 완벽히 동일하니, 제네릭을 이용해
@@ -99,6 +108,15 @@ fn largest<T>(list: &[T]) -> &T {
 <span class="caption">예제 10-6: `T` 타입의 값 `x`, `y`를 갖는
 `Point<T>` 구조체</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-06.js}}
+```
+
+</details>
+
 문법은 함수 정의에서 제네릭을 사용하는 것과 유사합니다.
 먼저 구조체 이름 바로 뒤 꺾쇠괄호에 타입 매개변수 이름을
 선언하고, 구조체 정의 내 구체적 데이터 타입을 지정하던 곳에
@@ -142,6 +160,15 @@ fn largest<T>(list: &[T]) -> &T {
 <span class="caption">예제 10-8: 두 타입의 제네릭을 사용하여,
 `x`와 `y`가 서로 다른 타입의 값이 될 수 있는 `Point<T, U>`</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-08.js}}
+```
+
+</details>
+
 이제 위와 같이 모든 `Point` 인스턴스를 생성할 수 있습니다!
 제네릭 타입 매개변수는 원하는 만큼 여러 개를 정의할 수 있지만,
 많으면 많아질수록 코드 가독성은 떨어집니다. 만약 코드에서 많은 수의
@@ -160,6 +187,15 @@ enum Option<T> {
     None,
 }
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/option-enum.js}}
+```
+
+</details>
 
 이제는 이 코드를 이해할 수 있습니다. 보시다시피 `Option<T>`
 열거형은 `T` 타입에 대한 제네릭이며, `T` 타입을 들고 있는 `Some`
@@ -207,6 +243,15 @@ enum Result<T, E> {
 참조자를 반환하는 `x` 메서드를 `Point<T>`에
 정의</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-09.js}}
+```
+
+</details>
+
 `x` 필드 데이터의 참조자를 반환하는 `x` 메서드를 `Point<T>`에
 정의해 보았습니다.
 
@@ -234,6 +279,15 @@ enum Result<T, E> {
 <span class="caption">예제 10-10: 구조체의 제네릭 타입 매개변수 `T`가
 특정 구체적 타입인 경우에만 적용되는 `impl` 블록</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-10.js}}
+```
+
+</details>
+
 이 코드에서 `Point<f32>` 타입 인스턴스는 `distance_from_origin`
 메서드를 갖게 될 것입니다; `T`가 `f32` 타입이 아닌 `Point<T>`
 인스턴스는 이 메서드가 정의되지 않습니다. 이 메서드는 생성된 점이
@@ -255,6 +309,15 @@ enum Result<T, E> {
 
 <span class="caption">예제 10-11: 구조체 정의와 다른 제네릭 타입을
 사용하는 메서드</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-11.js}}
+```
+
+</details>
 
 `main`에서는 `i32` 타입 `x`(`5`)와
 `f64` 타입 `y`(`10.4`)를 갖는 `Point`를 정의했습니다.

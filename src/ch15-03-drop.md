@@ -37,6 +37,15 @@
 <span class="caption">예제 15-14: 메모리 정리 코드를 집어넣게 될
 `Drop` 트레이트를 구현한 `CustomSmartPointer` 구조체</span>
 
+<details>
+<summary>JavaScript로 보기 — Drop은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch15-smart-pointers/drop.js}}
+```
+
+</details>
+
 `Drop` 트레이트는 프렐루드에 포함되어 있으므로, 이를 스코프로 가져올 필요는
 없습니다. `CustomSmartPointer`에는 `Drop` 트레이트가 구현되어 여기에
 `println!`을 호출하는 `drop` 메서드 구현체를 제공하였습니다. `drop` 함수의

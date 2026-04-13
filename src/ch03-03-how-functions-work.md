@@ -56,6 +56,15 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-17-functions-with-parameters/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-17-functions-with-parameters.js}}
+```
+
+</details>
+
 이 프로그램을 실행하면 다음과 같은 결과를 볼 수 있습니다:
 
 ```console
@@ -162,6 +171,15 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-20-blocks-are-expressions/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-20-blocks-are-expressions.js}}
+```
+
+</details>
+
 아래의 표현식:
 
 ```rust,ignore
@@ -194,6 +212,15 @@
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-21-function-return-values/src/main.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-21-function-return-values.js}}
+```
+
+</details>
 
 `five` 함수에는 함수 호출, 매크로, 심지어 `let` 구문도 없이
 그저 `5`란 숫자 하나가 있습니다. 러스트에서는 이게 완벽하게 유효한

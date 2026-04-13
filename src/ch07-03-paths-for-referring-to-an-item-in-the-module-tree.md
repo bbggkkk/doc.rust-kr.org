@@ -145,6 +145,15 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-07/src/lib.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch07-managing-growing-projects/paths-pub.js}}
+```
+
+</details>
+
 <span class="caption">예제 7-7: `mod hosting`, `fn add_to_waitlist` 에
 `pub` 키워드를 추가해 `eat_at_restaurant` 함수에서
 호출 가능하도록 만들기</span>
@@ -221,6 +230,15 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-08/src/lib.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch07-managing-growing-projects/super-path.js}}
+```
+
+</details>
+
 <span class="caption">예제 7-8: `super`로 시작하는 상대 경로를 사용해
 함수 호출하기</span>
 
@@ -252,6 +270,15 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-09/src/lib.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch07-managing-growing-projects/struct-pub-fields.js}}
+```
+
+</details>
+
 <span class="caption">예제 7-9: 일부 필드는 공개하고,
 일부 필드는 비공개인 구조체</span>
 
@@ -276,6 +303,15 @@
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-10/src/lib.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch07-managing-growing-projects/enum-pub.js}}
+```
+
+</details>
 
 <span class="caption">예제 7-10: 열거형과 열거형의 모든 배리언트를
 공개로 지정하기</span>

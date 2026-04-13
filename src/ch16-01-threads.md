@@ -48,6 +48,15 @@
 <span class="caption">예제 16-1: 메인 스레드에서 무언가를 출력하는 동안
 다른 것을 출력하는 새로운 스레드 생성하기</span>
 
+<details>
+<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch16-fearless-concurrency/listing-16-01.js}}
+```
+
+</details>
+
 러스트 프로그램의 메인 스레드가 완료되면 생성된 모든 스레드는 실행이
 종료되었든 혹은 그렇지 않든 멈추게 될 것이라는 점을 주의하세요. 이
 프로그램의 출력은 매번 약간씩 다를 수 있으나, 아래와 비슷하게 보일
@@ -104,6 +113,15 @@ hi number 5 from the spawned thread!
 <span class="caption">예제 16-2: `thread::spawn`으로부터 `JoinHandle`을
 저장하여 스레드가 완전히 실행되는 것을 보장하기</span>
 
+<details>
+<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch16-fearless-concurrency/listing-16-02.js}}
+```
+
+</details>
+
 핸들에 대해 `join`을 호출하면 핸들에 대한 스레드가 종료될 때까지 현재
 실행 중인 스레드를 블록합니다. 스레드를 *블록 (Block)* 한다는 것은 그 스레드의
 작업을 수행하거나 종료되는 것이 방지된다는 뜻입니다. 메인 스레드의 `for`
@@ -141,6 +159,16 @@ hi number 9 from the spawned thread!
 ```rust
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/no-listing-01-join-too-early/src/main.rs}}
 ```
+
+
+<details>
+<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch16-fearless-concurrency/no-listing-01-join-too-early.js}}
+```
+
+</details>
 
 메인 스레드는 생성된 스레드가 종료될 때까지 기다릴 것이고 그다음 자신의 `for`
 루프를 실행하게 되어, 아래처럼 출력값이 더 이상 교차하지 않을 것입니다:
@@ -193,6 +221,16 @@ hi number 4 from the main thread!
 <span class="caption">예제 16-3: 메인 스레드에서 생성된 벡터에 대한 다른
 스레드에서의 사용 시도</span>
 
+
+<details>
+<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch16-fearless-concurrency/listing-16-03.js}}
+```
+
+</details>
+
 클로저가 `v`를 사용하므로, `v`는 캡처되어 클로저 환경의 일부가 됩니다.
 `thread::spawn`이 이 클로저를 새로운 스레드에서 실행하므로, `v`는
 새로운 스레드 내에서 접근 가능해야 합니다. 하지만 이 예제를 컴파일하면
@@ -218,6 +256,16 @@ hi number 4 from the main thread!
 
 <span class="caption">예제 16-4: `v`를 버리는 메인 스레드로부터 `v`에
 대한 참조자를 캡처하려 하는 클로저를 갖는 스레드</span>
+
+
+<details>
+<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch16-fearless-concurrency/listing-16-04.js}}
+```
+
+</details>
 
 만약 러스트가 이 코드의 실행을 허용했다면, 생성된 스레드가 전혀 실행되지
 않고 즉시 백그라운드에 들어갔을 가능성이 있습니다. 생성된 스레드는 내부에
@@ -253,6 +301,15 @@ help: to force the closure to take ownership of `v` (and any other referenced va
 
 <span class="caption">예제 16-5: `move` 키워드를 이용하여 클로저가
 사용하는 값의 소유권을 갖도록 강제하기</span>
+
+<details>
+<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch16-fearless-concurrency/listing-16-05.js}}
+```
+
+</details>
 
 `move` 클로저를 사용하여 메인 스레드에서 `drop`을 호출하는 예제 16-4의 코드를
 고치려고 시도해 보고 싶을 수도 있습니다. 하지만 이 수정은 동작하지 않는데,

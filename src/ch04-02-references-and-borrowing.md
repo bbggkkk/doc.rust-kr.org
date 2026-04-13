@@ -18,6 +18,15 @@
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-07-reference/src/main.rs:all}}
 ```
 
+<details>
+<summary>JavaScript로 보기 — 참조와 빌림은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/reference.js}}
+```
+
+</details>
+
 먼저, 변수 선언부와 함수 반환 값에 위치하던 튜플 코드가 전부 사라진
 것을 볼 수 있습니다. 또한 `calculate_length` 함수에 `s1` 대신 `&s1`을
 전달하고, 함수 정의에 `String` 대신 `&String`을 사용했네요. 이 앰퍼센드
@@ -94,6 +103,15 @@
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-09-fixes-listing-04-06/src/main.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기 — 참조와 빌림은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/mutable-reference.js}}
+```
+
+</details>
 
 우선 `s`를 `mut` 로 변경합니다. 그런 다음 `change` 함수를 호출하는 곳에서
 `&mut s`로 가변 참조자를 생성하고, 이 함수에서 가변 참조자를 전달받도록
@@ -174,6 +192,15 @@
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-13-reference-scope-ends/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기 — 참조와 빌림은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/scope-reference.js}}
+```
+
+</details>
+
 불변 참조자 `r1`, `r2`의 스코프는 자신들이 마지막으로 사용된
 `println!` 이후로 종료되고, 해당 `println!`은  가변 참조자 `r3`가
 생성되기 전이니 서로 스코프가 겹치지 않아서 이 코드는 문제가 없는 것이죠:
@@ -238,6 +265,15 @@ this function's return type contains a borrowed value, but there is no value for
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-16-no-dangle/src/main.rs:here}}
 ```
+
+<details>
+<summary>JavaScript로 보기 — 참조와 빌림은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/no-dangle.js}}
+```
+
+</details>
 
 이 코드는 정상적으로 작동합니다.
 소유권은 이동되며, 할당 해제되지도 않죠.

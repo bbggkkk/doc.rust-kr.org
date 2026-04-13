@@ -84,6 +84,15 @@ let v: Vec<u32> = vec![1, 2, 3];
 <span class="caption">예제 19-28: 간소화된 버전의 `vec!` 매크로
 정의</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-28.js}}
+```
+
+</details>
+
 > Note: 표준 라이브러리의 `vec!` 매크로의 실제 정의에는 정확한 양의
 > 메모리를 미리 할당하는 코드가 포함되어 있습니다. 해당 코드에는 예제를
 > 더 간단하게 만들기 위해 여기에는 포함하지 않은 최적화가 있습니다.

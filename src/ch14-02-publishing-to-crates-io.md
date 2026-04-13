@@ -35,6 +35,15 @@
 <span class="caption">예제 14-1: 함수에 대한 문서화
 주석</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch14-more-about-cargo/doc-comment.js}}
+```
+
+</details>
+
 여기서 `add_one` 함수가 무슨 일을 하는지에 대한 설명을 적었고,
 제목 `Example`로 절을 시작한 다음, `add_one` 함수의 사용법을
 보여주는 코드를 제공했습니다. `cargo doc`을 실행하면 이 문서화
@@ -229,6 +238,15 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 <span class="caption">예제 14-5: `pub use` 구문을 추가하여 아이템을 다시
 내보내기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch14-more-about-cargo/re-export.js}}
+```
+
+</details>
+
 `cargo doc`이 생성한 이 크레이트의 API 문서는 이제 그림 14-4와 같이 다시 내보내진
 아이템을 첫 화면의 목록에 보여주고 링크를 걸어줄 것이며, 이로써 `PrimaryColor`와
 `SecondaryColor` 타입과 `mix` 함수를 더 쉽게 찾도록 만들어 줍니다.
@@ -390,6 +408,15 @@ license = "MIT OR Apache-2.0"
 의존하는 모든 프로젝트의 빌드가 계속 동작하도록 하는 것입니다.
 버전 삭제를 허용하면 이 목표의 이행을 불가능하게 할 것입니다.
 하지만 배포할 수 있는 크레이트 버전의 숫자에 제한은 없습니다.
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch14-more-about-cargo/publish-package.js}}
+```
+
+</details>
 
 다시 한번 `cargo publish` 명령어를 수행해 보세요. 이제 성공해야 합니다:
 

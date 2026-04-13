@@ -209,6 +209,15 @@
 <span class="caption">예제 15-22: `RefCell<T>`를 사용하여 바깥쪽에서는
 불변으로 간주되는 한편 내부 값 변경하기</span>
 
+<details>
+<summary>JavaScript로 보기 — 내부 가변성(RefCell)은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch15-smart-pointers/refcell.js}}
+```
+
+</details>
+
 `sent_message` 필드는 이제 `Vec<String>` 대신 `RefCell<Vec<String>>`
 타입입니다. `new` 함수에서는 빈 벡터를 감싼 새로운 `RefCell<Vec<String>>`
 인스턴스를 생성합니다.
@@ -306,6 +315,15 @@
 
 <span class="caption">예제 15-24: `Rc<RefCell<i32>>`를 사용하여
 변경 가능한 `List` 생성하기</span>
+
+<details>
+<summary>JavaScript로 보기 — Rc와 RefCell 조합은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch15-smart-pointers/rc-refcell.js}}
+```
+
+</details>
 
 먼저 `Rc<RefCell<i32>>`의 인스턴스 값을 생성하고 `value`라는 이름의 변수
 안에 저장하여 나중에 이를 직접 접근할 수 있게 했습니다. 그다음 `value`를

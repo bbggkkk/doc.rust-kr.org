@@ -71,6 +71,15 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/no-listing-02-extracting-hosting/src/front_of_house/hosting.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch07-managing-growing-projects/separate-files.js}}
+```
+
+</details>
+
 *hosting.rs*를 *src/front_of_house* 대신 *src* 디렉터리에 넣으면 컴파일러는
 *hosting.rs* 코드가 `front_of_house` 모듈의 하위에 선언되지 않고 크레이트 루트에
 선언된 `hosting` 모듈에 있을 것으로 예상합니다. 어떤 파일에서

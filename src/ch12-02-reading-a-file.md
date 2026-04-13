@@ -28,6 +28,15 @@ you?’를 입력하세요.
 <span class="caption">예제 12-4: 두 번째 인수로 명시된 파일의
 내용물 읽기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch12-an-io-project/listing-12-04.js}}
+```
+
+</details>
+
 먼저 `use` 구문을 사용하여 표준 라이브러리의 연관된 부분을 가져옵니다:
 파일을 다루기 위해서는 `std::fs`가 필요하죠.
 

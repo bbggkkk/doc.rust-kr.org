@@ -42,6 +42,16 @@
 <span class="caption">예제 16-6: 채널을 생성하여 각 절반을
 `tx`와 `rx`에 할당하기</span>
 
+
+<details>
+<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch16-fearless-concurrency/listing-16-06.js}}
+```
+
+</details>
+
 `mpsc::channel` 함수를 사용하여 새로운 채널을 생성합니다; `mpsc`는
 *복수 생산자, 단일 소비자 (multiple producer, single consumer)* 를
 나타냅니다. 짧게 줄이면, 러스트의 표준 라이브러리가 채널을 구현한 방법은
@@ -75,6 +85,15 @@
 <span class="caption">예제 16-7: `tx`를 생성된 스레드로 이동시키고
 ‘hi’를 보내기</span>
 
+<details>
+<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch16-fearless-concurrency/listing-16-07.js}}
+```
+
+</details>
+
 다시 한번 `thread::spawn`을 이용하여 새로운 스레드를 생성한 뒤 `move`를
 사용하여 `tx`를 클로저로 이동시켜 생성된 스레드가 `tx`를 소유하도록 합니다.
 생성된 스레드는 채널을 통해 메시지를 보낼 수 있도록 하기 위해 채널의 송신 단말을
@@ -97,6 +116,15 @@
 
 <span class="caption">예제 16-8: 메인 스레드에서 ‘hi’ 값을
 받아 출력하기</span>
+
+<details>
+<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch16-fearless-concurrency/listing-16-08.js}}
+```
+
+</details>
 
 수신자는 두 개의 유용한 메서드를 가지고 있습니다: `recv`와 `try_recv`입니다. 여기서는
 *수신 (receive)* 의 줄임말인 `recv`를 사용하고 있는데, 이는 메인 스레드의 실행을
@@ -148,6 +176,16 @@ Got: hi
 <span class="caption">예제 16-9: `val`을 채널로 보낸 뒤
 이에 대한 사용 시도</span>
 
+
+<details>
+<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch16-fearless-concurrency/listing-16-09.js}}
+```
+
+</details>
+
 여기서는 `tx.send`를 통하여 채널에 `val`을 보낸 뒤 이를 출력하는 시도를
 하였습니다. 이를 허용하는 것은 나쁜 생각입니다: 일단 값이 다른 스레드로 보내지고
 나면, 그 값을 다시 사용하려고 하기 전에 값을 받은 스레드에서 수정되거나
@@ -180,6 +218,15 @@ Got: hi
 
 <span class="caption">예제 16-10: 여러 메시지를 보내고
 각각마다 멈추기</span>
+
+<details>
+<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch16-fearless-concurrency/listing-16-10.js}}
+```
+
+</details>
 
 이번에는 생성된 스레드가 메인 스레드로 보내고 싶은 문자열의 벡터를 
 가지고 있습니다. 문자열마다 반복하여 각각의 값을 개별적으로 보내고,
@@ -223,6 +270,15 @@ Got: thread
 
 <span class="caption">예제 16-11: 여러 개의 생산자로부터 여러 메시지
 보내기</span>
+
+<details>
+<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch16-fearless-concurrency/listing-16-11.js}}
+```
+
+</details>
 
 이번에는 첫 번째로 생성된 스레드를 생성하기 전에, 채널의 송신 단말에 대해 `clone`을
 호출했습니다. 이는 첫 번째로 생성된 스레드로 전달할 수 있는 새로운 송신 핸들을

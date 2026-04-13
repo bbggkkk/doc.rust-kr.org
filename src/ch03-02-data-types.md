@@ -16,6 +16,15 @@
 let guess: u32 = "42".parse().expect("Not a number!");
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/type-annotation.js}}
+```
+
+</details>
+
 여기에 `: u32`라는 타입 명시를 하지 않으면 러스트는 아래와 같은 에러를
 출력하는데, 이는 컴파일러에게 사용하고자 하는 타입이 무엇인지에 대한
 추가적인 정보가 필요하다는 뜻입니다:
@@ -141,6 +150,15 @@ let guess: u32 = "42".parse().expect("Not a number!");
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-06-floating-point/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-06-floating-point.js}}
+```
+
+</details>
+
 부동 소수점 숫자는 IEEE-754 표준을 따릅니다. `f32` 타입은 1배 수 정밀도 (single-precision) 인
 부동 소수점이고, `f64`는 2배 수 정밀도 (double-precision) 입니다.
 
@@ -156,6 +174,15 @@ let guess: u32 = "42".parse().expect("Not a number!");
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-07-numeric-operations/src/main.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-07-numeric-operations.js}}
+```
+
+</details>
 
 위의 구문에서 각 표현식은 수학 연산자를 사용하여 값을 평가한
 뒤, 그 값을 변수에 묶어 넣습니다. [부록 B][appendix_b]<!-- ignore -->에
@@ -173,6 +200,15 @@ let guess: u32 = "42".parse().expect("Not a number!");
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-08-boolean/src/main.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-08-boolean.js}}
+```
+
+</details>
 
 부울린 값을 사용하는 주요 방식은 `if` 표현식과 같은 조건문에서 사용하는
 것입니다. 러스트에서 `if` 표현식이 동작하는 방식에 대해서는
@@ -232,6 +268,15 @@ let guess: u32 = "42".parse().expect("Not a number!");
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-11-destructuring-tuples/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-11-destructuring-tuples.js}}
+```
+
+</details>
+
 이 프로그램은 먼저 튜플을 만든 후 이를 변수 `tup`에 바인딩시킵니다.
 그다음 `let`을 이용하는 패턴을 사용하여 `tup`을 세 개의 분리된 변수 `x`, `y`,
 그리고 `z`로 바꿉니다. 이것을 *구조 해체 (destructuring)* 라고 부르는 이유는
@@ -271,6 +316,15 @@ let guess: u32 = "42".parse().expect("Not a number!");
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-13-arrays/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-13-arrays.js}}
+```
+
+</details>
+
 여러분이 힙보다는 스택에 데이터를 할당하고 싶을 때나
 (힙과 스택은 [4장][stack-and-heap]<!-- ignore -->에서
 더 다루겠습니다) 항상 고정된 개수의 요소로 이루어진 경우라면
@@ -307,6 +361,15 @@ let a: [i32; 5] = [1, 2, 3, 4, 5];
 ```rust
 let a = [3; 5];
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/array-init.js}}
+```
+
+</details>
 
 `a`라는 이름의 배열은 모두 `3`으로 채워진 `5`개의 요소를 갖게 될
 것입니다. 이는 `let a = [3, 3, 3, 3, 3];`이라고 쓴 것과 똑같지만

@@ -1,0 +1,18 @@
+details summary {
+  cursor: pointer;
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+details summary:hover {
+  text-decoration: underline;
+}
+
+details[open] {
+  border-left: 3px solid #3b82f6;
+  padding-left: 1em;
+  margin-bottom: 1em;
+}

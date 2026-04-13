@@ -43,6 +43,15 @@
 
 <span class="caption">예제 13-1: 셔츠 회사 증정 상황</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-01.js}}
+```
+
+</details>
+
 `main`에 정의된 `store`에는 이 한정판 프로모션 배포를 위해 남은
 두 개의 파란색 셔츠와 하나의 빨간색 셔츠가 있습니다. 여기서 빨간색 셔츠로
 설정한 고객과 색상 설정이 없는 고객에 대하여 `giveaway` 메서드를 호출하였습니다.
@@ -114,6 +123,15 @@
 <span class="caption">예제 13-2: 클로저에 매개변수와 반환 값의
 타입을 추가적으로 명시하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-02.js}}
+```
+
+</details>
+
 타입 명시가 추가되면 클로저 문법은 함수 문법과 더욱 유사해
 보입니다. 아래는 매개변수의 값에 1을 더하는 함수와, 그와 동일한
 동작을 수행하는 클로저를 비교하기 위해 정의해 본 것입니다. 관련된
@@ -127,6 +145,15 @@ let add_one_v2 = |x: u32| -> u32 { x + 1 };
 let add_one_v3 = |x|             { x + 1 };
 let add_one_v4 = |x|               x + 1  ;
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/closure-syntax-comparison.js}}
+```
+
+</details>
 
 첫 번째 줄은 함수 정의고, 두 번째 줄은 모든 것이 명시된
 클로저 정의입니다. 세 번째 줄에서는 타입 명시를 제거했습니다.
@@ -155,6 +182,15 @@ let add_one_v4 = |x|               x + 1  ;
 
 <span class="caption">예제 13-3: 두 개의 다른 타입에 대해 타입이
 추론되는 클로저 호출 시도하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-03.js}}
+```
+
+</details>
 
 컴파일러는 아래와 같은 에러를 냅니다:
 
@@ -188,6 +224,15 @@ let add_one_v4 = |x|               x + 1  ;
 <span class="caption">예제 13-4: 불변 참조자를 캡처하는 클로저의
 정의와 호출</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-04.js}}
+```
+
+</details>
+
 또한 이 예제는 어떤 변수가 클로저의 정의에 바인딩될 수 있고, 이 클로저는
 나중에 마치 변수 이름이 함수 이름인 것처럼 변수 이름과 괄호를 사용하여
 호출될 수 있음을 보여줍니다.
@@ -212,6 +257,15 @@ let add_one_v4 = |x|               x + 1  ;
 
 <span class="caption">예제 13-5: 가변 참조자를 캡처하는 클로저의
 정의와 호출</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-05.js}}
+```
+
+</details>
 
 이 코드는 컴파일되고, 실행되고, 다음을 출력합니다:
 
@@ -246,6 +300,15 @@ let add_one_v4 = |x|               x + 1  ;
 
 <span class="caption">예제 13-6: 스레드에 대한 클로저가 `list`의
 소유권을 갖도록 `move` 사용하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-06.js}}
+```
+
+</details>
 
 여기서는 새 스레드를 생성하여 여기에 인수로 실행될 클로저를 제공합니다.
 클로저의 본문에서는 리스트를 출력합니다. 예제 13-4에서는 클로저가
@@ -314,6 +377,15 @@ impl<T> Option<T> {
 }
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/unwrap-or-else.js}}
+```
+
+</details>
+
 `T`가 `Option`의 `Some` 배리언트 내 값의 타입을 나타내는 제네릭 타입임을
 상기합시다. 이 타입 `T`는 또한 `unwrap_or_else` 함수의 반환 타입이기도
 합니다: 예를 들어 `Option<String>` 상에서 `unwrap_or_else`를 호출하면
@@ -357,6 +429,15 @@ impl<T> Option<T> {
 <span class="caption">예제 13-7: `sort_by_key`를 사용하여 너비로
 사각형 정렬하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-07.js}}
+```
+
+</details>
+
 이 코드는 다음을 출력합니다:
 
 ```console
@@ -380,6 +461,15 @@ r.width`는 자신의 환경으로부터 어떤 것도 캡처나 변형, 혹은 
 
 <span class="caption">예제 13-8: `FnOnce` 클로저를 `sort_by_key`에 사용
 시도하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-08.js}}
+```
+
+</details>
 
 이는 `list`를 정렬할 때 `sort_by_key`가 클로저를 호출하는 횟수를 세려고
 시도하는 부자연스럽고 대단히 난해한 (동작하지 않는) 방식입니다.
@@ -414,6 +504,15 @@ r.width`는 자신의 환경으로부터 어떤 것도 캡처나 변형, 혹은 
 
 <span class="caption">예제 13-9: `FnMut` 클로저를 `sort_by_key`에 사용하는
 것은 허용됩니다</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/listing-13-09.js}}
+```
+
+</details>
 
 `Fn` 트레이트는 클로저를 사용하는 함수 혹은 타입을 정의하고 사용할 때
 중요합니다. 다음 절에서는 반복자를 다루려고 합니다. 많은 반복자들이

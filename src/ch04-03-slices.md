@@ -27,6 +27,15 @@ fn first_word(s: &String) -> ?
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/first-word-index.js}}
+```
+
+</details>
+
 <span class="caption">예제 4-7: `String` 매개변수의 바이트 인덱스 값을 반환하는
 `first_word` 함수</span>
 
@@ -111,6 +120,15 @@ fn second_word(s: &String) -> (usize, usize) {
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-17-slice/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/slice.js}}
+```
+
+</details>
+
 만드는 방식은 `String` 참조자와 유사하지만, `hello`는 추가적인 `[0..5]`으로
 명시된 `String`의 일부분을 가리키는 참조자입니다.
 `[starting_index..ending_index]`는  `starting_index`부터 시작해 `ending_index` 직전,
@@ -181,6 +199,15 @@ let slice = &s[..];
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-18-first-word-slice/src/main.rs:here}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/first-word-slice.js}}
+```
+
+</details>
 
 예제 4-7과 같은 방법으로
 단어의 끝부분 인덱스를 알아내되,
@@ -279,6 +306,15 @@ fn first_word(s: &String) -> &str {
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-09/src/main.rs:usage}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/first-word-usage.js}}
+```
+
+</details>
+
 ### 그 외 슬라이스
 
 문자열 슬라이스는 짐작하셨듯 문자열에만 특정되어 있습니다. 하지만
@@ -298,6 +334,15 @@ let slice = &a[1..3];
 
 assert_eq!(slice, &[2, 3]);
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/array-slice.js}}
+```
+
+</details>
 
 이 슬라이스는 `&[i32]` 타입입니다. 동작 방식은 문자열 슬라이스와
 동일합니다. 슬라이스의 첫 번째 요소를 참조하는 참조자와 슬라이스의

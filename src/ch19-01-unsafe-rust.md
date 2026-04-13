@@ -97,6 +97,15 @@
 
 <span class="caption">예제 19-1: 참조자로부터 원시 포인터 생성하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-01.js}}
+```
+
+</details>
+
 이 코드에 `unsafe` 키워드를 포함시키지 않았음을 주목하세요. 원시 포인터는
 안전한 코드에서 생성될 수 있습니다; 잠시 후 보게 될 것처럼, 그저 안전하지
 않은 블록 밖에서 원시 포인터를 역참조하는 것이 불가능할 뿐입니다.
@@ -202,6 +211,15 @@
 
 <span class="caption">예제 19-4: 안전한 `split_at_mut` 함수
 사용하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-04.js}}
+```
+
+</details>
 
 안전한 러스트만 사용하여 이 함수를 구현할 수는 없습니다. 예제 19-5처럼 시도해 볼 수 있지만
 컴파일되지 않을 것입니다. 간단하게 하기 위해 `split_at_mut`를
@@ -316,6 +334,15 @@
 <span class="caption">예제 19-8: 다른 언어에 정의된 `extern` 함수의
 선언 및 호출</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-08.js}}
+```
+
+</details>
+
 `extern "C"` 블록에는 호출하려는 다른 언어의 외부 함수의
 이름과 시그니처를 나열합니다. `"C"` 부분은 외부 함수가 사용하는
 *ABI (application binary interface)* 를 정의합니다: ABI는
@@ -366,6 +393,15 @@
 <span class="caption">예제 19-9: 불변 정적 변수의 정의 및
 사용</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-09.js}}
+```
+
+</details>
+
 정적 변수는 3장의
 [‘상수’][differences-between-variables-and-constants]<!-- ignore -->절에서
 다루었던 상수와 유사합니다. 정적 변수의 이름은 관례적으로
@@ -391,6 +427,15 @@
 
 <span class="caption">예제 19-10: 가변 정적 변수를 읽거나 쓰는 것은
 안전하지 않습니다</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-10.js}}
+```
+
+</details>
 
 일반적인 변수와 마찬가지로 `mut` 키워드를 사용하여 가변성을 지정합니다.
 `COUNTER`를 읽거나 쓰는 모든 코드는 `unsafe` 블록 내에 있어야 합니다.

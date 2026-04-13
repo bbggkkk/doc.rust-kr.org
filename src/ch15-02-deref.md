@@ -38,6 +38,15 @@
 <span class="caption">예제 15-6: 역참조 연산자를 사용하여 `i32` 값에 대한 참조자
 따라가기</span>
 
+<details>
+<summary>JavaScript로 보기 — Deref은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch15-smart-pointers/deref.js}}
+```
+
+</details>
+
 변수 `x`는 `i32` 값 `5`를 가지고 있습니다. `y`에는 `x`의 참조자를 설정했습니다.
 `x`는 `5`와 같음을 단언할 수 있습니다. 하지만 만일 `y` 안의 값에 대하여
 단언하고 싶다면, `*y`를 사용하여 참조자를 따라가서 이 참조자가 가리키고 있는 값을

@@ -16,6 +16,15 @@
 코드에서 특정한 구체적인 값을 가질 때 어떤 동작을 수행하려는 경우에
 유용합니다.
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/no-listing-01-literals.js}}
+```
+
+</details>
+
 ### 명명된 변수 매칭
 
 명명된 변수는 어떤 값과도 매칭되는 반박 불가능한 패턴으로, 이 책에서
@@ -37,6 +46,15 @@
 
 <span class="caption">예제 18-11: 섀도잉된 변수 `y`가 도입된
 갈래를 갖는 `match` 표현식</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-11.js}}
+```
+
+</details>
 
 `match` 표현식이 실행되면 어떤 일이 일어나는지 살펴봅시다.
 첫 번째 매치 갈래의 패턴이 `x`에 정의된 값과 매칭되지 않으므로
@@ -80,6 +98,15 @@
 
 이 코드는 `one or two`를 출력합니다.
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/no-listing-02-multiple-patterns.js}}
+```
+
+</details>
+
 ### `..=`를 이용한 값의 범위 매칭
 
 `..=` 문법은 경계 값을 포함하는 범위와 매칭시키도록 해 줍니다.
@@ -89,6 +116,16 @@
 ```rust
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/no-listing-03-ranges/src/main.rs:here}}
 ```
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/no-listing-03-ranges.js}}
+```
+
+</details>
 
 `x`가 1, 2, 3, 4, 5 중 하나라면 첫 번째 갈래에 매칭됩니다. 이 문법은
 `|` 연산자를 사용하여 동일한 개념을 표현하는 것보다 여러 개의 값을 매칭하는데
@@ -105,6 +142,16 @@
 ```rust
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/no-listing-04-ranges-of-char/src/main.rs:here}}
 ```
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/no-listing-04-ranges-of-char.js}}
+```
+
+</details>
 
 러스트는 `'c'`가 첫 번째 패턴의 범위 내에 있음을 인식하고
 `early ASCII letter`를 출력합니다.
@@ -128,6 +175,15 @@
 <span class="caption">예제 18-12: 구조체 필드를 별도의 변수로
 분해하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-12.js}}
+```
+
+</details>
+
 이 코드는 `p` 구조체의 `x`와 `y` 필드 값에 매칭되는 변수
 `a`와 `b`를 생성합니다. 이 예제는 패턴의 변수 이름이 구조체의
 필드 이름과 일치할 필요는 없음을 보여줍니다. 그러나 어떤
@@ -148,6 +204,15 @@
 
 <span class="caption">예제 18-13: 구조체 필드 축약법을 사용한
 구조체 필드 해체하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-13.js}}
+```
+
+</details>
 
 이 코드는 `p` 변수의 `x` 및 `y` 필드와 매칭되는 변수 `x` 및
 `y`를 생성합니다. 그 결과 변수 `x`와 `y`는 `p` 구조체로부터
@@ -170,6 +235,15 @@
 
 <span class="caption">예제 18-14: 패턴 하나로 리터럴 값과 매칭
 하면서 해체하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-14.js}}
+```
+
+</details>
 
 첫 번째 갈래는 `y` 필드의 값이 리터럴 `0`과 매칭되는 경우를 지정하여
 `x` 축 위의 모든 점과 매칭될 것입니다. 이 패턴은 여전히 이 갈래를 위한
@@ -204,6 +278,15 @@
 <span class="caption">예제 18-15: 다른 종류의 값을 가진 열거형
 배리언트 해체하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-15.js}}
+```
+
+</details>
+
 이 코드는 `Change the color to red 0, green 160, and blue 255`를 출력할
 것입니다. 다른 갈래가 실행되는 것을 보려면 `msg`의 값을 변경해 보세요.
 
@@ -236,6 +319,16 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 
 <span class="caption">예제 18-16: 중첩된 열거형에 대한 매칭</span>
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-16.js}}
+```
+
+</details>
+
 `match` 표현식에서 첫 번째 갈래의 패턴이 `Color::Rgb` 배리언트를 포함하는
 `Message::ChangeColor` 열거형 배리언트와 매칭합니다; 그런 다음 이 패턴은
 세 개의 내부 `i32` 값을 바인딩합니다. 두 번째 갈래의 패턴도
@@ -252,6 +345,16 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 ```rust
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/no-listing-05-destructuring-structs-and-tuples/src/main.rs:here}}
 ```
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/no-listing-05-destructuring-structs-and-tuples.js}}
+```
+
+</details>
 
 이 코드를 사용하면 복잡한 타입을 구성 요소로 분해하여 필요한
 값을 개별적으로 사용할 수 있습니다.
@@ -284,6 +387,16 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 
 <span class="caption">예제 18-17: 함수 시그니처에 `_` 하기</span>
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-17.js}}
+```
+
+</details>
+
 이 코드는 첫 번째 인수로 전달된 값 `3`을 완전히 무시하고
 `This code only uses the y parameter: 4`를 출력합니다.
 
@@ -311,6 +424,16 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 패턴에서 `Some` 내부 값을 사용할 필요가 없을 경우 패턴 내에 밑줄
 사용하기</span>
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-18.js}}
+```
+
+</details>
+
 이 코드는 `Can't overwrite an existing customized value`를 출력한 다음
 `setting is Some(5)`를 출력합니다. 첫 번째 매치 갈래에서는 `Some` 배리언트
 내부의 값을 매칭시키거나 사용할 필요는 없지만 `setting_value`와
@@ -331,6 +454,16 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 ```
 
 <span class="caption">예제 18-19: 튜플의 여러 부분 무시하기</span>
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-19.js}}
+```
+
+</details>
 
 이 코드는 `Some numbers: 2, 8, 32`를 출력하고 값 4와 16은 무시될
 것입니다.
@@ -354,6 +487,16 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 <span class="caption">예제 18-20: 밑줄로 시작하는 변수명으로
 사용하지 않는 변수에 대한 경고 피하기</span>
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-20.js}}
+```
+
+</details>
+
 여기서는 변수 `y`가 사용되지 않는 것에 대한 경고를 받지만, `_x`가
 사용되지 않는 것에 대한 경고는 받지 않습니다.
 
@@ -369,6 +512,16 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 <span class="caption">예제 18-21: 밑줄로 시작하는 사용하지 않는
 변수는 여전히 값을 바인딩하여 값의 소유권을 가져갈 수 있습니다</span>
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-21.js}}
+```
+
+</details>
+
 `s` 값이 여전히 `_s`로 이동되는데, 이는 `s`를 다시 사용할 수 없도록
 하기 때문에 에러가 발생합니다. 그러나 밑줄만 단독으로 사용하면
 값이 바인딩되지 않습니다. 예제 18-22는 `s`가 `_`로 이동되지
@@ -380,6 +533,16 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 
 <span class="caption">예제 18-22: 밑줄을 사용하는 것은 값을 바인딩하지
 않습니다</span>
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-22.js}}
+```
+
+</details>
 
 이 코드는 `s`를 어디에도 바인딩하지 않았기 때문에, 즉 이동되지 않았으므로 잘 작동합니다.
 
@@ -400,6 +563,15 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 <span class="caption">예제 18-23: `..`를 사용하여 `x`를 제외한 `Point`의
 모든 필드 무시하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-23.js}}
+```
+
+</details>
+
 `x` 값을 나열한 다음 그냥 `..` 패턴만 포함시켰습니다. 이는
 `y: _`와 `z: _`를 나열해야 하는 것보다 빠르며, 특히 많은 필드가
 있는 구조체로 작업하는 데 한두 개의 필드만 관련 있는 상황에서
@@ -417,6 +589,15 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 <span class="caption">예제 18-24: 튜플에서 첫 번째와 마지막
 값만 매칭하고 나머지 모든 값 무시하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-24.js}}
+```
+
+</details>
+
 이 코드에서는 첫 번째와 마지막 값이 `first`와 `last`로 매칭됩니다.
 `..`는 중간의 모든 것들과 매칭되고 무시될 것입니다.
 
@@ -433,6 +614,16 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 
 <span class="caption">예제 18-25: `..`을 모호한 방법으로 사용
 시도하기</span>
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-25.js}}
+```
+
+</details>
 
 이 예제를 컴파일하면 아래와 같은 에러가 발생합니다:
 
@@ -463,6 +654,15 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 ```
 
 <span class="caption">예제 18-26: 패턴에 매치 가드 추가하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-26.js}}
+```
+
+</details>
 
 이 예제는 `The number 4 is even`을 출력합니다. `Some(4)`가 `Some(x)`에
 매칭되기 때문에, `num`이 첫 번째 갈래의 패턴과 비교될 때 매칭됩니다.
@@ -495,6 +695,16 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 <span class="caption">예제 18-27: 매치 가드를 사용하여 외부 변수
 값과 같은지 테스트하기</span>
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-27.js}}
+```
+
+</details>
+
 이제 이 코드는 `Default case, x = Some(5)`를 출력합니다. 두 번째 매치
 갈래의 패턴은 외부 `y`를 가리는 새로운 변수 `y`를 도입하지 않으며,
 이는 매치 가드에서 외부 `y`를 사용할 수 있음을 뜻합니다. 패턴을
@@ -520,6 +730,16 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 
 <span class="caption">예제 18-28: 다중 패턴에 매치 가드
 조합하기</span>
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-28.js}}
+```
+
+</details>
 
 매치 조건은 `x`의 값이 `4`, `5` 또는 `6` *이면서* `y`가 `true`면
 이 갈래에 매칭된다고 기술합니다. 이 코드가 실행되면 `x`가 `4`이므로
@@ -560,6 +780,15 @@ RGB 및 HSV 색상을 지원할 수 있습니다.
 
 <span class="caption">예제 18-29: `@`를 사용하여 값을 테스트하는 동시에
 값 바인딩도 하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-29.js}}
+```
+
+</details>
 
 이 예제는 `Found an id in range: 5`를 출력합니다. 범위 `3..=7` 앞에
 `id_variable @`을 지정함으로써, 범위에 매칭되는 어떤 값이든 캡처하는

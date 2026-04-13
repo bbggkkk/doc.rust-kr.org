@@ -159,6 +159,15 @@ let s = "hello";
 let s = String::from("hello");
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/string-from.js}}
+```
+
+</details>
+
 이중 콜론 `::`은 우리가 함수를 사용할 때 `string_from` 같은 함수명을
 사용하지 않고 `String` 타입에 있는 특정된 `from` 함수라는 것을 지정할
 수 있게 해주는 네임스페이스 연산자입니다. 메서드 관련 문법은 5장
@@ -324,6 +333,15 @@ src="img/trpl04-03.svg" class="center" style="width: 50%;" />
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-04-cant-use-after-move/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기 — 소유권/이동은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/no-listing-04-cant-use-after-move.js}}
+```
+
+</details>
+
 보시는 것과 같이 유효하지 않은 참조자의 사용을 감지했다는 에러가
 발생하네요:
 
@@ -369,6 +387,15 @@ style="width: 50%;" />
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-05-clone/src/main.rs:here}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/no-listing-05-clone.js}}
+```
+
+</details>
 
 이 코드의 실행 결과는 힙 데이터까지 복사됐을 때의 메모리 구조를 나타낸
 그림 4-3과 정확히 일치합니다.
@@ -434,6 +461,15 @@ style="width: 50%;" />
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-03/src/main.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기 — 소유권과 함수</summary>
+
+```javascript
+{{#include ../js-examples/ch04-understanding-ownership/listing-04-03.js}}
+```
+
+</details>
 
 <span class="caption">예제 4-3: 소유권, 스코프가 주석으로
 표시된 함수</span>

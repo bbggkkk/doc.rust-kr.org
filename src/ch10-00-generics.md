@@ -51,6 +51,15 @@
 <span class="caption">예제 10-1: 숫자 리스트에서
 가장 큰 수 찾기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-01.js}}
+```
+
+</details>
+
 `number_list` 변수에는 정수 리스트를 저장하고, `largest`
 변수에 리스트의 첫 번째 숫자에 대한 참조자를 집어넣습니다.
 그리고 리스트 내 모든 숫자를 순회하는데,
@@ -72,6 +81,15 @@
 
 <span class="caption">예제 10-2: *두* 개의 숫자 리스트에서 가장 큰 숫자를
 찾는 코드</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-02.js}}
+```
+
+</details>
 
 이 코드는 잘 동작하지만, 중복된 코드를 생성하는 일은 지루하고 에러가 발생할
 가능성도 커집니다. 또한, 로직을 바꾸고 싶을 때 수정해야 할 부분이 여러 군데임을
@@ -95,6 +113,15 @@
 
 <span class="caption">예제 10-3: 두 리스트에서 가장 큰 수를 찾는
 추상화된 코드</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-03.js}}
+```
+
+</details>
 
 `largest` 함수는 `list` 매개변수를 갖는데,
 이는 함수로 전달될 임의의 `i32` 값 슬라이스를 나타냅니다.

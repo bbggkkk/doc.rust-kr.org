@@ -49,6 +49,16 @@
 <span class="caption">예제 17-11: `blog` 크레이트에 원하는 요구
 동작을 보여주는 코드</span>
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-11.js}}
+```
+
+</details>
+
 사용자가 `Post::new`를 통해 새로운 블로그 게시물의 초안을 작성할 수 있도록
 허용하려고 합니다. 블로그 게시물에는 텍스트의 추가를 허용하고 싶습니다.
 만약 승인 전에 게시물의 내용을 즉시 얻어오는 시도를 하면, 해당 게시물이 아직
@@ -94,6 +104,15 @@
 인스턴스를 만드는 `new` 함수, `State` 트레이트, 그리고 `Draft` 구조체의
 정의</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-12.js}}
+```
+
+</details>
+
 `State` 트레이트는 서로 다른 게시물 상태들이 공유하는 동작을 정의합니다.
 상태 객체는 `Draft`, `PendingReview`, 그리고 `Published`이며, 모두
 `State` 트레이트를 구현할 것입니다. 지금은 트레이트에 아무 메서드도 없고,
@@ -126,6 +145,16 @@
 <span class="caption">예제 17-13: `content`에 텍스트를 추가하기
 위한 `add_text` 메서드 구현하기</span>
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-13.js}}
+```
+
+</details>
+
 `add_text` 메서드는 가변 참조자 `self`를 취하는데, 이는 `add_text`를
 호출하고 있는 해당 `Post` 인스턴스가 변경되기 때문입니다. 그다음
 `content`의 `String`에서 `push_str`을 호출하고 `text`를 인수로 전달해
@@ -154,6 +183,16 @@
 <span class="caption">예제 17-14: 항상 비어있는 문자열 슬라이스를
 반환하는 `Post`의 `content` 메서드에 대한 껍데기 구현</span>
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-14.js}}
+```
+
+</details>
+
 `content` 메서드를 추가함으로써, 예제 17-11의 7번째 줄까지는
 의도대로 작동됩니다.
 
@@ -170,6 +209,16 @@
 
 <span class="caption">예제 17-15: `Post`와 `State` 트레이트에
 `request_review` 메서드를 구현하기</span>
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-15.js}}
+```
+
+</details>
 
 `Post`에게 `self`에 대한 가변 참조자를 받는 `request_review`라는 이름의
 공개 메서드가 제공되었습니다. 그런 다음 `Post`의 현재 상태에 대해 내부
@@ -231,6 +280,16 @@
 <span class="caption">예제 17-16: `Post`와 `State` 트레이트에
 `approve` 메서드 구현하기</span>
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-16.js}}
+```
+
+</details>
+
 `State` 트레이트에 `approve` 메서드를 추가하고 `State`를 구현하는
 새 구조체 `Published` 상태도 추가합니다.
 
@@ -255,6 +314,16 @@
 
 <span class="caption">예제 17-17: `Post`의 `content` 메서드가
 `State`의 `content` 메서드에게 위임하도록 업데이트하기</span>
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-17.js}}
+```
+
+</details>
 
 목표는 `State`를 구현하는 구조체들 안에서 이 모든 규칙을 유지하는 것이기
 때문에, `state`의 값에 `content` 메서드를 호출하고 게시물
@@ -290,6 +359,16 @@
 
 <span class="caption">예제 17-18: `State` 트레이트에 `content` 메서드
 추가하기</span>
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-18.js}}
+```
+
+</details>
 
 `content` 메서드에 대하여 빈 문자열 슬라이스를 반환하는 기본 구현이
 추가되었습니다. 이는 즉 `Draft`와 `PendingReview` 구조체에 대한 `content`는
@@ -389,6 +468,16 @@
 {{#rustdoc_include ../listings/ch17-oop/listing-17-11/src/main.rs:here}}
 ```
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-11-here.js}}
+```
+
+</details>
+
 `Post::new`를 사용하여 초안 상태의 새 게시물을 생성하고 게시물의
 내용에 새 글을 추가할 수 있는 기능은 계속 사용할 수 있습니다. 하지만
 초안 게시물의 `content` 메서드가 빈 문자열을 반환하는 대신, 초안 게시물이
@@ -407,6 +496,15 @@
 
 <span class="caption">예제 17-19: `content` 메서드가 있는
 `Post`와 `content` 메서드가 없는 `DraftPost`</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-19.js}}
+```
+
+</details>
 
 `Post`와 `DraftPost` 구조체 모두 블로그 게시물의 텍스트를 저장하는 비공개
 `content` 필드를 가지고 있습니다. 이 구조체들이 더 이상 `state` 필드를 갖지 않는
@@ -445,6 +543,16 @@
 호출하여 생성되는 `PendingReviewPost` 및 `PendingReviewPost`를 게시된
 `Post`로 전환하는 `approve` 메서드</span>
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-20.js}}
+```
+
+</details>
+
 `request_review`와 `approve` 메서드는 `self`의 소유권을 가져와서
 `DraftPost`와 `PendingReviewPost`의 인스턴스를 소비하고 이들을
 각각 `PendingReviewPost`와 게시된 `Post`로 변환시킵니다. 이렇게 하면
@@ -473,6 +581,16 @@
 
 <span class="caption">예제 17-21: 새로운 블로그 게시물 작업 흐름
 구현을 사용하기 위한 `main` 수정</span>
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-21.js}}
+```
+
+</details>
 
 `main`에서 `post`의 다시 대입하기 위해 필요한 이 변경 사항은 곧 이
 구현이 더 이상 객체 지향 상태 패턴을 잘 따르지 않는다는 것을 의미합니다:

@@ -37,6 +37,15 @@
 {{#rustdoc_include ../listings/ch09-error-handling/no-listing-01-panic/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/no-listing-01-panic.js}}
+```
+
+</details>
+
 프로그램을 실행하면, 다음과 같은 내용이 나타납니다:
 
 ```console
@@ -69,6 +78,15 @@
 ```rust,should_panic,panics
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-01/src/main.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/listing-09-01.js}}
+```
+
+</details>
 
 <span class="caption">예제 9-1: `panic!`을 일으키는 벡터의 끝을 넘어서는
 요소에 대한 접근 시도</span>

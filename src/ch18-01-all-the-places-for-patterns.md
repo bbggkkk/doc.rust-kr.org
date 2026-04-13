@@ -29,6 +29,16 @@ match x {
 }
 ```
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/no-listing-00-match-option.js}}
+```
+
+</details>
+
 이 `match` 표현식에 있는 패턴은 각 화살표 왼쪽에 위치한 `None`과
 `Some(i)`입니다.
 
@@ -71,6 +81,15 @@ match x {
 <span class="caption">예제 18-1: `if let`, `else if`, `else if let`, `else`의
 혼합</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-01.js}}
+```
+
+</details>
+
 사용자가 즐겨 찾는 색을 지정한 경우 그 색상이 배경으로 사용됩니다.
 즐겨 찾는 색상이 지정되지 않았고 오늘이 화요일이면, 배경색은 녹색이
 됩니다. 그렇지 않은 경우, 사용자가 자신의 나이를 문자열로 지정했고
@@ -109,6 +128,15 @@ match x {
 <span class="caption">예제 18-2: `while let`을 사용하여 `stack.pop()`이
 `Some`을 반환하는 한 값을 출력하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-02.js}}
+```
+
+</details>
+
 이 예제는 3, 2, 1을 출력합니다. `pop` 메서드는 벡터에서 마지막 요소를
 가져와서 `Some(value)`를 반환합니다. 벡터가 비어있다면 `pop`은 `None`을
 반환합니다. `while` 루프는 `pop`이 `Some`을 반환하는 한 블록의 코드를
@@ -128,6 +156,15 @@ match x {
 
 <span class="caption">예제 18-3: `for` 루프에서 패턴을 사용하여
 튜플 분해하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-03.js}}
+```
+
+</details>
 
 예제 18-3의 코드는 다음을 출력할 것입니다:
 
@@ -151,6 +188,16 @@ match x {
 ```rust
 let x = 5;
 ```
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/no-listing-00-let-pattern.js}}
+```
+
+</details>
 
 눈치채셨을지 모르겠지만, 이와 같은 `let` 구문을 사용할 때마다
 여러분은 패턴을 사용했던 것입니다! 좀 더 공식적으로 `let` 구문은
@@ -177,6 +224,15 @@ let PATTERN = EXPRESSION;
 <span class="caption">예제 18-4: 패턴을 사용해 튜플을 분해하여
 세 변수를 한 번에 만들기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-04.js}}
+```
+
+</details>
+
 여기서는 튜플을 패턴에 매칭합니다. 러스트는 값 `(1, 2, 3)`을 패턴
 `(x, y, z)`와 비교하고 이 값이 패턴과 매칭되는지 확인하고, `1`을
 `x`에, `2`를 `y`에, 그리고 `3`을 `z`에 바인딩합니다. 이 튜플 패턴을
@@ -193,6 +249,16 @@ let PATTERN = EXPRESSION;
 
 <span class="caption">예제 18-5: 변수 개수가 튜플의 요소 개수와
 맞지 않는 부정확한 패턴 구성</span>
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-05.js}}
+```
+
+</details>
 
 이 코드의 컴파일을 시도하면 아래와 같은 타입 에러가 발생합니다:
 
@@ -220,6 +286,16 @@ let PATTERN = EXPRESSION;
 <span class="caption">예제 18-6: 매개변수에서 패턴을 사용하는
 함수 시그니처</span>
 
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-06.js}}
+```
+
+</details>
+
 `x` 부분이 패턴입니다! `let`에서 했던 것처럼 함수 인수의 튜플을 패턴과
 매치시킬 수 있습니다. 예제 18-7은 함수에 값을 넘길 때 튜플의 값을
 분할합니다.
@@ -232,6 +308,15 @@ let PATTERN = EXPRESSION;
 
 <span class="caption">예제 18-7: 튜플을 분해하는 매개변수를 가진
 함수</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch18-patterns-and-matching/listing-18-07.js}}
+```
+
+</details>
 
 이 코드는 `Current location: (3, 5)`를 출력합니다. 값 `&(3, 5)`는
 패턴 `&(x, y)`에 매칭되어 `x`는 `3`이 되고 `y`는 `5`가 됩니다.

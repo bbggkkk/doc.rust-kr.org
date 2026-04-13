@@ -36,6 +36,15 @@
 <span class="caption">예제 10-12: `summarize` 메서드가 제공하는
 동작으로 구성된 `Summary` 트레이트</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-12.js}}
+```
+
+</details>
+
 `trait` 키워드 다음에 트레이트의 이름 `Summary`를 작성해
 트레이트를 선언했습니다. 또한 몇몇 예제에서 보게 될 것처럼 트레이트를
 `pub`으로 선언하여 이 크레이트에 의존하는 다른 크레이트가
@@ -70,6 +79,15 @@
 
 <span class="caption">예제 10-13: `NewsArticle`과 `Tweet` 타입에
 `Summary` 트레이트 구현하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-13.js}}
+```
+
+</details>
 
 어떤 타입에 대한 트레이트를 구현하는 것은 평범한 메서드를
 구현하는 것과 비슷합니다. 다른 점은 `impl` 뒤에 구현하고자
@@ -132,6 +150,15 @@ know, people`를 출력합니다.
 
 <span class="caption">예제 10-14: `summarize` 메서드의 기본 구현이
 있는 `Summary` 트레이트 정의하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-14.js}}
+```
+
+</details>
 
 `NewsArticle` 인스턴스에 기본 구현을 사용하려면
 `impl Summary for NewsArticle {}`처럼 비어있는 `impl` 블록을 명시합니다.
@@ -198,6 +225,15 @@ know, people`를 출력합니다.
 ```rust,ignore
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-04-traits-as-parameters/src/lib.rs:here}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/traits-as-parameters.js}}
+```
+
+</details>
 
 `item` 매개변수의 구체적 타입을 명시하는 대신 `impl` 키워드와 트레이트 이름을 명시했습니다.
 이 매개변수에는 지정된 트레이트를 구현하는 타입이라면 어떤 타입이든 전달받을 수 있습니다.
@@ -346,6 +382,15 @@ fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 {
 
 <span class="caption">예제 10-15: 트레이트 바운드를 이용해 제네릭 타입에
 조건부로 메서드 구현하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-15.js}}
+```
+
+</details>
 
 타입이 특정 트레이트를 구현하는 경우에만 해당 타입에 트레이트를 구현할 수도 있습니다.
 트레이트 바운드를 만족하는 모든 타입에 대해 트레이트를 구현하는 것을

@@ -8,7 +8,7 @@ authors = [
 language = "ko"
 
 [output.html]
-additional-css = ["ferris.css", "theme/2018-edition.css"]
+additional-css = ["ferris.css", "theme/2018-edition.css", "js-compare.css"]
 additional-js = ["ferris.js"]
 git-repository-url = "https://github.com/rust-kr/doc.rust-kr.org"
 

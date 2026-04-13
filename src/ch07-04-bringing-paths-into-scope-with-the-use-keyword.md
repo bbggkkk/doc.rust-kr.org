@@ -18,6 +18,15 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-11/src/lib.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch07-managing-growing-projects/use-keyword.js}}
+```
+
+</details>
+
 <span class="caption">예제 7-11: `use` 키워드로 모듈을 스코프 안으로
 가져오기</span>
 
@@ -88,6 +97,15 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-14/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch07-managing-growing-projects/use-hashmap.js}}
+```
+
+</details>
+
 <span class="caption">예제 7-14: 보편적인 방식으로 `HashMap`을
 스코프로 가져오기</span>
 
@@ -126,6 +144,15 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-16/src/lib.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch07-managing-growing-projects/use-as.js}}
+```
+
+</details>
+
 <span class="caption">예제 7-16: 스코프 안으로 가져온 타입의 이름을
 `as` 키워드로 변경하기</span>
 
@@ -151,6 +178,15 @@
 ```rust,noplayground,test_harness
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-17/src/lib.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch07-managing-growing-projects/pub-use-reexport.js}}
+```
+
+</details>
 
 <span class="caption">예제 7-17: 다른 스코프의 코드에서 사용할 수 있도록
 `pub use` 사용</span>
@@ -277,6 +313,15 @@ use std::collections::HashMap;
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-20/src/lib.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch07-managing-growing-projects/nested-use.js}}
+```
+
+</details>
 
 <span class="caption">예제 7-20: 예제 7-19의 두 경로를
 `use` 구문 하나로 합치기</span>

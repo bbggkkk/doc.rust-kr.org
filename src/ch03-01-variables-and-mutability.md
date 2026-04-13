@@ -21,6 +21,15 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-01-variables-are-immutable/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-01-immutable-error.js}}
+```
+
+</details>
+
 저장하고 `cargo run`으로 프로그램을 실행해 보세요. 다음의 출력처럼
 불변성 에러에 관한 에러 메시지를 받을 것입니다:
 
@@ -62,6 +71,15 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-02-adding-mut/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-02-adding-mut.js}}
+```
+
+</details>
+
 지금 이 프로그램을 실행하면, 다음의 출력을 얻습니다.
 
 ```console
@@ -96,6 +114,15 @@
 ```rust
 const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/const-declaration.js}}
+```
+
+</details>
 
 상수의 이름은 `THREE_HOURS_IN_SECONDS`이고 값은
 60(분당 초의 개수), 60(시간당 분의 개수), 3(이 프로그램에서
@@ -137,6 +164,15 @@ const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-03-shadowing/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기 — 섀도잉은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-03-shadowing.js}}
+```
+
+</details>
+
 이 프로그램은 먼저 `x`에 `5`라는 값을 묶어 넣습니다. 다음으로 `let x = `을
 반복해 새로운 변수 `x`를 만들고, 원래 값에 `1`을 더한 값을 대입해서
 `x`의 값은 이제 `6`이 됩니다. 그 후 중괄호를 사용하여 만들어진 안쪽 스코프
@@ -165,6 +201,15 @@ const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-04-shadowing-can-change-types/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-04-shadowing-can-change-types.js}}
+```
+
+</details>
+
 첫 번째 `spaces`는 문자열 타입이고 두 번째 `spaces`는 숫자 타입입니다.
 따라서 섀도잉은 `spaces_str`과 `spaces_num` 같이 구분되는
 변수명을 쓸 필요가 없도록 여유를 줍니다; 즉, 더 간단한 `spaces`라는
@@ -174,6 +219,15 @@ const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-05-mut-cant-change-types/src/main.rs:here}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-05-mut-cant-change-types-error.js}}
+```
+
+</details>
 
 에러는 변수의 타입을 바꿀 수 없다고 알려줍니다.
 

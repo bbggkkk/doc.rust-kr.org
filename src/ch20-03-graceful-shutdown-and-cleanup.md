@@ -151,6 +151,15 @@
 <span class="caption">예제 20-25: 두 개의 요청을 처리한 후 루프를
 벗어나는 것으로 서버 종료하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch20-web-server/listing-20-25.js}}
+```
+
+</details>
+
 실제 웹 서버가 두 개의 요청만 처리한 후 종료되는 것을 원하지는 않을
 것입니다. 이 코드는 그저 정상 종료 및 정리가 정상적으로 작동하고 있음을
 보여줄 따름입니다.
@@ -224,6 +233,15 @@ Shutting down worker 3
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch20-web-server/no-listing-07-final-code/src/lib.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch20-web-server/no-listing-07-final-code.js}}
+```
+
+</details>
 
 여기에 더 많은 작업을 할 수도 있습니다! 이 프로젝트를 계속 개선하고 싶으시다면,
 몇 가지 아이디어를 소개합니다:

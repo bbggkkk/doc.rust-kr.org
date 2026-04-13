@@ -207,6 +207,15 @@
 동일한 라이프타임 `'a`를 가져야 함을 나타낸 `longest` 함수
 정의</span>
 
+<details>
+<summary>JavaScript로 보기 — 라이프타임은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-21.js}}
+```
+
+</details>
+
 이 코드는 정상적으로 컴파일되며, 예제 10-19의 `main` 코드로
 실행하면 우리가 원했던 결과가 나옵니다.
 
@@ -375,6 +384,15 @@
 
 <span class="caption">예제 10-24: 참조자를 보유하여
 라이프타임 명시가 필요한 구조체</span>
+
+<details>
+<summary>JavaScript로 보기 — 라이프타임은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-24.js}}
+```
+
+</details>
 
 이 구조체에는 문자열 슬라이스를 보관하는 `part` 참조자 필드가 하나 있습니다.
 구조체의 제네릭 라이프타임 매개변수의 선언 방법은 제네릭 데이터 타입과 마찬가지로,

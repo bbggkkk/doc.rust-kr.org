@@ -26,6 +26,15 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-03/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch06-enums-and-pattern-matching/listing-06-03.js}}
+```
+
+</details>
+
 <span class="caption">예제 6-3: 열거형과 열거형의 배리언트를 패턴으로 사용하는
 `match` 표현식</span>
 
@@ -79,6 +88,15 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-04/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch06-enums-and-pattern-matching/listing-06-04.js}}
+```
+
+</details>
+
 <span class="caption">예제 6-4: `Quarter` 배리언트가 `UsState` 값도 담고
 있는 `Coin` 열거형</span>
 
@@ -95,6 +113,15 @@
 ```rust
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-09-variable-in-pattern/src/main.rs:here}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-09-variable-in-pattern.js}}
+```
+
+</details>
 
 만일 우리가 `value_in_cents(Coin::Quarter(UsState::Alaska))`를 호출했다면, `coin`은
 `Coin::Quarter(UsState::Alaska)`가 되겠지요. 각각의 매치 갈래와 이 값을 비교하면,
@@ -122,6 +149,15 @@
 ```rust
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-05/src/main.rs:here}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch06-enums-and-pattern-matching/listing-06-05.js}}
+```
+
+</details>
 
 <span class="caption">예제 6-5: `Option<i32>` 상에서 `match`를 이용하는
 함수</span>
@@ -204,6 +240,15 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-15-binding-catchall/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-15-binding-catchall.js}}
+```
+
+</details>
+
 처음 두 갈래에서의 패턴은 `3`과 `7` 리터럴 값입니다.
 나머지 모든 가능한 값을 다루는 마지막 갈래에 대한 패턴은
 `other`라는 이름을 가진 변수입니다. `other` 갈래 쪽의
@@ -228,6 +273,15 @@
 ```rust
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-16-underscore-catchall/src/main.rs:here}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-16-underscore-catchall.js}}
+```
+
+</details>
 
 이 예제 또한 철저함에 대한 요구사항을 충족하는데, 마지막 갈래에서 나머지 모든 값에
 대해 명시적으로 무시하기 때문입니다; 우리는 아무것도 잊어버리지 않았습니다.

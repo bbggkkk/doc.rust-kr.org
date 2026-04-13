@@ -18,6 +18,15 @@
 <span class="caption">예제 8-1: `i32` 타입의 값을 가질 수 있는 비어있는 새 벡터
 생성</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch08-common-collections/listing-08-01.js}}
+```
+
+</details>
+
 위에서 타입 명시 (type annotation) 가 추가된 것에 주목하세요. 이 벡터에 어떠한
 값도 집어넣지 않았기 때문에, 러스트는 저장하고자 하는 요소가 어떤 타입인지
 알지 못합니다. 이는 중요한 지점입니다. 벡터는 제네릭 (generic) 을 이용하여 구현됐습니다;
@@ -42,6 +51,15 @@
 <span class="caption">예제 8-2: 값을 저장하고 있는 새로운 벡터
 생성하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch08-common-collections/listing-08-02.js}}
+```
+
+</details>
+
 러스트는 `i32` 값이 초깃값으로 설정된 것을 이용해, `v`의 타입을 `Vec<i32>`로
 추론할 수 있습니다. 따라서 타입 명시는 필요 없습니다. 다음으로는 벡터를
 수정하는 방법을 살펴보겠습니다.
@@ -57,6 +75,15 @@
 
 <span class="caption">예제 8-3: `push` 메서드를 사용하여 벡터에 값을
 추가하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch08-common-collections/listing-08-03.js}}
+```
+
+</details>
 
 3장에서 설명한 것처럼, 어떤 변수의 값을 변경하려면 `mut` 키워드를 사용하여
 해당 변수를 가변으로 만들어야 합니다. 또한 `Vec<i32>` 타입 명시를 붙이지
@@ -78,6 +105,15 @@
 
 <span class="caption">예제 8-4: 인덱스 문법 혹은 `get` 메서드를 사용하여
 벡터 내의 아이템에 접근하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch08-common-collections/listing-08-04.js}}
+```
+
+</details>
 
 여기서 주의할 세부 사항이 몇 가지 있습니다. 벡터의 인덱스는 0부터 시작하므로,
 세 번째 값을 얻어오기 위해서는 인덱스 값 `2`를 사용합니다.
@@ -165,6 +201,15 @@
 <span class="caption">예제 8-7: `for` 루프로 벡터의 요소들에 대해
 반복하여 각 요소를 출력하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch08-common-collections/listing-08-07.js}}
+```
+
+</details>
+
 모든 요소를 변경하기 위해서는 가변 벡터의 각 요소에 대한 가변
 참조자로 반복 작업을 할 수도 있습니다. 예제 8-8의 `for` 루프는
 각 요소에 `50`을 더할 것입니다:
@@ -175,6 +220,15 @@
 
 <span class="caption">예제 8-8: 벡터의 요소에 대한 가변 참조자로
 반복하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch08-common-collections/listing-08-08.js}}
+```
+
+</details>
 
 가변 참조자가 가리키는 값을 수정하려면,
 `+=` 연산자를 쓰기 전에 `*` 역참조 연산자로 `i`의 값을 얻어야 합니다.
@@ -210,6 +264,15 @@
 
 <span class="caption">예제 8-9: 열거형을 정의하여 벡터 내에 다른
 타입의 데이터를 담을 수 있도록 하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch08-common-collections/listing-08-09.js}}
+```
+
+</details>
 
 러스트가 컴파일 타임에 벡터 내에 저장될 타입이 무엇인지 알아야 하는
 이유는 각 요소를 저장하기 위해 얼마만큼의 힙 메모리가 필요한지 알아야 하기

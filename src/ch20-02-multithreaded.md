@@ -24,6 +24,15 @@
 <span class="caption">예제 20-10: 5초 동안 슬립하여 느린 요청
 시뮬레이션하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch20-web-server/listing-20-10.js}}
+```
+
+</details>
+
 이제 세 가지 경우가 있으므로 `if`에서 `match`로 전환했습니다. 문자열
 리터럴 값에 대해 패턴 매치를 하려면 `request_line` 슬라이스에 대한
 명시적인 매칭을 할 필요가 있습니다; `match`는 동등 메서드가 작동하는 것과
@@ -421,6 +430,15 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
 
 <span class="caption">예제 20-15: 스레드를 직접 가지는 대신 `Worker`
 인스턴스를 가지도록 `ThreadPool` 수정하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch20-web-server/listing-20-15.js}}
+```
+
+</details>
 
 `ThreadPool`의 필드 이름을 `threads`에서 `workers`로 변경했는데,
 이제는 `JoinHandle<()>` 인스턴스 대신 `Worker` 인스턴스를 가지게 되기

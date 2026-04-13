@@ -29,6 +29,15 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-24-comments-end-of-line/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-24-comments-end-of-line.js}}
+```
+
+</details>
+
 하지만 아래와 같이 코드 앞줄에 따로 주석을 작성한 형태를
 더 자주 보게 될 겁니다.
 
@@ -38,8 +47,26 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-25-comments-above-line/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/no-listing-25-comments-above-line.js}}
+```
+
+</details>
+
 러스트는 문서화 주석 (documentation comment) 라고 불리는 또다른 주석 형태를
 가지고 있는데, 14장의 [‘Crates.io에 크레이트 배포하기’][publishing]<!-- ignore -->에서
 다루도록 하겠습니다.
+
+<details>
+<summary>JavaScript로 보기 — Rust의 /// 문서화 주석은 JS의 JSDoc /** */에 해당합니다</summary>
+
+```javascript
+{{#include ../js-examples/ch03-common-programming-concepts/doc-comments.js}}
+```
+
+</details>
 
 [publishing]: ch14-02-publishing-to-crates-io.html

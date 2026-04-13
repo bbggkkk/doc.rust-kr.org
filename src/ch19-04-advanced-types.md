@@ -46,6 +46,15 @@ API를 노출할 수 있습니다.
 {{#rustdoc_include ../listings/ch19-advanced-features/no-listing-04-kilometers-alias/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/no-listing-04-type-alias.js}}
+```
+
+</details>
+
 이제 별칭 `Kilometers`는 `i32`의 *동의어*입니다; 예제 19-15에서
 만든 `Millimeters` 및 `Meters` 타입과는 달리, `Kilometers`는 별도의
 새로운 타입은 아닙니다. `Kilometers` 타입을 가진 값은 `i32` 타입의 값과
@@ -78,6 +87,15 @@ Box<dyn Fn() + Send + 'static>
 ```
 
 <span class="caption">예제 19-24: 수많은 곳에 긴 타입 사용하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch19-advanced-features/listing-19-24.js}}
+```
+
+</details>
 
 타입 별칭은 반복을 줄여 이 코드를 관리하기 쉽게 만듭니다. 예제 19-25에서는
 이 장황한 타입에 대해 `Thunk`라는 별칭을 만들고 이 타입이

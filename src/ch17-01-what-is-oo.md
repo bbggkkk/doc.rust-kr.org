@@ -54,6 +54,15 @@ Elements of Reusable Object-Oriented Software, Addison-Wesley Professional, 1994
 아이템들과 그의 평균값을 관리하는 `AveragedCollection`
 구조체</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-01.js}}
+```
+
+</details>
+
 구조체는 `pub`으로 표시되어 다른 코드가 이를 사용할 수 있지만, 구조체 안에 존재하는
 필드들은 여전히 비공개입니다. 이는 이번 사례에 매우 중요한데, 그 이유는 하나의 값이
 리스트에 추가되거나 제거될 때마다 평균도 업데이트되는 것을 보장하고 싶기 때문입니다.
@@ -68,6 +77,15 @@ Elements of Reusable Object-Oriented Software, Addison-Wesley Professional, 1994
 
 <span class="caption">예제 17-2: `AveragedCollection`의 공개 메서드 `add`,
 `remove`, 그리고 `average`의 구현</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-02.js}}
+```
+
+</details>
 
 공개 메서드 `add`, `remove`, 그리고 `average`는 `AveragedCollection`
 인스턴스의 데이터에 접근하거나 수정할 수 있는 유일한 방법입니다. `add` 메서드를

@@ -58,6 +58,15 @@ for i in 12..buffer.len() {
 }
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch13-functional-features/zero-cost-abstraction.js}}
+```
+
+</details>
+
 `prediction`의 값을 계산하기 위해서, 이 코드는 `coefficients`에 있는
 12개의 값을 순회하면서 `zip` 메서드를 사용하여 각 계수와 `buffer`의 이전
 12개의 값 간의 쌍을 만듭니다. 그런 다음, 각 쌍의 값을 서로 곱하고,

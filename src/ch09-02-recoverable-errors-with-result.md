@@ -17,6 +17,15 @@ enum Result<T, E> {
 }
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/result-enum.js}}
+```
+
+</details>
+
 `T`와 `E`는 제네릭 타입 매개변수입니다:
 제네릭은 10장에서 자세히 다루겠습니다.
 지금 당장은 `T`는 성공한 경우에 `Ok` 배리언트 안에 반환될 값의 타입을
@@ -65,6 +74,15 @@ enum Result<T, E> {
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-04/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/listing-09-04.js}}
+```
+
+</details>
+
 <span class="caption">예제 9-4: `match` 표현식을 사용하여 반환 가능한
 `Result` 배리언트들을 처리하기</span>
 
@@ -106,6 +124,15 @@ tests to fail lol -->
 ```rust,ignore
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-05/src/main.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/listing-09-05.js}}
+```
+
+</details>
 
 <span class="caption">예제 9-5: 다른 종류의 에러를
 다른 방식으로 처리하기</span>
@@ -178,6 +205,15 @@ tests to fail lol -->
 {{#rustdoc_include ../listings/ch09-error-handling/no-listing-04-unwrap/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/no-listing-04-unwrap.js}}
+```
+
+</details>
+
 *hello.txt* 파일이 없는 상태에서 이 코드를 실행시키면, `unwrap` 메서드에 의해 호출된
 `panic!`으로부터의 에러 메시지를 보게 될 것입니다:
 
@@ -203,6 +239,15 @@ src/main.rs:4:49
 ```rust,should_panic
 {{#rustdoc_include ../listings/ch09-error-handling/no-listing-05-expect/src/main.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/no-listing-05-expect.js}}
+```
+
+</details>
 
 `unwrap`과 똑같이 파일 핸들을 반환하거나 `panic!` 매크로를 호출하도록
 하는 데에 `expect`를 사용했습니다. `unwrap`은 `panic!`의 기본 메시지가
@@ -248,6 +293,15 @@ don't want to include it for rustdoc testing purposes. -->
 ```rust
 {{#include ../listings/ch09-error-handling/listing-09-06/src/main.rs:here}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/listing-09-06.js}}
+```
+
+</details>
 
 <span class="caption">예제 9-6: `match`를 이용하여 호출 코드 쪽으로
 에러를 반환하는 함수</span>
@@ -318,6 +372,15 @@ don't want to include it for rustdoc testing purposes. -->
 ```rust
 {{#include ../listings/ch09-error-handling/listing-09-07/src/main.rs:here}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/listing-09-07.js}}
+```
+
+</details>
 
 <span class="caption">예제 9-7: `?` 연산자를 이용하여 에러를 호출 코드 쪽으로
 반환하는 함수</span>
@@ -457,6 +520,15 @@ don't want to include it for rustdoc testing purposes. -->
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-11/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/listing-09-11.js}}
+```
+
+</details>
+
 <span class="caption">예제 9-11: `Option<T>` 값에 대한 `?` 연산자의
 사용</span>
 
@@ -501,6 +573,15 @@ don't want to include it for rustdoc testing purposes. -->
 ```rust,ignore
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-12/src/main.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/listing-09-12.js}}
+```
+
+</details>
 
 <span class="caption">예제 9-12: `main`이 `Result<(), E>`를 반환하도록
 하여 `Result` 값에 대한 `?` 사용 가능하게 하기</span>

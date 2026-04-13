@@ -43,6 +43,15 @@ $ cd hello
 <span class="caption">예제 20-1: 들어오는 스트림 수신 대기하기 및
 스트림을 받았을 때 메시지 출력하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch20-web-server/listing-20-01.js}}
+```
+
+</details>
+
 `TcpListener`를 사용하면 `127.0.0.1:7878` 주소에서 TCP 연결을 수신 대기할
 수 있습니다. 주소에서 콜론 앞부분은 여러분의 컴퓨터를 나타내는 IP 주소이며
 (이는 모든 컴퓨터에서 동일하며 딱히 저자의 컴퓨터를 나타내는 것이 아닙니다),
@@ -325,6 +334,15 @@ HTML 파일</span>
 <span class="caption">예제 20-5: *hello.html*의 내용을 응답의
 본문으로 보내기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch20-web-server/listing-20-05.js}}
+```
+
+</details>
+
 `use` 구문에 `fs`를 추가하여 표준 라이브러리의 파일 시스템 모듈을
 스코프 안으로 가져왔습니다. 파일의 내용을 문자열로 읽는 코드는
 익숙할 것입니다; 12장 I/O 프로젝트의 예제 12-4에서 파일
@@ -437,6 +455,15 @@ HTML이 나올 것입니다. 만일 *127.0.0.1:7878/something-else*과 같은
 
 <span class="caption">예제 20-9: 두 경우의 차이에 대한 코드만 담은
 `if`와 `else` 블록으로 리팩터링하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch20-web-server/listing-20-09.js}}
+```
+
+</details>
 
 이제 `if`와 `else` 블록은 상태 라인과 파일 이름에 대한
 적절한 값만 튜플로 반환합니다; 그런 다음 18장에서 설명한 것처럼

@@ -63,6 +63,15 @@ Problem parsing arguments: not enough arguments
 <span class="caption">예제 12-24: `eprintln!`를 사용하여 표준 출력 대신
 표준 에러로 에러 메시지 작성하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch12-an-io-project/listing-12-24.js}}
+```
+
+</details>
+
 이제 동일한 방식, 즉 아무런 인수 없이 `>`로 표준 출력을 리디렉션하여
 프로그램을 다시 실행해 봅시다:
 

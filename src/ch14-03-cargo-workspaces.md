@@ -151,6 +151,15 @@ $ cargo new add_one --lib
 <span class="caption">예제 14-7: `adder` 크레이트에서 `add_one` 라이브러리
 크레이트 사용하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch14-more-about-cargo/workspaces.js}}
+```
+
+</details>
+
 최상위 *add* 디렉터리에서 `cargo build`를 실행하여 작업공간을
 빌드해 봅시다!
 

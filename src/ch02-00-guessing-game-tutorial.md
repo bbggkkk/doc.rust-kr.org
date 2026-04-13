@@ -53,6 +53,15 @@ cd ../../..
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/src/main.rs}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/cargo-new-hello.js}}
+```
+
+</details>
+
 이제 `cargo run` 명령문을 이용하여 이 ‘Hello, world!’ 프로그램을
 컴파일하고 실행해 봅시다:
 
@@ -79,6 +88,15 @@ cd ../../..
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:all}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/listing-02-01.js}}
+```
+
+</details>
+
 <span class="caption">예제 2-1: 사용자가 추리한 값을 입력받아 그대로
 출력하는 코드</span>
 
@@ -90,6 +108,15 @@ cd ../../..
 ```rust,ignore
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:io}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/use-io.js}}
+```
+
+</details>
 
 기본적으로 러스트는 모든 프로그램의 스코프로 가져오는 표준 라이브러리에
 정의된 아이템 집합을 가지고 있습니다. 이 집합을 *프렐루드 (prelude)* 라고
@@ -107,6 +134,15 @@ cd ../../..
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:main}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/fn-main.js}}
+```
+
+</details>
+
 `fn` 문법은 새로운 함수를 선언하며, 괄호 `()`는 매개변수가 없음을 나타내고
 중괄호 `{`는 함수 본문의 시작을 나타냅니다.
 
@@ -116,6 +152,15 @@ cd ../../..
 ```rust,ignore
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:print}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/println-prompt.js}}
+```
+
+</details>
 
 이 코드는 게임에 대해 설명하여 사용자의 입력을 요청하는 프롬프트를
 출력하고 있습니다.
@@ -128,12 +173,30 @@ cd ../../..
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:string}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/let-mut-guess.js}}
+```
+
+</details>
+
 이제 프로그램이 점점 흥미로워지고 있습니다! 이 짧은 라인에서 여러 일들이 벌어집니다.
 변수를 만드는 데에는 `let` 구문을 사용합니다. 다음 코드도 변수를 선언하는 예시입니다:
 
 ```rust,ignore
 let apples = 5;
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/let-apples.js}}
+```
+
+</details>
 
 이 라인은 `apples`라는 변수를 만들고 5라는 값을 묶어 넣습니다.
 러스트에서 변수는 기본적으로 불변 (immutable) 인데, 이는 변수에
@@ -146,6 +209,15 @@ let apples = 5;
 let apples = 5; // immutable
 let mut bananas = 5; // mutable
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/let-mut-bananas.js}}
+```
+
+</details>
 
 > Note: `//` 문법은 현재 위치부터 라인의 끝까지 주석임을 나타냅니다.
 > 러스트는 주석의 모든 내용을 무시합니다. 더 자세한 내용은
@@ -178,6 +250,15 @@ let mut bananas = 5; // mutable
 ```rust,ignore
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:read}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/read-line.js}}
+```
+
+</details>
 
 프로그램 시작 지점에서 `use std::io`를 통해 `io` 라이브러리를 가져오지
 않았더라도, 함수 호출 시 `std::io::stdin`처럼 작성하는 것으로 이 함수를
@@ -217,11 +298,29 @@ let mut bananas = 5; // mutable
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:expect}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/expect.js}}
+```
+
+</details>
+
 위 코드를 아래처럼 쓸 수도 있습니다.
 
 ```rust,ignore
 io::stdin().read_line(&mut guess).expect("Failed to read line");
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/stdin-oneliner.js}}
+```
+
+</details>
 
 하지만 하나의 긴 라인은 가독성이 떨어지므로 라인을 나누는
 것이 좋습니다. `.method_name()` 문법으로 어떤 메서드를 호출할 때는
@@ -275,6 +374,15 @@ io::stdin().read_line(&mut guess).expect("Failed to read line");
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:print_guess}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/println-placeholder.js}}
+```
+
+</details>
+
 이 라인은 사용자가 입력한 값을 담고 있는 문자열을 출력합니다. `{}`는
 자리표시자 (placeholder) 입니다: `{}`를 어떤 위치에 값을 자리하도록
 하는 작은 집게발이라고 생각하면 됩니다. 어떤 변수의 값을 출력할 때라면
@@ -290,6 +398,15 @@ let y = 10;
 
 println!("x = {x} and y + 2 = {}", y + 2);
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/println-format.js}}
+```
+
+</details>
 
 이 코드는 `x = 5 and y + 2 = 12`를 출력합니다.
 
@@ -514,6 +631,15 @@ rand = "0.9.0"
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-03/src/main.rs:all}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/listing-02-03.js}}
+```
+
+</details>
+
 <span class="caption">예제 2-3: 임의의 숫자를 생성하기 위한 코드
 추가하기</span>
 
@@ -591,6 +717,15 @@ You guessed: 5
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-04/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기 — match/Ordering은 JS에서 if-else로 대체합니다</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/listing-02-04.js}}
+```
+
+</details>
+
 <span class="caption">예제 2-4: 두 숫자의 비교에 대한 가능한 반환 값
 처리하기</span>
 
@@ -663,11 +798,29 @@ anchor or snip comments
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/no-listing-03-convert-string-to-number/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/convert-string-to-number.js}}
+```
+
+</details>
+
 추가된 라인은 다음과 같습니다:
 
 ```rust,ignore
 let guess: u32 = guess.trim().parse().expect("Please type a number!");
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/parse-shadowing.js}}
+```
+
+</details>
 
 `guess`라는 이름의 변수가 만들어졌습니다. 잠깐, 이미 프로그램에서 `guess`라는
 이름의 변수가 생성되지 않았나요? 그렇긴 하지만 러스트는 이전에 있던 `guess`의
@@ -756,6 +909,15 @@ Too big!
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/no-listing-04-looping/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/loop-keyword.js}}
+```
+
+</details>
+
 보시다시피, 추릿값 입력 프롬프트부터 모든 것을 루프로 옮겼습니다.
 루프 내부의 줄을 각각 네 칸씩 들여 쓰고 프로그램을 다시 실행하세요.
 이제 프로그램이 계속해서 다른 추리를 요청하고, 새로운 문제가 발생했군요.
@@ -816,6 +978,15 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/no-listing-05-quitting/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/break-on-win.js}}
+```
+
+</details>
+
 `You win!` 뒤에 `break` 라인을 추가하면 사용자가 비밀번호를 맞혔을 때
 프로그램이 루프를 종료하게 됩니다. 루프가 `main`의 마지막 부분이므로
 루프의 종료는 프로그램의 종료를 의미합니다.
@@ -832,6 +1003,15 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ```rust,ignore
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-05/src/main.rs:here}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/match-parse-continue.js}}
+```
+
+</details>
 
 <span class="caption">예제 2-5: 숫자가 아닌 추릿값에 대해 프로그램을
 종료하는 대신 이를 무시하고 다른 추릿값을 요청하기</span>
@@ -902,6 +1082,15 @@ You win!
 ```rust,ignore
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-06/src/main.rs}}
 ```
+
+<details>
+<summary>JavaScript로 보기 — 소유권(ownership)과 Result 타입은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch02-guessing-game-tutorial/listing-02-06.js}}
+```
+
+</details>
 
 <span class="caption">예제 2-6: 완성된 추리 게임 코드</span>
 

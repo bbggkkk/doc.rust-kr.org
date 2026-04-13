@@ -44,6 +44,15 @@
 <span class="caption">예제 15-1: 박스를 사용하여 `i32` 값을 힙에
 저장하기</span>
 
+<details>
+<summary>JavaScript로 보기 — Box는 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch15-smart-pointers/box-heap.js}}
+```
+
+</details>
+
 변수 `b`를 정의하여 `5`라는 값을 가리키는 `Box` 값을 갖도록 했는데, 여기서
 `5`는 힙에 할당됩니다. 이 프로그램은 `b = 5`를 출력할 것입니다; 이 경우,
 박스 안에 있는 데이터는 마치 이 데이터가 스택에 있는 것처럼 접근
@@ -223,6 +232,15 @@ help: insert some indirection (e.g., a `Box`, `Rc`, or `&`) to make `List` repre
 
 <span class="caption">예제 15-5: 알려진 크기를 갖도록 하기 위해
 `Box<T>`를 이용한 `List` 정의</span>
+
+<details>
+<summary>JavaScript로 보기 — 재귀적 타입에 Box가 필요한 것은 JS에 없는 개념입니다</summary>
+
+```javascript
+{{#include ../js-examples/ch15-smart-pointers/cons-list.js}}
+```
+
+</details>
 
 `Cons` 배리언트에는 `i32`와 박스의 포인터 데이터를 저장할 공간을 더한 크기가
 필요합니다. `Nil` 배리언트는 아무런 값도 저장하지 않으므로, `Cons` 배리언트에 비해

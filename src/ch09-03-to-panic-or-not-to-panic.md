@@ -50,6 +50,15 @@
 {{#rustdoc_include ../listings/ch09-error-handling/no-listing-08-unwrap-that-cant-fail/src/main.rs:here}}
 ```
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/no-listing-08-unwrap-that-cant-fail.js}}
+```
+
+</details>
+
 여기서는 하드코딩된 문자열을 파싱하여 `IpAddr` 인스턴스를 만드는 중입니다.
 `127.0.0.1`이 유효한 IP 주소라는 사실을 알 수 있으므로, 여기서는 `expect`의
 사용이 허용됩니다. 하지만 하드코딩된 유효한 문자열이라는 사실이 `parse`
@@ -170,6 +179,15 @@ purposes. -->
 ```rust
 {{#include ../listings/ch09-error-handling/listing-09-13/src/main.rs:here}}
 ```
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch09-error-handling/listing-09-13.js}}
+```
+
+</details>
 
 <span class="caption">예제 9-13: 1과 100 사이의 값일 때만 실행을 계속하는
 `Guess` 타입</span>

@@ -178,6 +178,15 @@ productive."` 라인을 가지고 있는 벡터와 일치하지 않으므로 실
 <span class="caption">예제 12-19: 매칭된 라인들을 저장하여 반환될 수
 있게 하기</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch12-an-io-project/listing-12-19.js}}
+```
+
+</details>
+
 이제 `search` 함수는 `query`를 담고 있는 라인들만 반환해야 하고
 테스트는 통과되어야 합니다. 테스트를 실행해 봅시다:
 

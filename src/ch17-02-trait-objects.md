@@ -74,6 +74,15 @@
 
 <span class="caption">예제 17-3: `Draw` 트레이트의 정의</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-03.js}}
+```
+
+</details>
+
 이 문법은 10장에 있는 트레이트를 정의하는 방법에서 다뤘으니 익숙하실 겁니다.
 다음에 새로운 문법이 등장합니다: 예제 17-4는 `components`라는
 벡터를 보유하고 있는 `Screen`이라는 구조체를 정의합니다. `Box<dyn Draw>`
@@ -90,6 +99,15 @@
 트레이트 객체들의 벡터 `components`를 필드로 가지고 있는 `Screen`
 구조체의 정의</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-04.js}}
+```
+
+</details>
+
 `Screen` 구조체에서는 예제 17-5와 같이 `components`의 각 요소마다
 `draw` 메서드를 호출하는 `run` 메서드를 정의합니다:
 
@@ -101,6 +119,16 @@
 
 <span class="caption">예제 17-5: 각 컴포넌트에 대해 `draw` 메서드를
 호출하는 `Screen`의 `run` 메서드</span>
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-05.js}}
+```
+
+</details>
 
 이는 트레이트 바운드가 있는 제네릭 타입 매개변수를 사용하는 구조체를
 정의하는 것과는 다르게 작동합니다. 제네릭 타입 매개변수는 한 번에
@@ -117,6 +145,16 @@
 
 <span class="caption">예제 17-6: 제네릭과 트레이트 바운드를 사용한
 `Screen` 구조체와 `run` 메서드의 대체 구현</span>
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-06.js}}
+```
+
+</details>
 
 이렇게 하면 전부 `Button` 타입이거나 전부 `TextField` 타입인 컴포넌트의
 목록을 가진 `Screen` 인스턴스로 제한됩니다. 동일 타입의 컬렉션만 사용한다면
@@ -145,6 +183,15 @@
 <span class="caption">예제 17-7: `Draw` 트레이트를 구현하는
 `Button` 구조체</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-07.js}}
+```
+
+</details>
+
 `Button`의 `width`, `height` 및 `label` 필드는 다른 컴포넌트의
 필드와는 다를 것입니다; 예를 들어 `TextField` 타입은 이 필드들에 추가로
 `placeholder` 필드를 가질 수 있습니다. 화면에 그리고자 하는 각각의
@@ -168,6 +215,15 @@
 <span class="caption">예제 17-8: `gui`를 사용하고 `Draw` 트레이트를
 `SelectBox` 구조체에 구현한 또 다른 크레이트</span>
 
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-08.js}}
+```
+
+</details>
+
 이제 라이브러리 사용자는 `main` 함수를 작성하여 `Screen` 인스턴스를
 만들 수 있습니다. `Screen` 인스턴스에는 `SelectBox`와 `Button`을
 `Box<T>` 안에 넣어 트레이트 객체가 되게 하여 이들을 추가할 수 있습니다.
@@ -182,6 +238,15 @@
 
 <span class="caption">예제 17-9: 트레이트 객체를 사용하여 동일한 트레이트를
 구현하는 서로 다른 타입들의 값 저장하기</span>
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-09.js}}
+```
+
+</details>
 
 이 라이브러리를 작성할 때는 누군가 `SelectBox` 타입을 추가할 수도
 있다는 것을 몰랐지만, 우리의 `Screen` 구현체는 새로운 타입에 대해서도
@@ -216,6 +281,16 @@
 
 <span class="caption">예제 17-10: 트레이트 객체의 트레이트를 구현하지 않은
 타입의 사용 시도</span>
+
+
+<details>
+<summary>JavaScript로 보기</summary>
+
+```javascript
+{{#include ../js-examples/ch17-oop/listing-17-10.js}}
+```
+
+</details>
 
 `String`이 `Draw` 트레이트를 구현하지 않기 때문에 아래와 같은 에러를 얻게 됩니다:
 

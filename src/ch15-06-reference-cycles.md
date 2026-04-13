@@ -24,6 +24,15 @@
 <span class="caption">예제 15-25: `RefCell<T>`를 가지고 있어서
 `Cons` 배리언트가 참조하는 것을 변경할 수 있는 cons 리스트 정의</span>
 
+<details>
+<summary>JavaScript로 보기 — 순환 참조는 JS GC가 자동 처리합니다</summary>
+
+```javascript
+{{#include ../js-examples/ch15-smart-pointers/reference-cycles.js}}
+```
+
+</details>
+
 예제 15-5의 `List` 정의의 또 다른 변형이 이용되고 있습니다.
 이제 `Cons` 배리언트 내의 두 번째 요소는 `RefCell<Rc<List>>`인데,
 이는 예제 15-24에서 했던 것처럼 `i32` 값을 변경하는 능력을 가진 대신,
@@ -215,6 +224,15 @@
 
 <span class="caption">예제 15-28: 부모 노드 `branch`의 약한 참조를
 갖는 `leaf` 노드</span>
+
+<details>
+<summary>JavaScript로 보기 — Weak&lt;T&gt;와 WeakRef</summary>
+
+```javascript
+{{#include ../js-examples/ch15-smart-pointers/weak-ref.js}}
+```
+
+</details>
 
 `leaf` 노드를 만드는 것이 `parent` 필드를 제외하고는 예제 15-27과
 비슷해 보입니다: `leaf`는 부모 없이 시작돼서, 새 비어있는 `Weak<Node>`
