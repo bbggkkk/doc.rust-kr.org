@@ -41,6 +41,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-01/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-01/main.ts}}
+```
+
 <span class="caption">예제 15-1: 박스를 사용하여 `i32` 값을 힙에
 저장하기</span>
 
@@ -121,6 +127,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-02/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-02/main.ts}}
+```
+
 <span class="caption">예제 15-2: `i32` 값의 콘스 리스트 데이터 구조를
 표현하는 열거형 정의에 대한 첫 번째 시도</span>
 
@@ -136,6 +148,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-03/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-03/main.ts}}
 ```
 
 <span class="caption">예제 15-3: `List` 열거형을 이용하여 리스트 `1, 2, 3`
@@ -169,6 +187,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-02/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/listing-06-02/src/main.ts}}
 ```
 
 `Message` 값을 할당하기 위해 필요한 공간의 양을 결정하기 위해서, 러스트는 각
@@ -228,6 +252,12 @@ help: insert some indirection (e.g., a `Box`, `Rc`, or `&`) to make `List` repre
 
 ```rust
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-05/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-05/main.ts}}
 ```
 
 <span class="caption">예제 15-5: 알려진 크기를 갖도록 하기 위해

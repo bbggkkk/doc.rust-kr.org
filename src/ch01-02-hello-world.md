@@ -57,14 +57,11 @@ fn main() {
 }
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch01-getting-started/hello-world.js}}
+```ts
+{{#include ../listings-ts/inline/ch01-02/snippet-01.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 1-1: `Hello, world!`를 출력하는 프로그램</span>
 
@@ -105,14 +102,11 @@ fn main() {
 }
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch01-getting-started/main-function.js}}
+```ts
+{{#include ../listings-ts/inline/ch01-02/snippet-02.ts}}
 ```
-
-</details>
 
 이 라인은 러스트에서 `main`이라는 이름의 함수를 정의합니다. `main` 함수는
 특별한 함수로, 러스트 실행 프로그램에서 항상 가장 먼저 실행되는 함수입니다.
@@ -136,14 +130,11 @@ fn main() {
     println!("Hello, world!");
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch01-getting-started/println-macro.js}}
+```ts
+{{#include ../listings-ts/inline/ch01-02/snippet-03.ts}}
 ```
-
-</details>
 
 화면에 텍스트를 출력하는 코드로, 이 한 라인이 이 자그마한 프로그램의 전부입니다.
 하지만 이 단순한 코드에도 눈여겨볼 것이 네 가지 들어있습니다.

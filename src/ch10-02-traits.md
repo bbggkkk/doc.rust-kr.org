@@ -33,17 +33,14 @@
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-12/src/lib.rs}}
 ```
 
-<span class="caption">예제 10-12: `summarize` 메서드가 제공하는
-동작으로 구성된 `Summary` 트레이트</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-12.js}}
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-12/src/lib.ts}}
 ```
 
-</details>
+<span class="caption">예제 10-12: `summarize` 메서드가 제공하는
+동작으로 구성된 `Summary` 트레이트</span>
 
 `trait` 키워드 다음에 트레이트의 이름 `Summary`를 작성해
 트레이트를 선언했습니다. 또한 몇몇 예제에서 보게 될 것처럼 트레이트를
@@ -77,17 +74,14 @@
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-13/src/lib.rs:here}}
 ```
 
-<span class="caption">예제 10-13: `NewsArticle`과 `Tweet` 타입에
-`Summary` 트레이트 구현하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-13.js}}
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-13/src/lib.ts}}
 ```
 
-</details>
+<span class="caption">예제 10-13: `NewsArticle`과 `Tweet` 타입에
+`Summary` 트레이트 구현하기</span>
 
 어떤 타입에 대한 트레이트를 구현하는 것은 평범한 메서드를
 구현하는 것과 비슷합니다. 다른 점은 `impl` 뒤에 구현하고자
@@ -106,6 +100,12 @@
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-01-calling-trait-method/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-01-calling-trait-method/src/main.ts}}
 ```
 
 이 코드는 `1 new tweet: horse_ebooks: of course, as you probably already
@@ -148,17 +148,14 @@ know, people`를 출력합니다.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-14/src/lib.rs:here}}
 ```
 
-<span class="caption">예제 10-14: `summarize` 메서드의 기본 구현이
-있는 `Summary` 트레이트 정의하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-14.js}}
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-14/src/lib.ts}}
 ```
 
-</details>
+<span class="caption">예제 10-14: `summarize` 메서드의 기본 구현이
+있는 `Summary` 트레이트 정의하기</span>
 
 `NewsArticle` 인스턴스에 기본 구현을 사용하려면
 `impl Summary for NewsArticle {}`처럼 비어있는 `impl` 블록을 명시합니다.
@@ -170,6 +167,12 @@ know, people`를 출력합니다.
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-02-calling-default-impl/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-02-calling-default-impl/src/main.ts}}
 ```
 
 이 코드는 `New article available! (Read more...)`를 출력합니다.
@@ -191,11 +194,23 @@ know, people`를 출력합니다.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-03-default-impl-calls-other-methods/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-03-default-impl-calls-other-methods/src/lib.ts}}
+```
+
 이 `Summary`를 어떤 타입에 구현할 때는 `summarize_author`만
 정의하면 됩니다:
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-03-default-impl-calls-other-methods/src/lib.rs:impl}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-03-default-impl-calls-other-methods/src/impl.ts}}
 ```
 
 `summarize_author`를 정의하고 나면 `Tweet` 인스턴스에서 `summarize`를 호출할 수 있습니다.
@@ -206,6 +221,12 @@ know, people`를 출력합니다.
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-03-default-impl-calls-other-methods/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-03-default-impl-calls-other-methods/src/main.ts}}
 ```
 
 이 코드는 `1 new tweet: (Read more from @horse_ebooks...)`를 출력합니다.
@@ -226,14 +247,11 @@ know, people`를 출력합니다.
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-04-traits-as-parameters/src/lib.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/traits-as-parameters.js}}
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-04-traits-as-parameters/src/lib.ts}}
 ```
-
-</details>
 
 `item` 매개변수의 구체적 타입을 명시하는 대신 `impl` 키워드와 트레이트 이름을 명시했습니다.
 이 매개변수에는 지정된 트레이트를 구현하는 타입이라면 어떤 타입이든 전달받을 수 있습니다.
@@ -257,6 +275,12 @@ pub fn notify<T: Summary>(item: &T) {
 }
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-02/snippet-01.ts}}
+```
+
 앞서 본 예시와 동일한 코드지만, 더 장황합니다.
 트레이트 바운드는 꺾쇠괄호 안의 제네릭 타입 매개변수 선언에 붙은 콜론(`:`) 뒤에
 위치합니다.
@@ -270,6 +294,12 @@ pub fn notify<T: Summary>(item: &T) {
 pub fn notify(item1: &impl Summary, item2: &impl Summary) {
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-02/snippet-02.ts}}
+```
+
 `item1` 과 `item2`가 (둘 다 `Summary`를 구현하는 타입이되) 서로 다른
 타입이어도 상관없다면 `impl Trait` 문법 사용도 적절합니다. 하지만 만약
 두 매개변수가 같은 타입으로 강제되어야 한다면, 이는 아래와 같이 트레이트
@@ -277,6 +307,12 @@ pub fn notify(item1: &impl Summary, item2: &impl Summary) {
 
 ```rust,ignore
 pub fn notify<T: Summary>(item1: &T, item2: &T) {
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-02/snippet-03.ts}}
 ```
 
 `item1` 및 `item2` 매개변수의 타입으로 지정된 제네릭 타입 `T`는
@@ -294,10 +330,22 @@ pub fn notify<T: Summary>(item1: &T, item2: &T) {
 pub fn notify(item: &(impl Summary + Display)) {
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-02/snippet-04.ts}}
+```
+
 `+` 구문은 제네릭 타입의 트레이트 바운드에도 사용할 수 있습니다:
 
 ```rust,ignore
 pub fn notify<T: Summary + Display>(item: &T) {
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-02/snippet-05.ts}}
 ```
 
 두 개의 트레이트 바운드가 지정됐으니, `notify` 본문에서는 `item`의 `summarize` 메서드를
@@ -316,10 +364,22 @@ pub fn notify<T: Summary + Display>(item: &T) {
 fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 {
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-02/snippet-06.ts}}
+```
+
 다음과 같이 `where` 조항을 사용할 수 있습니다:
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-07-where-clause/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-07-where-clause/src/lib.ts}}
 ```
 
 트레이트 바운드로 도배되지 않고, 평범한 함수처럼 함수명과
@@ -333,6 +393,12 @@ fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 {
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-05-returning-impl-trait/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-05-returning-impl-trait/src/lib.ts}}
 ```
 
 반환 타입에 구체적인 타입명이 아닌 `impl Summary`를 작성하여
@@ -353,6 +419,12 @@ fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 {
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-06-impl-trait-returns-one-type/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-06-impl-trait-returns-one-type/src/lib.ts}}
 ```
 
 `NewsArticle`, `Tweet` 중 하나를 반환하는
@@ -380,17 +452,14 @@ fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 {
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-15/src/lib.rs}}
 ```
 
-<span class="caption">예제 10-15: 트레이트 바운드를 이용해 제네릭 타입에
-조건부로 메서드 구현하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-15.js}}
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-15/src/lib.ts}}
 ```
 
-</details>
+<span class="caption">예제 10-15: 트레이트 바운드를 이용해 제네릭 타입에
+조건부로 메서드 구현하기</span>
 
 타입이 특정 트레이트를 구현하는 경우에만 해당 타입에 트레이트를 구현할 수도 있습니다.
 트레이트 바운드를 만족하는 모든 타입에 대해 트레이트를 구현하는 것을
@@ -405,6 +474,12 @@ impl<T: Display> ToString for T {
 }
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-02/snippet-07.ts}}
+```
+
 `Display` 트레이트가 구현된 모든 타입에서 (`ToString` 트레이트에
 정의된) `to_string()` 메서드를 호출할 수 있는 건 표준 라이브러리의
 이 포괄 구현 덕분입니다. 예를 들어, 정수는 `Display`를 구현하므로
@@ -412,6 +487,12 @@ impl<T: Display> ToString for T {
 
 ```rust
 let s = 3.to_string();
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-02/snippet-08.ts}}
 ```
 
 포괄 구현은 트레이트 문서 페이지의 ‘구현자 (Implementors)’ 절에

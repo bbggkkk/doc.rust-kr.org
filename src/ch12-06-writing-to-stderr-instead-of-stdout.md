@@ -60,6 +60,12 @@ Problem parsing arguments: not enough arguments
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-24/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-24/src/main.ts}}
+```
+
 <span class="caption">예제 12-24: `eprintln!`를 사용하여 표준 출력 대신
 표준 에러로 에러 메시지 작성하기</span>
 

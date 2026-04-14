@@ -10,14 +10,11 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-06/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/listing-06-06.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/listing-06-06/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 6-6: 어떤 값이 `Some` 일 때에만 코드를 실행하도록
 하는 `match`</span>
@@ -35,14 +32,11 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-12-if-let/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-12-if-let.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-12-if-let/src/main.ts}}
 ```
-
-</details>
 
 `if let`은 `=`로 구분된 패턴과 표현식을 입력받습니다. 이는
 `match`와 동일한 방식으로 작동하는데, 여기서 표현식은 `match`에
@@ -73,20 +67,23 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-13-count-and-announce-match/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-13-count-and-announce-match/src/main.ts}}
+```
+
 혹은 아래와 같이 `if let`과 `else` 표현식을 이용할 수도 있겠지요:
 
 ```rust
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-14-count-and-announce-if-let-else/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-14-count-and-announce-if-let-else.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-14-count-and-announce-if-let-else/src/main.ts}}
 ```
-
-</details>
 
 만일 여러분의 프로그램이 `match`로 표현하기에는 너무 장황한 로직을 가지고 있는 경우라면,
 러스트 도구 상자에 `if let`도 있음을 기억하세요.

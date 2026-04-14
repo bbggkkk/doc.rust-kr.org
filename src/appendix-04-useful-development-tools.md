@@ -48,6 +48,12 @@ fn main() {
 }
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/appendix-04/snippet-01.ts}}
+```
+
 여기서는 `do_something` 함수를 100번 호출하지만, `for` 루프의 본문에서
 `i` 변수를 사용하지 않습니다. 러스트는 이것에 대해 경고합니다:
 
@@ -92,6 +98,12 @@ fn main() {
 }
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/appendix-04/snippet-02.ts}}
+```
+
 `for` 루프 변수가 이제 `_i`라는 이름이 되었고, 경고는 더 이상 나타나지 않습니다.
 
 또한 `cargo fix` 명령을 사용하여 코드에 대해 서로 다른 러스트 에디션 간
@@ -127,6 +139,12 @@ fn main() {
 }
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/appendix-04/snippet-03.ts}}
+```
+
 `cargo clippy`를 이 프로젝트에 실행하면 다음과 같은 오류가 발생합니다:
 
 ```text
@@ -154,6 +172,12 @@ fn main() {
     let r = 8.0;
     println!("the area of the circle is {}", x * r * r);
 }
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/appendix-04/snippet-04.ts}}
 ```
 
 Clippy에 대한 더 많은 정보를 보려면 [Clippy 문서][clippy]를 참조하세요.

@@ -45,17 +45,14 @@
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-01/src/main.rs}}
 ```
 
-<span class="caption">예제 16-1: 메인 스레드에서 무언가를 출력하는 동안
-다른 것을 출력하는 새로운 스레드 생성하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
-
-```javascript
-{{#include ../js-examples/ch16-fearless-concurrency/listing-16-01.js}}
+```ts
+{{#include ../listings-ts/ch16-fearless-concurrency/listing-16-01/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 16-1: 메인 스레드에서 무언가를 출력하는 동안
+다른 것을 출력하는 새로운 스레드 생성하기</span>
 
 러스트 프로그램의 메인 스레드가 완료되면 생성된 모든 스레드는 실행이
 종료되었든 혹은 그렇지 않든 멈추게 될 것이라는 점을 주의하세요. 이
@@ -110,17 +107,14 @@ hi number 5 from the spawned thread!
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-02/src/main.rs}}
 ```
 
-<span class="caption">예제 16-2: `thread::spawn`으로부터 `JoinHandle`을
-저장하여 스레드가 완전히 실행되는 것을 보장하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
-
-```javascript
-{{#include ../js-examples/ch16-fearless-concurrency/listing-16-02.js}}
+```ts
+{{#include ../listings-ts/ch16-fearless-concurrency/listing-16-02/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 16-2: `thread::spawn`으로부터 `JoinHandle`을
+저장하여 스레드가 완전히 실행되는 것을 보장하기</span>
 
 핸들에 대해 `join`을 호출하면 핸들에 대한 스레드가 종료될 때까지 현재
 실행 중인 스레드를 블록합니다. 스레드를 *블록 (Block)* 한다는 것은 그 스레드의
@@ -160,15 +154,11 @@ hi number 9 from the spawned thread!
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/no-listing-01-join-too-early/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
-
-```javascript
-{{#include ../js-examples/ch16-fearless-concurrency/no-listing-01-join-too-early.js}}
+```ts
+{{#include ../listings-ts/ch16-fearless-concurrency/no-listing-01-join-too-early/main.ts}}
 ```
-
-</details>
 
 메인 스레드는 생성된 스레드가 종료될 때까지 기다릴 것이고 그다음 자신의 `for`
 루프를 실행하게 되어, 아래처럼 출력값이 더 이상 교차하지 않을 것입니다:
@@ -218,18 +208,14 @@ hi number 4 from the main thread!
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-03/src/main.rs}}
 ```
 
-<span class="caption">예제 16-3: 메인 스레드에서 생성된 벡터에 대한 다른
-스레드에서의 사용 시도</span>
+<span class="caption">TypeScript로 보면</span>
 
-
-<details>
-<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
-
-```javascript
-{{#include ../js-examples/ch16-fearless-concurrency/listing-16-03.js}}
+```ts
+{{#include ../listings-ts/ch16-fearless-concurrency/listing-16-03/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 16-3: 메인 스레드에서 생성된 벡터에 대한 다른
+스레드에서의 사용 시도</span>
 
 클로저가 `v`를 사용하므로, `v`는 캡처되어 클로저 환경의 일부가 됩니다.
 `thread::spawn`이 이 클로저를 새로운 스레드에서 실행하므로, `v`는
@@ -254,18 +240,14 @@ hi number 4 from the main thread!
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-04/src/main.rs}}
 ```
 
-<span class="caption">예제 16-4: `v`를 버리는 메인 스레드로부터 `v`에
-대한 참조자를 캡처하려 하는 클로저를 갖는 스레드</span>
+<span class="caption">TypeScript로 보면</span>
 
-
-<details>
-<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
-
-```javascript
-{{#include ../js-examples/ch16-fearless-concurrency/listing-16-04.js}}
+```ts
+{{#include ../listings-ts/ch16-fearless-concurrency/listing-16-04/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 16-4: `v`를 버리는 메인 스레드로부터 `v`에
+대한 참조자를 캡처하려 하는 클로저를 갖는 스레드</span>
 
 만약 러스트가 이 코드의 실행을 허용했다면, 생성된 스레드가 전혀 실행되지
 않고 즉시 백그라운드에 들어갔을 가능성이 있습니다. 생성된 스레드는 내부에
@@ -299,17 +281,14 @@ help: to force the closure to take ownership of `v` (and any other referenced va
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-05/src/main.rs}}
 ```
 
-<span class="caption">예제 16-5: `move` 키워드를 이용하여 클로저가
-사용하는 값의 소유권을 갖도록 강제하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기 — JS는 싱글 스레드입니다</summary>
-
-```javascript
-{{#include ../js-examples/ch16-fearless-concurrency/listing-16-05.js}}
+```ts
+{{#include ../listings-ts/ch16-fearless-concurrency/listing-16-05/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 16-5: `move` 키워드를 이용하여 클로저가
+사용하는 값의 소유권을 갖도록 강제하기</span>
 
 `move` 클로저를 사용하여 메인 스레드에서 `drop`을 호출하는 예제 16-4의 코드를
 고치려고 시도해 보고 싶을 수도 있습니다. 하지만 이 수정은 동작하지 않는데,

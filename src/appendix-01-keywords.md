@@ -94,6 +94,12 @@ fn match(needle: &str, haystack: &str) -> bool {
 }
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/appendix-01/snippet-01.ts}}
+```
+
 다음과 같은 에러가 발생합니다:
 
 ```text
@@ -118,6 +124,12 @@ fn r#match(needle: &str, haystack: &str) -> bool {
 fn main() {
     assert!(r#match("foo", "foobar"));
 }
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/appendix-01/snippet-02.ts}}
 ```
 
 이 코드는 에러 없이 컴파일됩니다. 함수 정의에서 함수 이름 앞에 `r#` 접두사를 붙인

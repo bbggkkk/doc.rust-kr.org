@@ -48,6 +48,12 @@
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-01/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-01/src/main.ts}}
+```
+
 <span class="caption">예제 10-1: 숫자 리스트에서
 가장 큰 수 찾기</span>
 
@@ -77,6 +83,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-02/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-02/src/main.ts}}
 ```
 
 <span class="caption">예제 10-2: *두* 개의 숫자 리스트에서 가장 큰 숫자를
@@ -109,6 +121,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-03/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-03/src/main.ts}}
 ```
 
 <span class="caption">예제 10-3: 두 리스트에서 가장 큰 수를 찾는

@@ -40,6 +40,12 @@ $ cd hello
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-01/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-01/src/main.ts}}
+```
+
 <span class="caption">예제 20-1: 들어오는 스트림 수신 대기하기 및
 스트림을 받았을 때 메시지 출력하기</span>
 
@@ -140,6 +146,12 @@ Connection established!
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-02/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-02/src/main.ts}}
 ```
 
 <span class="caption">예제 20-2: `TcpStream`을 읽고 데이터
@@ -288,6 +300,12 @@ HTTP/1.1 200 OK\r\n\r\n
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-03/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-03/src/main.ts}}
+```
+
 <span class="caption">예제 20-3: 작은 HTTP 성공 응답을 스트림에
 작성하기</span>
 
@@ -329,6 +347,12 @@ HTML 파일</span>
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-05/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-05/src/main.ts}}
 ```
 
 <span class="caption">예제 20-5: *hello.html*의 내용을 응답의
@@ -380,6 +404,12 @@ HTML을 반환합니다. HTML 파일을 반환하기 전에 브라우저가 */* 
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-06/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-06/src/main.ts}}
+```
+
 <span class="caption">예제 20-6: */* 에 대한 요청과 다른 요청을
 다르게 처리하기</span>
 
@@ -412,6 +442,12 @@ HTML이 나올 것입니다. 만일 *127.0.0.1:7878/something-else*과 같은
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-07/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-07/src/main.ts}}
 ```
 
 <span class="caption">예제 20-7: */* 이외의 요청이 들어올 때
@@ -451,6 +487,12 @@ HTML이 나올 것입니다. 만일 *127.0.0.1:7878/something-else*과 같은
 
 ```rust,no_run
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-09/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-09/src/main.ts}}
 ```
 
 <span class="caption">예제 20-9: 두 경우의 차이에 대한 코드만 담은

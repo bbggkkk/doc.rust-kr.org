@@ -22,6 +22,12 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-21-and-22/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-21-and-22/src/lib.ts}}
+```
+
 <span class="caption">예제 7-21: 본문이 *src/front_of_house.rs*에 위치할
 `front_of_house` 모듈 선언하기</span>
 
@@ -34,6 +40,12 @@
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-21-and-22/src/front_of_house.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-21-and-22/src/front_of_house.ts}}
 ```
 
 <span class="caption">예제 7-22: *src/front_of_house.rs* 파일에
@@ -62,6 +74,12 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/no-listing-02-extracting-hosting/src/front_of_house.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/no-listing-02-extracting-hosting/src/front_of_house.ts}}
+```
+
 그다음 *src/front_of_house* 디렉터리를 만들고 그 안에 *hosting.rs*
 파일을 생성한 다음 `hosting` 모듈 내용을 작성합니다:
 
@@ -71,14 +89,11 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/no-listing-02-extracting-hosting/src/front_of_house/hosting.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch07-managing-growing-projects/separate-files.js}}
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/no-listing-02-extracting-hosting/src/front_of_house/hosting.ts}}
 ```
-
-</details>
 
 *hosting.rs*를 *src/front_of_house* 대신 *src* 디렉터리에 넣으면 컴파일러는
 *hosting.rs* 코드가 `front_of_house` 모듈의 하위에 선언되지 않고 크레이트 루트에

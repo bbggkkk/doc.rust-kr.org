@@ -31,18 +31,14 @@
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/listing-18-08/src/main.rs:here}}
 ```
 
-<span class="caption">예제 18-8: `let`에서 반박 가능한 패턴의
-사용 시도하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch18-patterns-and-matching/listing-18-08.js}}
+```ts
+{{#include ../listings-ts/ch18-patterns-and-matching/listing-18-08/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 18-8: `let`에서 반박 가능한 패턴의
+사용 시도하기</span>
 
 `some_option_value`이 `None` 값이면 `Some(x)` 패턴과 매칭되지
 않으므로 이 패턴은 반박 가능합니다. 그러나 `let` 구문은 `None`
@@ -67,14 +63,11 @@
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/listing-18-09/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch18-patterns-and-matching/listing-18-09.js}}
+```ts
+{{#include ../listings-ts/ch18-patterns-and-matching/listing-18-09/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 18-9: `let` 대신 반박 가능한 패턴과 함께
 `if let`과 코드 블록 사용하기</span>
@@ -88,18 +81,14 @@
 {{#rustdoc_include ../listings/ch18-patterns-and-matching/listing-18-10/src/main.rs:here}}
 ```
 
-<span class="caption">예제 18-10: `if let`에 반박 불가능한 패턴 사용
-시도하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch18-patterns-and-matching/listing-18-10.js}}
+```ts
+{{#include ../listings-ts/ch18-patterns-and-matching/listing-18-10/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 18-10: `if let`에 반박 불가능한 패턴 사용
+시도하기</span>
 
 러스트는 반박 불가능한 패턴에 `if let`을 사용하는 것은 이치에 맞지
 않는다고 불평합니다:

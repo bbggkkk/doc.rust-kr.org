@@ -15,6 +15,12 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-16-functions/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-16-functions/src/main.ts}}
+```
+
 러스트에서는 `fn` 뒤에 함수 이름과 괄호를 붙여서 함수를
 정의합니다. 중괄호는 함수 본문의 시작과 끝을 컴파일러에게
 알려줍니다.
@@ -56,14 +62,11 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-17-functions-with-parameters/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/no-listing-17-functions-with-parameters.js}}
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-17-functions-with-parameters/src/main.ts}}
 ```
-
-</details>
 
 이 프로그램을 실행하면 다음과 같은 결과를 볼 수 있습니다:
 
@@ -89,6 +92,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-18-functions-with-multiple-parameters/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-18-functions-with-multiple-parameters/src/main.ts}}
 ```
 
 이 예제에서는 두 개의 매개변수를 갖는 함수 `print_labeled_measurement`를
@@ -131,6 +140,12 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/listing-03-01/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/listing-03-01/src/main.ts}}
+```
+
 <span class="caption">예제 3-1: 구문 하나로 되어있는 `main` 함수</span>
 
 또한 함수 정의도 구문입니다; 위 예제는 그 자체로 구문에
@@ -143,6 +158,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-19-statements-vs-expressions/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-19-statements-vs-expressions/src/main.ts}}
 ```
 
 이 프로그램을 실행하면 다음과 같은 에러를 보게 됩니다:
@@ -171,14 +192,11 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-20-blocks-are-expressions/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/no-listing-20-blocks-are-expressions.js}}
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-20-blocks-are-expressions/src/main.ts}}
 ```
-
-</details>
 
 아래의 표현식:
 
@@ -187,6 +205,12 @@
     let x = 3;
     x + 1
 }
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch03-03/snippet-01.ts}}
 ```
 
 같은 경우에는 `4`를 평가하는 코드 블록입니다. 이 값이 `let` 구문의
@@ -213,14 +237,11 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-21-function-return-values/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/no-listing-21-function-return-values.js}}
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-21-function-return-values/src/main.ts}}
 ```
-
-</details>
 
 `five` 함수에는 함수 호출, 매크로, 심지어 `let` 구문도 없이
 그저 `5`란 숫자 하나가 있습니다. 러스트에서는 이게 완벽하게 유효한
@@ -241,6 +262,12 @@
 let x = 5;
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch03-03/snippet-02.ts}}
+```
+
 두 번째로, `five` 함수는 매개변수 없이 반환 타입만 정의되어 있지만,
 본문에는 `5`만이 세미콜론 없이 외롭게 있는데, 그 이유는 이 값이
 반환하려는 값에 대한 표현식이기 때문입니다.
@@ -253,6 +280,12 @@ let x = 5;
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-22-function-parameter-and-return/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-22-function-parameter-and-return/src/main.ts}}
+```
+
 이 코드를 실행하면 `The value of x is: 6`이 출력됩니다.
 만일 `x + 1` 끝에 세미콜론이 추가되어 표현식이 구문으로 변경되면
 에러가 발생합니다:
@@ -261,6 +294,12 @@ let x = 5;
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-23-statements-dont-return-values/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-23-statements-dont-return-values/src/main.ts}}
 ```
 
 이 코드를 컴파일하면 다음과 같은 에러가 나타납니다:

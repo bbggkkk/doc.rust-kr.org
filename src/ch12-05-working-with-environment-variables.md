@@ -22,6 +22,12 @@
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-20/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-20/src/lib.ts}}
+```
+
 <span class="caption">예제 12-20: 추가하려는 대소문자 구분 없는 함수를 위한
 새로운 실패 테스트 추가하기</span>
 
@@ -52,6 +58,12 @@
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-21/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-21/src/lib.ts}}
 ```
 
 <span class="caption">예제 12-21: 질의어와 라인을 비교하기 전에 소문자로
@@ -105,6 +117,12 @@
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-22/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-22/src/lib.ts}}
+```
+
 부울린 값을 갖는 `ignore_case` 필드를 추가했습니다. 다음으로, 예제 12-22에서
 보시는 것처럼 `run` 함수가 `ignore_case` 필드의 값을 검사하여
 `search` 함수 혹은 `search_case_insensitive` 함수 중 어느 쪽을 호출할
@@ -114,6 +132,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-22/src/lib.rs:there}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-22/src/lib.ts}}
 ```
 
 <span class="caption">예제 12-22: `config.ignore_case`의 값에
@@ -130,6 +154,12 @@
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-23/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-23/src/lib.ts}}
 ```
 
 <span class="caption">예제 12-23: `IGNORE_CASE`라는 이름의 환경 변수의

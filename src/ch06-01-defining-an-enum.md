@@ -28,14 +28,11 @@ v4, v6는 근본적으로 IP 주소이기 때문에, 이 둘은 코드에서
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main.rs:def}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-01-defining-enums-def.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main-def.ts}}
 ```
-
-</details>
 
 이제 `IpAddrKind`는 코드 어디에서나 쓸 수 있는 커스텀 데이터 타입이 되었습니다.
 
@@ -47,14 +44,11 @@ v4, v6는 근본적으로 IP 주소이기 때문에, 이 둘은 코드에서
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main.rs:instance}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-01-defining-enums-instance.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main-instance.ts}}
 ```
-
-</details>
 
 열거형을 정의할 때의 식별자로 네임스페이스가 만들어져서, 각 배리언트 앞에
 이중 콜론(`::`)을 붙여야 한다는 점을 주의하세요. 이 방식은 `IpAddrKind::V4`,
@@ -65,14 +59,11 @@ v4, v6는 근본적으로 IP 주소이기 때문에, 이 둘은 코드에서
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main.rs:fn}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-01-defining-enums-fn.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main-fn.ts}}
 ```
-
-</details>
 
 그리고, 배리언트 중 하나를 사용해서 함수를 호출할 수 있습니다:
 
@@ -80,14 +71,11 @@ v4, v6는 근본적으로 IP 주소이기 때문에, 이 둘은 코드에서
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main.rs:fn_call}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-01-defining-enums-fn-call.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-01-defining-enums/src/main-fn_call.ts}}
 ```
-
-</details>
 
 열거형을 사용하면 더 많은 이점이 있습니다. IP 주소 타입에 대해
 더 생각해 보면, 지금으로서는 실제 IP 주소 *데이터*를 저장할
@@ -99,14 +87,11 @@ v4, v6는 근본적으로 IP 주소이기 때문에, 이 둘은 코드에서
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-01/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/listing-06-01.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/listing-06-01/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 6-1: `struct`를 사용해서 IP 주소의 데이터와
 `IpAddrKind` 배리언트 저장하기</span>
@@ -129,14 +114,11 @@ v4, v6는 근본적으로 IP 주소이기 때문에, 이 둘은 코드에서
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-02-enum-with-data/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-02-enum-with-data.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-02-enum-with-data/src/main.ts}}
 ```
-
-</details>
 
 열거형의 각 배리언트에 직접 데이터를 붙임으로써, 구조체를 사용할 필요가
 없어졌습니다. 또한 여기서 열거형의 동작에 대한 다른 세부 사항을 살펴보기가
@@ -157,14 +139,11 @@ V4 IP 주소는 항상 0 ~ 255 사이의 숫자 4개로 된 구성 요소를 갖
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-03-variants-with-different-data/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-03-variants-with-different-data.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-03-variants-with-different-data/src/main.ts}}
 ```
-
-</details>
 
 두 가지 다른 종류의 IP 주소를 저장하기 위해
 코드에 열거형을 정의하는 몇 가지 방법을 살펴봤습니다.
@@ -190,14 +169,11 @@ enum IpAddr {
 }
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/stdlib-ipaddr.js}}
+```ts
+{{#include ../listings-ts/inline/ch06-01/snippet-01.ts}}
 ```
-
-</details>
 
 이 코드로 알 수 있듯, 열거형 배리언트에는 어떤 종류의 데이터라도 넣을 수 있습니다.
 문자열, 숫자 타입, 구조체 등은 물론, 다른 열거형마저도 포함할 수 있죠!
@@ -216,14 +192,11 @@ enum IpAddr {
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-02/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/listing-06-02.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/listing-06-02/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 6-2: `Message` 열거형은 각 배리언트가 다른 타입과
 다른 양의 값을 저장합니다.</span>
@@ -245,14 +218,11 @@ enum IpAddr {
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-04-structs-similar-to-message-enum/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-04-structs-similar-to-message-enum.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-04-structs-similar-to-message-enum/src/main.ts}}
 ```
-
-</details>
 
 각기 다른 타입을 갖는 여러 개의 구조체를 사용한다면, 이 메시지 중 어떤 한 가지를
 인수로 받는 함수를 정의하기 힘들 것입니다. 예제 6-2에 정의한 `Message`
@@ -266,14 +236,11 @@ enum IpAddr {
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-05-methods-on-enums/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-05-methods-on-enums.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-05-methods-on-enums/src/main.ts}}
 ```
-
-</details>
 
 메서드 본문에서는 `self`를 사용하여 호출한 열거형의 값을 가져올 것입니다.
 이 예제에서 생성한 변수 `m`은  `Message::Write(String::from("hello"))` 값을 갖게 되고,
@@ -334,14 +301,11 @@ enum Option<T> {
 }
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/option-enum.js}}
+```ts
+{{#include ../listings-ts/inline/ch06-01/snippet-02.ts}}
 ```
-
-</details>
 
 `Option<T>` 열거형은 너무나 유용하기 때문에, 러스트에서 기본으로 임포트하는
 목록인 프렐루드에도 포함되어 있습니다. 이것의 배리언트 또한 프렐루드에 포함되어
@@ -361,14 +325,11 @@ enum Option<T> {
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-06-option-examples/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-06-option-examples.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-06-option-examples/src/main.ts}}
 ```
-
-</details>
 
 `some_number`의 타입은 `Option<i32>`입니다. `some_char`의 타입은
 `Option<char>`이고 둘은 서로 다른 타입입니다. `Some` 배리언트 내에 어떤
@@ -390,6 +351,12 @@ enum Option<T> {
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-07-cant-use-option-directly/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-07-cant-use-option-directly/src/main.ts}}
 ```
 
 이 코드를 실행하면, 아래와 같은 에러 메시지가 출력됩니다:

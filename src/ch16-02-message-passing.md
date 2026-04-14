@@ -39,6 +39,12 @@
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-06/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch16-fearless-concurrency/listing-16-06/main.ts}}
+```
+
 <span class="caption">예제 16-6: 채널을 생성하여 각 절반을
 `tx`와 `rx`에 할당하기</span>
 
@@ -82,6 +88,12 @@
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-07/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch16-fearless-concurrency/listing-16-07/main.ts}}
+```
+
 <span class="caption">예제 16-7: `tx`를 생성된 스레드로 이동시키고
 ‘hi’를 보내기</span>
 
@@ -112,6 +124,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-08/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch16-fearless-concurrency/listing-16-08/main.ts}}
 ```
 
 <span class="caption">예제 16-8: 메인 스레드에서 ‘hi’ 값을
@@ -173,6 +191,12 @@ Got: hi
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-09/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch16-fearless-concurrency/listing-16-09/main.ts}}
+```
+
 <span class="caption">예제 16-9: `val`을 채널로 보낸 뒤
 이에 대한 사용 시도</span>
 
@@ -214,6 +238,12 @@ Got: hi
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-10/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch16-fearless-concurrency/listing-16-10/main.ts}}
 ```
 
 <span class="caption">예제 16-10: 여러 메시지를 보내고
@@ -266,6 +296,12 @@ Got: thread
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch16-fearless-concurrency/listing-16-11/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch16-fearless-concurrency/listing-16-11/main.ts}}
 ```
 
 <span class="caption">예제 16-11: 여러 개의 생산자로부터 여러 메시지

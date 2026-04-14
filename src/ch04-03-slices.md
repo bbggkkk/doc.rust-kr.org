@@ -16,6 +16,12 @@
 fn first_word(s: &String) -> ?
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-01.ts}}
+```
+
 `first_word` 함수는 소유권을 가질 필요가 없으니 `&String`을 매개변수로 갖게 했습니다.
 그런데, 뭘 반환해야 할까요? 문자열 *일부분*을 나타내는 법을 모르겠네요.
 일단 예제 4-7처럼 공백문자를 가리키는 단어 끝부분의 인덱스를
@@ -27,14 +33,11 @@ fn first_word(s: &String) -> ?
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch04-understanding-ownership/first-word-index.js}}
+```ts
+{{#include ../listings-ts/listing-04-07/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 4-7: `String` 매개변수의 바이트 인덱스 값을 반환하는
 `first_word` 함수</span>
@@ -47,10 +50,22 @@ fn first_word(s: &String) -> ?
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:as_bytes}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-02.ts}}
+```
+
 그다음, 바이트 배열에 사용할 반복자 (iterator) 를 `iter` 메서드로 생성했습니다:
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:iter}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-03.ts}}
 ```
 
 반복자 (iterator) 는 [13장][ch13]<!-- ignore -->에서 자세히 알아볼
@@ -75,6 +90,12 @@ fn first_word(s: &String) -> ?
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-07/src/main.rs:inside_for}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-04.ts}}
+```
+
 이제 문자열에서 첫 번째 단어 끝의 인덱스를 찾는 방법이
 생겼지만, 문제가 있습니다. `usize`를 반환하고 있는데, 이는
 `&String`의 컨텍스트에서만 의미 있는 숫자일 뿐입니다. 바꿔
@@ -86,6 +107,12 @@ fn first_word(s: &String) -> ?
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-08/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/listing-04-08/main.ts}}
 ```
 
 <span class="caption">예제 4-8: `first_word` 함수의 결과를 저장했으나,
@@ -105,6 +132,12 @@ fn first_word(s: &String) -> ?
 fn second_word(s: &String) -> (usize, usize) {
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-05.ts}}
+```
+
 두 번째 단어이니 시작, 끝 두 개의 인덱스가 필요할 것이고,
 이는 앞선 예제 4-8의 `word`처럼 어떠한 데이터의 특정 상태에만
 의존하는 값들이 늘어남을 의미합니다. 그러면 여러분은 3개의 관련 없는
@@ -120,14 +153,11 @@ fn second_word(s: &String) -> (usize, usize) {
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-17-slice/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch04-understanding-ownership/slice.js}}
+```ts
+{{#include ../listings-ts/no-listing-17-slice/main.ts}}
 ```
-
-</details>
 
 만드는 방식은 `String` 참조자와 유사하지만, `hello`는 추가적인 `[0..5]`으로
 명시된 `String`의 일부분을 가리키는 참조자입니다.
@@ -160,6 +190,12 @@ let slice = &s[0..2];
 let slice = &s[..2];
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-06.ts}}
+```
+
 마찬가지로, `String` 맨 마지막 바이트까지 포함하는 슬라이스는 뒤의 값을 생략할 수 있습니다.
 다음 코드에 등장하는 두 슬라이스 표현은 동일합니다:
 
@@ -172,6 +208,12 @@ let slice = &s[3..len];
 let slice = &s[3..];
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-07.ts}}
+```
+
 앞뒤 모두 생략할 경우, 전체 문자열이 슬라이스로 생성됩니다.
 다음 코드에 등장하는 두 슬라이스 표현은 동일합니다:
 
@@ -182,6 +224,12 @@ let len = s.len();
 
 let slice = &s[0..len];
 let slice = &s[..];
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-08.ts}}
 ```
 
 > Note: 본 내용은 문자열 슬라이스를 소개할 목적이기에 ASCII 문자만 사용하여 문제가
@@ -200,14 +248,11 @@ let slice = &s[..];
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-18-first-word-slice/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch04-understanding-ownership/first-word-slice.js}}
+```ts
+{{#include ../listings-ts/no-listing-18-first-word-slice/main.ts}}
 ```
-
-</details>
 
 예제 4-7과 같은 방법으로
 단어의 끝부분 인덱스를 알아내되,
@@ -224,6 +269,12 @@ let slice = &s[..];
 fn second_word(s: &String) -> &str {
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-09.ts}}
+```
+
 사용법이 훨씬 직관적이지 않나요? 또한 예제 4-8에서 말한
 첫 단어의 끝부분 인덱스를 찾은 이후 문자열이 비워지면 찾아낸
 인덱스가 쓸모없어지는 문제도 해결했습니다. 이제는 컴파일러가
@@ -238,6 +289,12 @@ fn second_word(s: &String) -> &str {
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-19-slice-error/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/no-listing-19-slice-error/main.ts}}
 ```
 
 컴파일러 에러는 다음과 같습니다:
@@ -267,6 +324,12 @@ fn second_word(s: &String) -> &str {
 let s = "Hello, world!";
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-10.ts}}
+```
+
 여기서 `s`는 바이너리의 특정 지점을 가리키는 슬라이스입니다. `&str` 타입이죠.
 `&str`은 불변 참조자이므로, 문자열 리터럴은 왜 변경할 수 없는지에 대한 의문도
 풀립니다.
@@ -280,12 +343,24 @@ let s = "Hello, world!";
 fn first_word(s: &String) -> &str {
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-11.ts}}
+```
+
 좀 더 경험이 많은 러스타시안은
 다음 예제 4-9처럼 `&String` 값과 `&str` 값
 모두 사용 가능한 함수를 작성할 것입니다.
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-09/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/listing-04-09/main.ts}}
 ```
 
 <span class="caption">예제 4-9: 매개변수 `s`를 문자열 슬라이스 타입으로 변경하여
@@ -306,14 +381,11 @@ fn first_word(s: &String) -> &str {
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-09/src/main.rs:usage}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch04-understanding-ownership/first-word-usage.js}}
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-12.ts}}
 ```
-
-</details>
 
 ### 그 외 슬라이스
 
@@ -322,6 +394,12 @@ fn first_word(s: &String) -> &str {
 
 ```rust
 let a = [1, 2, 3, 4, 5];
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-13.ts}}
 ```
 
 문자열 일부를 참조할 때처럼 다음과 같이 배열 일부를 참조하고
@@ -335,14 +413,11 @@ let slice = &a[1..3];
 assert_eq!(slice, &[2, 3]);
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch04-understanding-ownership/array-slice.js}}
+```ts
+{{#include ../listings-ts/inline/ch04-03/snippet-14.ts}}
 ```
-
-</details>
 
 이 슬라이스는 `&[i32]` 타입입니다. 동작 방식은 문자열 슬라이스와
 동일합니다. 슬라이스의 첫 번째 요소를 참조하는 참조자와 슬라이스의

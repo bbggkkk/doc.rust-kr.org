@@ -15,6 +15,12 @@
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-01/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-01/src/main.ts}}
+```
+
 <span class="caption">예제 8-1: `i32` 타입의 값을 가질 수 있는 비어있는 새 벡터
 생성</span>
 
@@ -48,6 +54,12 @@
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-02/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-02/src/main.ts}}
+```
+
 <span class="caption">예제 8-2: 값을 저장하고 있는 새로운 벡터
 생성하기</span>
 
@@ -71,6 +83,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-03/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-03/src/main.ts}}
 ```
 
 <span class="caption">예제 8-3: `push` 메서드를 사용하여 벡터에 값을
@@ -103,6 +121,12 @@
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-04/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-04/src/main.ts}}
+```
+
 <span class="caption">예제 8-4: 인덱스 문법 혹은 `get` 메서드를 사용하여
 벡터 내의 아이템에 접근하기</span>
 
@@ -129,6 +153,12 @@
 
 ```rust,should_panic,panics
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-05/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-05/src/main.ts}}
 ```
 
 <span class="caption">예제 8-5: 5개의 요소를 가진 벡터에 100 인덱스에 있는
@@ -162,6 +192,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-06/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-06/src/main.ts}}
 ```
 
 <span class="caption">예제 8-6: 아이템의 참조자를 가지고 있는 상태에서
@@ -198,6 +234,12 @@
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-07/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-07/src/main.ts}}
+```
+
 <span class="caption">예제 8-7: `for` 루프로 벡터의 요소들에 대해
 반복하여 각 요소를 출력하기</span>
 
@@ -216,6 +258,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-08/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-08/src/main.ts}}
 ```
 
 <span class="caption">예제 8-8: 벡터의 요소에 대한 가변 참조자로
@@ -262,6 +310,12 @@
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-09/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-09/src/main.ts}}
+```
+
 <span class="caption">예제 8-9: 열거형을 정의하여 벡터 내에 다른
 타입의 데이터를 담을 수 있도록 하기</span>
 
@@ -298,6 +352,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-10/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-10/src/main.ts}}
 ```
 
 <span class="caption">예제 8-10: 벡터와 요소들이 버려지는 위치를

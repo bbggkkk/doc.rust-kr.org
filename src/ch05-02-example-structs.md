@@ -15,17 +15,14 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-08/src/main.rs:all}}
 ```
 
-<span class="caption">예제 5-8: 각 변수에 지정된 너비와 높이로
-사각형 넓이 계산하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-08.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-08/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-8: 각 변수에 지정된 너비와 높이로
+사각형 넓이 계산하기</span>
 
 `cargo run`으로 실행해 보죠:
 
@@ -43,14 +40,11 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-08/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-08-fn.js}}
+```ts
+{{#include ../listings-ts/inline/ch05-02/snippet-01.ts}}
 ```
-
-</details>
 
 `area` 함수는 하나의 사각형의 면적을 계산하는 것을 가정하고
 있지만 두 개의 매개변수를 받고 있으며, 이 두 값이 서로 연관되어
@@ -69,17 +63,14 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-09/src/main.rs}}
 ```
 
-<span class="caption">예제 5-9: 사각형의 너비와 높이를
-튜플로 명시하는 코드</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-09.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-09/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-9: 사각형의 너비와 높이를
+튜플로 명시하는 코드</span>
 
 튜플을 사용함으로써 더 짜임새 있는 코드가 됐고, 인수도 단 하나만
 넘기면 된다는 점에서는 프로그램이 발전했다고 볼 수 있습니다.
@@ -105,16 +96,13 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-10/src/main.rs}}
 ```
 
-<span class="caption">예제 5-10: `Rectangle` 구조체 정의</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-10.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-10/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-10: `Rectangle` 구조체 정의</span>
 
 `Rectangle`이라는 구조체를 정의하고,
 중괄호 안에 `width`, `height` 필드를 `u32` 타입으로 정의했습니다.
@@ -150,17 +138,14 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-11/src/main.rs}}
 ```
 
-<span class="caption">예제 5-11: `Rectangle` 인스턴스
-출력을 시도해 본 모습</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-11.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-11/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-11: `Rectangle` 인스턴스
+출력을 시도해 본 모습</span>
 
 이 코드를 컴파일하면 다음과 같은 메시지가 나타납니다:
 
@@ -214,17 +199,14 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-12/src/main.rs}}
 ```
 
-<span class="caption">예제 5-12: `Rectangle` 인스턴스를 디버그 출력 형식으로
-사용하기 위해, 속성을 추가하여 `Debug` 트레이트 파생 (derive) 하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-12.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-12/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-12: `Rectangle` 인스턴스를 디버그 출력 형식으로
+사용하기 위해, 속성을 추가하여 `Debug` 트레이트 파생 (derive) 하기</span>
 
 이제 프로그램을 실행해 보면 더 이상 에러가 나타나지 않고,
 다음과 같은 출력이 나타날 겁니다:
@@ -262,14 +244,11 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/no-listing-05-dbg-macro/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/no-listing-05-dbg-macro.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/no-listing-05-dbg-macro/src/main.ts}}
 ```
-
-</details>
 
 표현식 `30 * scale`을 `dbg!`으로 감싸 넣었는데, 이는 `dbg!`가 표현식 값의 소유권을
 반환하면서 `dbg!` 호출을 하지 않았을 때와 같은 값이 `width` 필드에 입력되기

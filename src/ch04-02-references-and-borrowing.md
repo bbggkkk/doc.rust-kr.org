@@ -18,14 +18,11 @@
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-07-reference/src/main.rs:all}}
 ```
 
-<details>
-<summary>JavaScript로 보기 — 참조와 빌림은 JS에 없는 개념입니다</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch04-understanding-ownership/reference.js}}
+```ts
+{{#include ../listings-ts/no-listing-07-reference/main.ts}}
 ```
-
-</details>
 
 먼저, 변수 선언부와 함수 반환 값에 위치하던 튜플 코드가 전부 사라진
 것을 볼 수 있습니다. 또한 `calculate_length` 함수에 `s1` 대신 `&s1`을
@@ -51,6 +48,12 @@
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-07-reference/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch04-02/snippet-01.ts}}
+```
+
 `s1`에 `&`를 붙인 `&s1` 구문은 `s1` 값을 참조하지만 해당 값을 소유하지
 않는 참조자를 생성합니다. 값을 소유하지 않으므로 이 참조자가 가리킨 값은
 참조자가 사용되지 않을 때까지 버려지지 않습니다.
@@ -60,6 +63,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-08-reference-with-annotations/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/no-listing-08-reference-with-annotations/main.ts}}
 ```
 
 변수 `s`가 유효한 스코프는 여타 함수의 매개변수에 적용되는
@@ -80,6 +89,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch04-understanding-ownership/listing-04-06/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/listing-04-06/main.ts}}
 ```
 
 <span class="caption">예제 4-6: 빌린 값을 수정해 보는 코드</span>
@@ -104,14 +119,11 @@
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-09-fixes-listing-04-06/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기 — 참조와 빌림은 JS에 없는 개념입니다</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch04-understanding-ownership/mutable-reference.js}}
+```ts
+{{#include ../listings-ts/no-listing-09-fixes-listing-04-06/main.ts}}
 ```
-
-</details>
 
 우선 `s`를 `mut` 로 변경합니다. 그런 다음 `change` 함수를 호출하는 곳에서
 `&mut s`로 가변 참조자를 생성하고, 이 함수에서 가변 참조자를 전달받도록
@@ -126,6 +138,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-10-multiple-mut-not-allowed/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/no-listing-10-multiple-mut-not-allowed/main.ts}}
 ```
 
 에러는 다음과 같습니다:
@@ -162,11 +180,23 @@
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-11-muts-in-separate-scopes/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/no-listing-11-muts-in-separate-scopes/main.ts}}
+```
+
 가변 참조자와 불변 참조자를 혼용할 때도 유사한 규칙이 적용됩니다.
 다음 코드는 컴파일 에러가 발생합니다:
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-12-immutable-and-mutable-not-allowed/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/no-listing-12-immutable-and-mutable-not-allowed/main.ts}}
 ```
 
 에러는 다음과 같습니다:
@@ -192,14 +222,11 @@
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-13-reference-scope-ends/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기 — 참조와 빌림은 JS에 없는 개념입니다</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch04-understanding-ownership/scope-reference.js}}
+```ts
+{{#include ../listings-ts/no-listing-13-reference-scope-ends/main.ts}}
 ```
-
-</details>
 
 불변 참조자 `r1`, `r2`의 스코프는 자신들이 마지막으로 사용된
 `println!` 이후로 종료되고, 해당 `println!`은  가변 참조자 `r3`가
@@ -231,6 +258,12 @@
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-14-dangling-reference/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/no-listing-14-dangling-reference/main.ts}}
+```
+
 에러는 다음과 같습니다:
 
 ```console
@@ -255,6 +288,12 @@ this function's return type contains a borrowed value, but there is no value for
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-15-dangling-reference-annotated/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/no-listing-15-dangling-reference-annotated/main.ts}}
+```
+
 `s`는  `dangle` 함수 내에서 생성됐기 때문에,
 함수가 끝날 때 할당 해제됩니다.
 하지만 코드에서는 `&s`를 반환하려 했고, 이는 유효하지 않은 `String`을 가리키는
@@ -266,14 +305,11 @@ this function's return type contains a borrowed value, but there is no value for
 {{#rustdoc_include ../listings/ch04-understanding-ownership/no-listing-16-no-dangle/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기 — 참조와 빌림은 JS에 없는 개념입니다</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch04-understanding-ownership/no-dangle.js}}
+```ts
+{{#include ../listings-ts/no-listing-16-no-dangle/main.ts}}
 ```
-
-</details>
 
 이 코드는 정상적으로 작동합니다.
 소유권은 이동되며, 할당 해제되지도 않죠.

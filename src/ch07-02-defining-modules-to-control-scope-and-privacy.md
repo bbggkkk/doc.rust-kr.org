@@ -72,14 +72,11 @@ backyard
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/quick-reference-example/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch07-managing-growing-projects/backyard-modules.js}}
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/quick-reference-example/src/main.ts}}
 ```
-
-</details>
 
 `pub mod garden;` 라인이 컴파일러에게 *src/garden.rs*에 있는 코드를 포함할 것을
 알려주고, *src/garden.rs*는 아래와 같습니다:
@@ -90,11 +87,23 @@ backyard
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/quick-reference-example/src/garden.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/quick-reference-example/src/garden.ts}}
+```
+
 여기 `pub mod vegetables;`은 *src/garden/vegetables.rs*의 코드 또한 포함되어야
 함을 의미합니다. 해당 파일의 코드는 아래와 같습니다:
 
 ```rust,noplayground,ignore
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/quick-reference-example/src/garden/vegetables.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/quick-reference-example/src/garden/vegetables.ts}}
 ```
 
 이제 위 규칙들의 세부 사항으로 넘어가서 실제로 해보면서 확인합시다!
@@ -130,14 +139,11 @@ backyard
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-01/src/lib.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch07-managing-growing-projects/restaurant-modules.js}}
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-01/src/lib.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 7-1: 함수를 포함하는 별도의 모듈을 포함한
 `front_of_house` 모듈</span>

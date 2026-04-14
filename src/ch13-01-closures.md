@@ -41,16 +41,13 @@
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-01/src/main.rs}}
 ```
 
-<span class="caption">예제 13-1: 셔츠 회사 증정 상황</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch13-functional-features/listing-13-01.js}}
+```ts
+{{#include ../listings-ts/ch13-functional-features/listing-13-01/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 13-1: 셔츠 회사 증정 상황</span>
 
 `main`에 정의된 `store`에는 이 한정판 프로모션 배포를 위해 남은
 두 개의 파란색 셔츠와 하나의 빨간색 셔츠가 있습니다. 여기서 빨간색 셔츠로
@@ -120,17 +117,14 @@
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-02/src/main.rs:here}}
 ```
 
-<span class="caption">예제 13-2: 클로저에 매개변수와 반환 값의
-타입을 추가적으로 명시하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch13-functional-features/listing-13-02.js}}
+```ts
+{{#include ../listings-ts/ch13-functional-features/listing-13-02/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 13-2: 클로저에 매개변수와 반환 값의
+타입을 추가적으로 명시하기</span>
 
 타입 명시가 추가되면 클로저 문법은 함수 문법과 더욱 유사해
 보입니다. 아래는 매개변수의 값에 1을 더하는 함수와, 그와 동일한
@@ -146,14 +140,11 @@ let add_one_v3 = |x|             { x + 1 };
 let add_one_v4 = |x|               x + 1  ;
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch13-functional-features/closure-syntax-comparison.js}}
+```ts
+{{#include ../listings-ts/inline/ch13-closures/snippet-02.ts}}
 ```
-
-</details>
 
 첫 번째 줄은 함수 정의고, 두 번째 줄은 모든 것이 명시된
 클로저 정의입니다. 세 번째 줄에서는 타입 명시를 제거했습니다.
@@ -180,17 +171,14 @@ let add_one_v4 = |x|               x + 1  ;
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-03/src/main.rs:here}}
 ```
 
-<span class="caption">예제 13-3: 두 개의 다른 타입에 대해 타입이
-추론되는 클로저 호출 시도하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch13-functional-features/listing-13-03.js}}
+```ts
+{{#include ../listings-ts/ch13-functional-features/listing-13-03/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 13-3: 두 개의 다른 타입에 대해 타입이
+추론되는 클로저 호출 시도하기</span>
 
 컴파일러는 아래와 같은 에러를 냅니다:
 
@@ -221,17 +209,14 @@ let add_one_v4 = |x|               x + 1  ;
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-04/src/main.rs}}
 ```
 
-<span class="caption">예제 13-4: 불변 참조자를 캡처하는 클로저의
-정의와 호출</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch13-functional-features/listing-13-04.js}}
+```ts
+{{#include ../listings-ts/ch13-functional-features/listing-13-04/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 13-4: 불변 참조자를 캡처하는 클로저의
+정의와 호출</span>
 
 또한 이 예제는 어떤 변수가 클로저의 정의에 바인딩될 수 있고, 이 클로저는
 나중에 마치 변수 이름이 함수 이름인 것처럼 변수 이름과 괄호를 사용하여
@@ -255,17 +240,14 @@ let add_one_v4 = |x|               x + 1  ;
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-05/src/main.rs}}
 ```
 
-<span class="caption">예제 13-5: 가변 참조자를 캡처하는 클로저의
-정의와 호출</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch13-functional-features/listing-13-05.js}}
+```ts
+{{#include ../listings-ts/ch13-functional-features/listing-13-05/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 13-5: 가변 참조자를 캡처하는 클로저의
+정의와 호출</span>
 
 이 코드는 컴파일되고, 실행되고, 다음을 출력합니다:
 
@@ -298,17 +280,14 @@ let add_one_v4 = |x|               x + 1  ;
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-06/src/main.rs}}
 ```
 
-<span class="caption">예제 13-6: 스레드에 대한 클로저가 `list`의
-소유권을 갖도록 `move` 사용하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch13-functional-features/listing-13-06.js}}
+```ts
+{{#include ../listings-ts/ch13-functional-features/listing-13-06/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 13-6: 스레드에 대한 클로저가 `list`의
+소유권을 갖도록 `move` 사용하기</span>
 
 여기서는 새 스레드를 생성하여 여기에 인수로 실행될 클로저를 제공합니다.
 클로저의 본문에서는 리스트를 출력합니다. 예제 13-4에서는 클로저가
@@ -377,14 +356,11 @@ impl<T> Option<T> {
 }
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch13-functional-features/unwrap-or-else.js}}
+```ts
+{{#include ../listings-ts/inline/ch13-closures/snippet-01.ts}}
 ```
-
-</details>
 
 `T`가 `Option`의 `Some` 배리언트 내 값의 타입을 나타내는 제네릭 타입임을
 상기합시다. 이 타입 `T`는 또한 `unwrap_or_else` 함수의 반환 타입이기도
@@ -426,17 +402,14 @@ impl<T> Option<T> {
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-07/src/main.rs}}
 ```
 
-<span class="caption">예제 13-7: `sort_by_key`를 사용하여 너비로
-사각형 정렬하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch13-functional-features/listing-13-07.js}}
+```ts
+{{#include ../listings-ts/ch13-functional-features/listing-13-07/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 13-7: `sort_by_key`를 사용하여 너비로
+사각형 정렬하기</span>
 
 이 코드는 다음을 출력합니다:
 
@@ -459,17 +432,14 @@ r.width`는 자신의 환경으로부터 어떤 것도 캡처나 변형, 혹은 
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-08/src/main.rs}}
 ```
 
-<span class="caption">예제 13-8: `FnOnce` 클로저를 `sort_by_key`에 사용
-시도하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch13-functional-features/listing-13-08.js}}
+```ts
+{{#include ../listings-ts/ch13-functional-features/listing-13-08/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 13-8: `FnOnce` 클로저를 `sort_by_key`에 사용
+시도하기</span>
 
 이는 `list`를 정렬할 때 `sort_by_key`가 클로저를 호출하는 횟수를 세려고
 시도하는 부자연스럽고 대단히 난해한 (동작하지 않는) 방식입니다.
@@ -502,17 +472,14 @@ r.width`는 자신의 환경으로부터 어떤 것도 캡처나 변형, 혹은 
 {{#rustdoc_include ../listings/ch13-functional-features/listing-13-09/src/main.rs}}
 ```
 
-<span class="caption">예제 13-9: `FnMut` 클로저를 `sort_by_key`에 사용하는
-것은 허용됩니다</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch13-functional-features/listing-13-09.js}}
+```ts
+{{#include ../listings-ts/ch13-functional-features/listing-13-09/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 13-9: `FnMut` 클로저를 `sort_by_key`에 사용하는
+것은 허용됩니다</span>
 
 `Fn` 트레이트는 클로저를 사용하는 함수 혹은 타입을 정의하고 사용할 때
 중요합니다. 다음 절에서는 반복자를 다루려고 합니다. 많은 반복자들이

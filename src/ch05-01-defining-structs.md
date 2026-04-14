@@ -19,16 +19,13 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-01/src/main.rs:here}}
 ```
 
-<span class="caption">예제 5-1: 사용자 계정 정보를 저장하는 `User` 구조체 정의</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-01.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-01/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-1: 사용자 계정 정보를 저장하는 `User` 구조체 정의</span>
 
 정의한 구조체를 사용하려면 해당 구조체의 각 필드에 대한 구체적인 값을
 정하여 구조체의 *인스턴스 (instance)* 를 생성해야 합니다.
@@ -46,17 +43,14 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-02/src/main.rs:here}}
 ```
 
-<span class="caption">예제 5-2: `User` 구조체의
-인스턴스 생성</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-02.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-02/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-2: `User` 구조체의
+인스턴스 생성</span>
 
 구조체 내 특정 값은 점(.) 표기법으로 얻어올 수 있습니다. 예를 들어
 사용자의 이메일 주소를 가져오려면 `user1.email`처럼 사용할 수 있습니다.
@@ -70,17 +64,14 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-03/src/main.rs:here}}
 ```
 
-<span class="caption">예제 5-3: `User` 인스턴스의
-`email` 필드 값 변경</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-03.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-03/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-3: `User` 인스턴스의
+`email` 필드 값 변경</span>
 
 가변성은 해당 인스턴스 전체가 지니게 됩니다.
 일부 필드만 가변으로 만들 수는 없으니, 기억해 두시기 바랍니다.
@@ -97,17 +88,14 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-04/src/main.rs:here}}
 ```
 
-<span class="caption">예제 5-4: 사용자의 이메일과 이름을 전달받고
-`User` 인스턴스를 반환하는 `build_user` 함수</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-04.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-04/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-4: 사용자의 이메일과 이름을 전달받고
+`User` 인스턴스를 반환하는 `build_user` 함수</span>
 
 특별히 나쁜 부분은 없지만, 매개변수명과 구조체 필드명이
 `email`, `username`으로 동일한데 굳이 반복해서 작성하는 건 귀찮은 감이 있군요.
@@ -130,18 +118,15 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-05/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-05/src/main.ts}}
+```
+
 <span class="caption">예제 5-5: 변수명과 필드명이 같던
 `username`, `email`에 필드 초기화 축약법을 적용한
 `build_user` 함수</span>
-
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-05.js}}
-```
-
-</details>
 
 이번에는 `build_user` 함수에서
 `User` 구조체의 인스턴스를 생성할 때
@@ -165,17 +150,14 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-06/src/main.rs:here}}
 ```
 
-<span class="caption">예제 5-6: `user1`의 값 중 하나를 다르게 한
-새로운 `User` 인스턴스 생성하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-06.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-06/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-6: `user1`의 값 중 하나를 다르게 한
+새로운 `User` 인스턴스 생성하기</span>
 
 구조체 업데이트 문법을 사용하면 다음 예제 5-7처럼 더 적은 코드로
 같은 효과를 낼 수 있습니다. `..` 문법은 따로 명시된 필드를 제외한
@@ -187,18 +169,15 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-07/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-07/src/main.ts}}
+```
+
 <span class="caption">예제 5-7: 새로운 `email` 값으로 `User` 구조체의
 인스턴스를 생성하되, 나머지 필드는 구조체 업데이트 문법으로 `user1`의 필드
 값을 사용하기</span>
-
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-07.js}}
-```
-
-</details>
 
 예제 5-7의 코드 또한 `email` 값이 다른 `user2` 인스턴스를
 생성하지만 `username`, `active`, `sign_in_count`는 `user1`의
@@ -238,14 +217,11 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/no-listing-01-tuple-structs/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/no-listing-01-tuple-structs.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/no-listing-01-tuple-structs/src/main.ts}}
 ```
-
-</details>
 
 `black`, `origin`이 서로 다른 튜플 구조체의 인스턴스이므로,
 타입이 서로 달라진다는 점이 중요합니다.
@@ -272,14 +248,11 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/no-listing-04-unit-like-structs/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/no-listing-04-unit-like-structs.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/no-listing-04-unit-like-structs/src/main.ts}}
 ```
-
-</details>
 
 `AlwaysEqual`을 정의하기 위해서 `struct` 키워드 뒤에 이름을 쓰고
 바로 세미콜론을 붙였습니다. 중괄호나 괄호도 필요 없습니다! 그런 다음
@@ -326,14 +299,11 @@
 > }
 > ```
 >
-> <details>
-> <summary>JavaScript로 보기</summary>
+> <span class="caption">TypeScript로 보면</span>
 >
-> ```javascript
-> {{#include ../js-examples/ch05-using-structs-to-structure-related-data/no-listing-02-reference-in-struct.js}}
+> ```ts
+> {{#include ../listings-ts/inline/ch05-01/snippet-01.ts}}
 > ```
->
-> </details>
 >
 > 라이프타임이 명시돼야 한다며 컴파일러가 에러를 일으킬 겁니다.
 >

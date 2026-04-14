@@ -71,15 +71,6 @@ edition = "2021"
 [dependencies]
 ```
 
-<details>
-<summary>JavaScript로 보기 — Cargo.toml은 npm의 package.json에 해당합니다</summary>
-
-```json
-{{#include ../js-examples/ch01-getting-started/cargo-toml.json}}
-```
-
-</details>
-
 <span class="caption">예제 1-2: `cargo new`로 생성한
 *Cargo.toml* 파일의 내용</span>
 
@@ -109,14 +100,11 @@ fn main() {
 }
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch01-getting-started/hello-cargo.js}}
+```ts
+{{#include ../listings-ts/inline/ch01-03/snippet-01.ts}}
 ```
-
-</details>
 
 카고가 ‘Hello, world!’ 프로그램을 만들어 놨네요.
 예제 1-1에서 만든 프로젝트와 다른 점은

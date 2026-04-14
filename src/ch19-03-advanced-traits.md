@@ -29,6 +29,12 @@
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-12/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-12/lib.ts}}
+```
+
 <span class="caption">예제 19-12: 연관 타입 `Item`이 있는
 `Iterator` 트레이트의 정의</span>
 
@@ -58,11 +64,23 @@
 {{#rustdoc_include ../listings/ch19-advanced-features/no-listing-22-iterator-on-counter/src/lib.rs:ch19}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/no-listing-22-iterator-on-counter/lib.ts}}
+```
+
 이 문법은 제네릭과 비슷해 보입니다. 그렇다면 예제 19-13에 나온 것처럼
 제네릭으로 `Iterator` 트레이트를 정의하면 되지 않을까요?
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-13/src/lib.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-13/lib.ts}}
 ```
 
 <span class="caption">예제 19-13: 제네릭을 사용한 `Iterator` 트레이트의
@@ -113,6 +131,12 @@ API 문서에 연관 타입을 문서화하는 것이 좋습니다.
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-14/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-14/main.ts}}
+```
+
 <span class="caption">예제 19-14: `Add` 트레이트를 구현하여
 `Point` 인스턴스에 대한 `+` 연산자 오버로딩하기</span>
 
@@ -141,6 +165,12 @@ trait Add<Rhs=Self> {
 }
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch19-03/snippet-01.ts}}
+```
+
 이 코드는 일반적으로 익숙해 보일 것입니다: 하나의 메서드와 연관된 타입이 있는
 트레이트라는 점이 말이지요. 새로운 부분은 `Rhs=Self`입니다: 이 문법을
 *기본 타입 매개변수 (default type parameter)* 라고 합니다. `Rhs` 기본 타입
@@ -166,6 +196,12 @@ trait Add<Rhs=Self> {
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-15/src/lib.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-15/lib.ts}}
 ```
 
 <span class="caption">예제 19-15: `Millimeters`와 `Meters`를 더하기
@@ -219,6 +255,12 @@ trait Add<Rhs=Self> {
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-16/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-16/main.ts}}
+```
+
 <span class="caption">예제 19-16: 두 트레이트에는 `fly` 메서드가
 있도록 정의되어 `Human` 타입에 대해 구현되었고, `Human`에 직접 `fly`
 메서드가 구현되어 있습니다</span>
@@ -241,6 +283,12 @@ trait Add<Rhs=Self> {
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-17/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-17/main.ts}}
+```
+
 <span class="caption">예제 19-17: `Human` 인스턴스에 `fly`
 호출하기</span>
 
@@ -255,6 +303,12 @@ trait Add<Rhs=Self> {
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-18/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-18/main.ts}}
 ```
 
 <span class="caption">예제 19-18: 호출하고자 하는 트레이트의 `fly`
@@ -291,6 +345,12 @@ trait Add<Rhs=Self> {
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-19/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-19/main.ts}}
+```
+
 <span class="caption">예제 19-19: 연관 함수가 있는 트레이트와
 이 트레이트를 구현하면서 동시에 같은 이름의 연관 함수가 있는
 타입</span>
@@ -320,6 +380,12 @@ called a puppy`라고 출력하기를 원합니다. 예제 19-18에서 사용했
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-20/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-20/main.ts}}
+```
+
 <span class="caption">예제 19-20: `Animal` 트레이트의 `baby_name`을
 호출하는 시도이지만, 러스트는 어떤 구현체를 사용해야 하는지 알지
 못합니다</span>
@@ -343,6 +409,12 @@ called a puppy`라고 출력하기를 원합니다. 예제 19-18에서 사용했
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-21/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-21/main.ts}}
+```
+
 <span class="caption">예제 19-21: 완전 정규화 문법을 사용하여
 `Dog`에 구현된 `Animal` 트레이트의 `baby_name`을 호출하고자 함을
 지정하기</span>
@@ -360,6 +432,12 @@ called a puppy`라고 출력하기를 원합니다. 예제 19-18에서 사용했
 
 ```rust,ignore
 <Type as Trait>::function(receiver_if_method, next_arg, ...);
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch19-03/snippet-02.ts}}
 ```
 
 메서드가 아닌 연관 함수의 경우 `receiver`가 없습니다: 다른
@@ -407,6 +485,12 @@ called a puppy`라고 출력하기를 원합니다. 예제 19-18에서 사용했
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-22/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-22/main.ts}}
+```
+
 <span class="caption">예제 19-22: `Display`의 기능을 요구하는
 `OutlinePrint` 트레이트 구현하기</span>
 
@@ -435,6 +519,12 @@ called a puppy`라고 출력하기를 원합니다. 예제 19-18에서 사용했
 {{#rustdoc_include ../listings/ch19-advanced-features/no-listing-02-impl-outlineprint-for-point/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/no-listing-02-impl-outlineprint-for-point/main.ts}}
+```
+
 `Display`가 필요하지만 구현되지 않았다는 에러가 발생합니다:
 
 ```console
@@ -448,6 +538,12 @@ called a puppy`라고 출력하기를 원합니다. 예제 19-18에서 사용했
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/no-listing-03-impl-display-for-point/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/no-listing-03-impl-display-for-point/main.ts}}
 ```
 
 그러면 `Point`에 `OutlinePrint` 트레이트를 구현하면 컴파일이 성공적으로
@@ -480,6 +576,12 @@ called a puppy`라고 출력하기를 원합니다. 예제 19-18에서 사용했
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-23/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-23/main.ts}}
 ```
 
 <span class="caption">예제 19-23: `Display` 구현을 위해서 `Vec<String>`을

@@ -28,17 +28,14 @@
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-20/src/main.rs:here}}
 ```
 
-<span class="caption">예제 8-20: 새로운 해시맵을 생성하여 몇 개의 키와 값을
-집어넣기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch08-common-collections/listing-08-20.js}}
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-20/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 8-20: 새로운 해시맵을 생성하여 몇 개의 키와 값을
+집어넣기</span>
 
 먼저 표준 라이브러리의 컬렉션 부분으로부터 `HashMap`을 `use`로 가져와야 할
 필요가 있음을 주목하세요. 이 장에서 보고 있는 세 가지 일반적인 컬렉션 중
@@ -60,17 +57,14 @@
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-21/src/main.rs:here}}
 ```
 
-<span class="caption">예제 8-23: 해시맵 내에 저장된 블루 팀의 점수
-접근하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch08-common-collections/listing-08-21.js}}
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-21/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 8-23: 해시맵 내에 저장된 블루 팀의 점수
+접근하기</span>
 
 여기서 `score`는 블루 팀과 연관된 값을 갖게 될 것이고, 결괏값은
 `10`일 것입니다. `get` 메서드는 `Option<&V>`를 반환합니다; 만일 이
@@ -86,14 +80,11 @@
 {{#rustdoc_include ../listings/ch08-common-collections/no-listing-03-iterate-over-hashmap/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch08-common-collections/no-listing-03-iterate-over-hashmap.js}}
+```ts
+{{#include ../listings-ts/ch08-common-collections/no-listing-03-iterate-over-hashmap/src/main.ts}}
 ```
-
-</details>
 
 이 코드는 각각의 쌍을 임의의 순서로 출력할 것입니다:
 
@@ -110,6 +101,12 @@ Blue: 10
 
 ```rust
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-22/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-22/src/main.ts}}
 ```
 
 <span class="caption">예제 8-22: 키와 값이 삽입되는 순간 이들이 해시맵의
@@ -151,17 +148,14 @@ Blue: 10
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-23/src/main.rs:here}}
 ```
 
-<span class="caption">예제 8-23: 특정한 키로 저장된 값을
-덮어쓰기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch08-common-collections/listing-08-23.js}}
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-23/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 8-23: 특정한 키로 저장된 값을
+덮어쓰기</span>
 
 이 코드는 `{"Blue": 25}`를 출력할 것입니다. 원래의 값 `10`은
 덮어써졌습니다.
@@ -187,17 +181,14 @@ Blue: 10
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-24/src/main.rs:here}}
 ```
 
-<span class="caption">예제 8-24: `entry` 메서드를 이용하여 어떤 키가 값을
-이미 갖고 있지 않을 경우에만 추가하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch08-common-collections/listing-08-24.js}}
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-24/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 8-24: `entry` 메서드를 이용하여 어떤 키가 값을
+이미 갖고 있지 않을 경우에만 추가하기</span>
 
 `Entry`의 `or_insert` 메서드는 해당 키가 존재할 경우 `Entry` 키에
 대한 연관된 값을 반환하도록 정의되어 있고, 그렇지 않은 경우 매개변수로 제공된
@@ -224,17 +215,14 @@ Blue: 10
 {{#rustdoc_include ../listings/ch08-common-collections/listing-08-25/src/main.rs:here}}
 ```
 
-<span class="caption">예제 8-25: 단어와 횟수를 저장하는 해시맵을 사용하여
-단어의 등장 횟수 세기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch08-common-collections/listing-08-25.js}}
+```ts
+{{#include ../listings-ts/ch08-common-collections/listing-08-25/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 8-25: 단어와 횟수를 저장하는 해시맵을 사용하여
+단어의 등장 횟수 세기</span>
 
 이 코드는 `{"world": 2, "hello": 1, "wonderful": 1}`를 출력할 것입니다.
 이러한 키/값 쌍의 출력 순서가 다를 수도 있습니다:

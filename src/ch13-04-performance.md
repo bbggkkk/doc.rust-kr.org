@@ -58,14 +58,11 @@ for i in 12..buffer.len() {
 }
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch13-functional-features/zero-cost-abstraction.js}}
+```ts
+{{#include ../listings-ts/inline/ch13-performance/snippet-01.ts}}
 ```
-
-</details>
 
 `prediction`의 값을 계산하기 위해서, 이 코드는 `coefficients`에 있는
 12개의 값을 순회하면서 `zip` 메서드를 사용하여 각 계수와 `buffer`의 이전

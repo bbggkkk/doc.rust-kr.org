@@ -21,17 +21,14 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-13/src/main.rs}}
 ```
 
-<span class="caption">예제 5-13: `Rectangle` 구조체에
-`area` 메서드 정의하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-13.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-13/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-13: `Rectangle` 구조체에
+`area` 메서드 정의하기</span>
 
 `Rectangle`의 컨텍스트에 함수를 정의하기 위해서, `Rectangle`에 대한 `impl`
 (implementation, 구현) 블록을 만드는 것으로 시작합니다. 이 `impl` 블록 내의
@@ -80,14 +77,11 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/no-listing-06-method-field-interaction/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/no-listing-06-method-field-interaction.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/no-listing-06-method-field-interaction/src/main.ts}}
 ```
-
-</details>
 
 여기서는 인스턴스의 `width` 필드가 `0`보다 크면 `true`를 반환하고
 `0`이면 `false`를 반환하는 메서드의 이름으로 `width`를 선택했습니다:
@@ -143,14 +137,11 @@
 > (&p1).distance(&p2);
 > ```
 >
-> <details>
-> <summary>JavaScript로 보기</summary>
+> <span class="caption">TypeScript로 보면</span>
 >
-> ```javascript
-> {{#include ../js-examples/ch05-using-structs-to-structure-related-data/auto-ref-deref.js}}
+> ```ts
+> {{#include ../listings-ts/inline/ch05-03/snippet-01.ts}}
 > ```
->
-> </details>
 >
 > 첫 번째 표현이 더 깔끔하죠?
 > 이런 자동 참조 동작은 메서드의 수신자(`self`의 타입을 말합니다)가 명확하기 때문에 가능합니다.
@@ -174,17 +165,14 @@
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-14/src/main.rs}}
 ```
 
-<span class="caption">예제 5-14: `can_hold` 메서드를 작성하고 나면
-작동할 코드</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-14.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-14/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-14: `can_hold` 메서드를 작성하고 나면
+작동할 코드</span>
 
 `rect2`는 너비와 높이 둘 다 `rect1`보다 작지만,
 `rect3`는  `rect1` 보다 너비가 넓으므로
@@ -215,17 +203,14 @@ Can rect1 hold rect3? false
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/listing-05-15/src/main.rs:here}}
 ```
 
-<span class="caption">예제 5-15: 다른 `Rectangle` 인스턴스를
-매개변수로 갖는 `can_hold` 메서드를 `Rectangle`에 구현</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-15.js}}
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/listing-05-15/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 5-15: 다른 `Rectangle` 인스턴스를
+매개변수로 갖는 `can_hold` 메서드를 `Rectangle`에 구현</span>
 
 이제 예제 5-14에서 본
 `main` 함수를 실행하면 원하던 결과가 나올 겁니다.
@@ -255,18 +240,15 @@ Can rect1 hold rect3? false
 {{#rustdoc_include ../listings/ch05-using-structs-to-structure-related-data/no-listing-03-associated-functions/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch05-using-structs-to-structure-related-data/no-listing-03-associated-functions/src/main.ts}}
+```
+
 반환 타입 및 함수 본문의 `Self` 키워드는 `impl` 키워드
 뒤에 적혀있는 타입의 별칭으로서, 여기서는 `Rectangle`이
 되겠습니다.
-
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/no-listing-03-associated-functions.js}}
-```
-
-</details>
 
 연관 함수를 호출할 땐
 `let sq = Rectangle::square(3);`처럼 구조체 명에 `::` 구문을 붙여서 호출합니다.
@@ -286,15 +268,6 @@ Can rect1 hold rect3? false
 
 <span class="caption">예제 5-16: 예제 5-15를 여러 `impl`
 블록을 사용하도록 재작성하기</span>
-
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch05-using-structs-to-structure-related-data/listing-05-16.js}}
-```
-
-</details>
 
 위 코드에서는 `impl` 블록을 여러 개로 나눠야 할 이유가 전혀 없지만,
 `impl` 블록을 반드시 하나만 작성해야 할 필요는 없음을 보여드리기 위한 예시로 작성했습니다.

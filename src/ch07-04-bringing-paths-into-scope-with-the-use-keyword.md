@@ -18,14 +18,11 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-11/src/lib.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch07-managing-growing-projects/use-keyword.js}}
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-11/src/lib.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 7-11: `use` 키워드로 모듈을 스코프 안으로
 가져오기</span>
@@ -45,6 +42,12 @@
 
 ```rust,noplayground,test_harness,does_not_compile,ignore
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-12/src/lib.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-12/src/lib.ts}}
 ```
 
 <span class="caption">예제 7-12: `use` 구문은 사용된 스코프 내에서만
@@ -75,6 +78,12 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-13/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-13/src/lib.ts}}
+```
+
 <span class="caption">예제 7-13: `use` 키워드로 `add_to_waitlist` 함수를 직접 가져오기
 (보편적이지 않은 작성 방식)</span>
 
@@ -97,14 +106,11 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-14/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch07-managing-growing-projects/use-hashmap.js}}
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-14/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 7-14: 보편적인 방식으로 `HashMap`을
 스코프로 가져오기</span>
@@ -121,6 +127,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-15/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-15/src/lib.ts}}
 ```
 
 <span class="caption">예제 7-15: 이름이 같은 두 개의 타입을 동일한 스코프에 가져오려면
@@ -144,14 +156,11 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-16/src/lib.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch07-managing-growing-projects/use-as.js}}
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-16/src/lib.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 7-16: 스코프 안으로 가져온 타입의 이름을
 `as` 키워드로 변경하기</span>
@@ -179,14 +188,11 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-17/src/lib.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch07-managing-growing-projects/pub-use-reexport.js}}
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-17/src/lib.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 7-17: 다른 스코프의 코드에서 사용할 수 있도록
 `pub use` 사용</span>
@@ -241,6 +247,12 @@
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-03/src/main.rs:ch07-04}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch07-04/snippet-01.ts}}
+```
+
 러스트 커뮤니티 구성원들이 [crates.io](https://crates.io/)에서 이용 가능한
 다양한 패키지를 만들어왔고, 이들 모두 같은 단계를 거쳐서 여러분 패키지에
 가져올 수 있습니다: 패키지의 *Cargo.toml* 파일에 추가하고,
@@ -254,6 +266,12 @@
 
 ```rust
 use std::collections::HashMap;
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch07-04/snippet-02.ts}}
 ```
 
 위는 표준 라이브러리 크레이트의 이름인 `std` 로 시작하는
@@ -272,6 +290,12 @@ use std::collections::HashMap;
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/no-listing-01-use-std-unnested/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/no-listing-01-use-std-unnested/src/main.ts}}
+```
+
 그대신 중첩 경로를 사용하여 동일한 아이템을 한 줄로 가져올 수 있습니다.
 경로의 공통된 부분을 작성하고 콜론 두 개를 붙인 다음, 중괄호 내에
 경로가 다른 부분을 나열합니다.
@@ -281,6 +305,12 @@ use std::collections::HashMap;
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-18/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-18/src/main.ts}}
 ```
 
 <span class="caption">예제 7-18: 중첩 경로를 사용해, 경로의 앞부분이 같은
@@ -301,6 +331,12 @@ use std::collections::HashMap;
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-19/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-19/src/lib.ts}}
+```
+
 <span class="caption">예제 7-19: 하위 경로가 같은
 두 `use` 구문</span>
 
@@ -314,14 +350,11 @@ use std::collections::HashMap;
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-20/src/lib.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch07-managing-growing-projects/nested-use.js}}
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-20/src/lib.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 7-20: 예제 7-19의 두 경로를
 `use` 구문 하나로 합치기</span>
@@ -335,6 +368,12 @@ use std::collections::HashMap;
 
 ```rust
 use std::collections::*;
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch07-04/snippet-03.ts}}
 ```
 
 이 `use` 구문은 `std::collections` 내에 정의된

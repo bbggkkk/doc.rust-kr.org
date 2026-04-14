@@ -22,17 +22,14 @@
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-04/src/main.rs:here}}
 ```
 
-<span class="caption">예제 10-4: 이름과 타입 시그니처만 다른
-두 함수</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-04.js}}
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-04/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 10-4: 이름과 타입 시그니처만 다른
+두 함수</span>
 
 함수 `largest_i32`는  예제 10-3에서 봤던 슬라이스에서 가장 큰 `i32`를 찾는 함수이고,
 `largest_char` 함수는 슬라이스에서 가장 큰 `char`를 찾는 함수입니다.
@@ -57,6 +54,12 @@
 fn largest<T>(list: &[T]) -> &T {
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-01/snippet-01.ts}}
+```
+
 이 정의는 ‘`largest` 함수는 어떤 타입 `T`에 대한 제네릭 함수’라고
 읽힙니다. 이 함수는 `T` 타입 값의 슬라이스인 `list` 매개변수를
 가지고 있고, 동일한 `T` 타입의 값에 대한 참조자를
@@ -71,6 +74,12 @@ fn largest<T>(list: &[T]) -> &T {
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-05/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-05/src/main.ts}}
 ```
 
 <span class="caption">예제 10-5: 제네릭 타입 매개변수를 이용한 `largest` 함수;
@@ -105,17 +114,14 @@ fn largest<T>(list: &[T]) -> &T {
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-06/src/main.rs}}
 ```
 
-<span class="caption">예제 10-6: `T` 타입의 값 `x`, `y`를 갖는
-`Point<T>` 구조체</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-06.js}}
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-06/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 10-6: `T` 타입의 값 `x`, `y`를 갖는
+`Point<T>` 구조체</span>
 
 문법은 함수 정의에서 제네릭을 사용하는 것과 유사합니다.
 먼저 구조체 이름 바로 뒤 꺾쇠괄호에 타입 매개변수 이름을
@@ -132,6 +138,12 @@ fn largest<T>(list: &[T]) -> &T {
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-07/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-07/src/main.ts}}
 ```
 
 <span class="caption">예제 10-7: `x`와 `y` 필드는 둘 다 동일한
@@ -157,17 +169,14 @@ fn largest<T>(list: &[T]) -> &T {
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-08/src/main.rs}}
 ```
 
-<span class="caption">예제 10-8: 두 타입의 제네릭을 사용하여,
-`x`와 `y`가 서로 다른 타입의 값이 될 수 있는 `Point<T, U>`</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-08.js}}
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-08/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 10-8: 두 타입의 제네릭을 사용하여,
+`x`와 `y`가 서로 다른 타입의 값이 될 수 있는 `Point<T, U>`</span>
 
 이제 위와 같이 모든 `Point` 인스턴스를 생성할 수 있습니다!
 제네릭 타입 매개변수는 원하는 만큼 여러 개를 정의할 수 있지만,
@@ -188,14 +197,11 @@ enum Option<T> {
 }
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/option-enum.js}}
+```ts
+{{#include ../listings-ts/inline/ch10-01/snippet-02.ts}}
 ```
-
-</details>
 
 이제는 이 코드를 이해할 수 있습니다. 보시다시피 `Option<T>`
 열거형은 `T` 타입에 대한 제네릭이며, `T` 타입을 들고 있는 `Some`
@@ -212,6 +218,12 @@ enum Result<T, E> {
     Ok(T),
     Err(E),
 }
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-01/snippet-03.ts}}
 ```
 
 `Result` 열거형은 `T`, `E` 두 타입을 이용한 제네릭이며,
@@ -239,18 +251,15 @@ enum Result<T, E> {
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-09/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-09/src/main.ts}}
+```
+
 <span class="caption">예제 10-9: `T` 타입의 `x` 필드에 대한
 참조자를 반환하는 `x` 메서드를 `Point<T>`에
 정의</span>
-
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-09.js}}
-```
-
-</details>
 
 `x` 필드 데이터의 참조자를 반환하는 `x` 메서드를 `Point<T>`에
 정의해 보았습니다.
@@ -276,17 +285,14 @@ enum Result<T, E> {
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-10/src/main.rs:here}}
 ```
 
-<span class="caption">예제 10-10: 구조체의 제네릭 타입 매개변수 `T`가
-특정 구체적 타입인 경우에만 적용되는 `impl` 블록</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-10.js}}
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-10/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 10-10: 구조체의 제네릭 타입 매개변수 `T`가
+특정 구체적 타입인 경우에만 적용되는 `impl` 블록</span>
 
 이 코드에서 `Point<f32>` 타입 인스턴스는 `distance_from_origin`
 메서드를 갖게 될 것입니다; `T`가 `f32` 타입이 아닌 `Point<T>`
@@ -307,17 +313,14 @@ enum Result<T, E> {
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-11/src/main.rs}}
 ```
 
-<span class="caption">예제 10-11: 구조체 정의와 다른 제네릭 타입을
-사용하는 메서드</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch10-generic-types-traits-and-lifetimes/listing-10-11.js}}
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-11/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 10-11: 구조체 정의와 다른 제네릭 타입을
+사용하는 메서드</span>
 
 `main`에서는 `i32` 타입 `x`(`5`)와
 `f64` 타입 `y`(`10.4`)를 갖는 `Point`를 정의했습니다.
@@ -356,6 +359,12 @@ let integer = Some(5);
 let float = Some(5.0);
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-01/snippet-04.ts}}
+```
+
 러스트는 이 코드를 컴파일할 때 단형성화를 수행합니다.
 이 과정 중 컴파일러는 `Option<T>` 인스턴스에 사용된 값을 읽고,
 `i32`, `f64` 두 종류의 `Option<T>`가 있다는 것을 인지합니다.
@@ -383,6 +392,12 @@ fn main() {
     let integer = Option_i32::Some(5);
     let float = Option_f64::Some(5.0);
 }
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-01/snippet-05.ts}}
 ```
 
 제네릭 `Option<T>`가 컴파일러에 의해 특정한 정의들로

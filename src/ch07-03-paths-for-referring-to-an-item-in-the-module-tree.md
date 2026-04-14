@@ -35,6 +35,12 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-03/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-03/src/lib.ts}}
+```
+
 <span class="caption">예제 7-3: 절대 경로와 상대 경로로
 `add_to_waitlist` 함수 호출하기</span>
 
@@ -110,6 +116,12 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-05/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-05/src/lib.ts}}
+```
+
 <span class="caption">예제 7-5: `eat_at_restaurant` 함수에서 `hosting` 모듈을
 사용할 수 있도록 `pub`으로 선언</span>
 
@@ -145,14 +157,11 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-07/src/lib.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch07-managing-growing-projects/paths-pub.js}}
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-07/src/lib.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 7-7: `mod hosting`, `fn add_to_waitlist` 에
 `pub` 키워드를 추가해 `eat_at_restaurant` 함수에서
@@ -230,14 +239,11 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-08/src/lib.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch07-managing-growing-projects/super-path.js}}
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-08/src/lib.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 7-8: `super`로 시작하는 상대 경로를 사용해
 함수 호출하기</span>
@@ -270,14 +276,11 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-09/src/lib.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch07-managing-growing-projects/struct-pub-fields.js}}
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-09/src/lib.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 7-9: 일부 필드는 공개하고,
 일부 필드는 비공개인 구조체</span>
@@ -304,14 +307,11 @@
 {{#rustdoc_include ../listings/ch07-managing-growing-projects/listing-07-10/src/lib.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch07-managing-growing-projects/enum-pub.js}}
+```ts
+{{#include ../listings-ts/ch07-managing-growing-projects/listing-07-10/src/lib.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 7-10: 열거형과 열거형의 모든 배리언트를
 공개로 지정하기</span>

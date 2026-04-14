@@ -35,6 +35,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-06/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-06/main.ts}}
+```
+
 <span class="caption">예제 15-6: 역참조 연산자를 사용하여 `i32` 값에 대한 참조자
 따라가기</span>
 
@@ -78,6 +84,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-07/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-07/main.ts}}
+```
+
 <span class="caption">예제 15-7: `Box<i32>`에 역참조 연산자
 사용하기</span>
 
@@ -106,6 +118,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-08/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-08/main.ts}}
+```
+
 <span class="caption">예제 15-8: `MyBox<T>` 타입 정의하기</span>
 
 `MyBox`라는 이름의 구조체를 정의하고 제네릭 매개변수 `T`를 선언했는데, 이는
@@ -122,6 +140,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-09/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-09/main.ts}}
 ```
 
 <span class="caption">예제 15-9: 참조자와 `Box<T>`에 사용되었던 방식
@@ -152,6 +176,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-10/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-10/main.ts}}
+```
+
 <span class="caption">예제 15-10: `MyBox<T>`에 대한 `Deref` 구현하기</span>
 
 `type Target = T;` 문법은 `Deref` 트레이트가 사용할 연관 타입 (associated type)
@@ -176,6 +206,12 @@
 
 ```rust,ignore
 *(y.deref())
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch15-02/snippet-01.ts}}
 ```
 
 러스트는 `*` 연산자에 `deref` 메서드 호출과 보통의 역참조를 대입하므로
@@ -225,6 +261,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-11/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-11/main.ts}}
+```
+
 <span class="caption">예제 15-11: `&str` 타입의 `name` 매개변수를 갖는
 `hello` 함수</span>
 
@@ -236,6 +278,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-12/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-12/main.ts}}
 ```
 
 <span class="caption">예제 15-12: 역참조 강제 변환에 의해 작동되는,
@@ -257,6 +305,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-13/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-13/main.ts}}
 ```
 
 <span class="caption">예제 15-13: 러스트에 역참조 강제 변환이 없었을 경우

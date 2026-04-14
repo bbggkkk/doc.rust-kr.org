@@ -45,6 +45,12 @@ $ cargo run -- searchstring example-filename.txt
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-01/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-01/src/main.ts}}
+```
+
 <span class="caption">예제 12-1: 커맨드 라인 인수들을 벡터로 모으고
 출력하기</span>
 
@@ -114,6 +120,12 @@ $ cargo run -- searchstring example-filename.txt
 
 ```rust,should_panic,noplayground
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-02/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-02/src/main.ts}}
 ```
 
 <span class="caption">예제 12-2: 질의 (query) 인수와 파일 경로 인수를 담은

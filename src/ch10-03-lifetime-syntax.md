@@ -30,6 +30,12 @@
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-16/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-16/src/main.ts}}
+```
+
 <span class="caption">예제 10-16: 스코프 밖으로 벗어난 값을
 참조하는 코드</span>
 
@@ -69,6 +75,12 @@
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-17/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-17/src/main.ts}}
+```
+
 <span class="caption">예제 10-17: `r`, `x`의 라이프타임을 각각
 `'a`, `'b`로 표현한 주석</span>
 
@@ -84,6 +96,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-18/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-18/src/main.ts}}
 ```
 
 <span class="caption">예제 10-18: 데이터의 라이프타임이
@@ -110,6 +128,12 @@
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-19/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-19/src/main.ts}}
+```
+
 <span class="caption">예제 10-19: 두 문자열 슬라이스 중 긴 쪽을 찾기 위해
 `longest` 함수를 호출하는 `main` 함수</span>
 
@@ -127,6 +151,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-20/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-20/src/main.ts}}
 ```
 
 <span class="caption">예제 10-20: 두 문자열 슬라이스 중
@@ -180,6 +210,12 @@
 &'a mut i32 // 명시적인 라이프타임이 있는 가변 참조자
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-03/snippet-01.ts}}
+```
+
 자신의 라이프타임 명시 하나만 있는 것으로는 큰 의미가 없습니다. 라이프타임
 명시는 러스트에게 여러 참조자의 제네릭 라이프타임 매개변수가 서로 어떻게
 연관되어 있는지 알려주는 용도이기 때문입니다. `longest` 함수의 컨텍스트에서
@@ -201,6 +237,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-21/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-21/src/main.ts}}
 ```
 
 <span class="caption">예제 10-21: 시그니처 내 모든 참조자가
@@ -264,6 +306,12 @@
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-22/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-22/src/main.ts}}
+```
+
 <span class="caption">예제 10-22: 서로 다른 구체적인 라이프타임을 가진
 `String` 값의 참조자로 `longest` 함수 호출하기</span>
 
@@ -285,6 +333,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-23/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-23/src/main.ts}}
 ```
 
 <span class="caption">예제 10-24: `string2`가 스코프 밖으로 벗어나고 나서
@@ -329,6 +383,12 @@
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-08-only-one-reference-with-lifetime/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-08-only-one-reference-with-lifetime/src/main.ts}}
+```
+
 매개변수 `x`와 반환 타입에만 라이프타임 매개변수 `'a`가 지정되어 있습니다.
 `y`의 라이프타임은 `x`나 반환 값의 라이프타임과 전혀 관계없으므로,
 매개변수 `y`에는 `'a`를 지정하지 않았습니다.
@@ -345,6 +405,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-09-unrelated-lifetime/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-09-unrelated-lifetime/src/main.ts}}
 ```
 
 반환 타입에 `'a`를 지정했지만,
@@ -380,6 +446,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-24/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-24/src/main.ts}}
 ```
 
 <span class="caption">예제 10-24: 참조자를 보유하여
@@ -421,6 +493,12 @@
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/listing-10-25/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/listing-10-25/src/main.ts}}
+```
+
 <span class="caption">예제 10-25: 4장에서 정의했던,
 매개변수, 반환 타입이 참조자인데도 라이프타임 명시 없이
 컴파일 가능한 함수</span>
@@ -432,6 +510,12 @@
 
 ```rust,ignore
 fn first_word<'a>(s: &'a str) -> &'a str {
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-03/snippet-02.ts}}
 ```
 
 수많은 러스트 코드를 작성하고 난 후, 러스트 팀은 러스트 프로그래머들이
@@ -490,6 +574,12 @@ fn first_word<'a>(s: &'a str) -> &'a str {
 fn first_word(s: &str) -> &str {
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-03/snippet-04.ts}}
+```
+
 첫 번째 규칙을 적용해, 각각의 매개변수에 라이프타임을 지정해 봅시다.
 평범하게 `'a`라고 해보죠.
 시그니처는 이제 다음과 같습니다:
@@ -498,12 +588,24 @@ fn first_word(s: &str) -> &str {
 fn first_word<'a>(s: &'a str) -> &str {
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-03/snippet-05.ts}}
+```
+
 입력 라이프타임이 딱 하나밖에 없으니 두 번째 규칙을 적용합니다.
 두 번째 규칙대로 출력 라이프타임에 입력 매개변수의 라이프타임을 대입하고 나면,
 시그니처는 다음과 같습니다:
 
 ```rust,ignore
 fn first_word<'a>(s: &'a str) -> &'a str {
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-03/snippet-06.ts}}
 ```
 
 함수 시그니처의 모든 참조자가 라이프타임을 갖게 됐으니,
@@ -517,11 +619,23 @@ fn first_word<'a>(s: &'a str) -> &'a str {
 fn longest(x: &str, y: &str) -> &str {
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-03/snippet-07.ts}}
+```
+
 첫 번째 규칙을 적용해, 각각의 매개변수에 라이프타임을 지정해 봅시다.
 이번에는 매개변수가 두 개니, 두 개의 라이프타임이 생깁니다.
 
 ```rust,ignore
 fn longest<'a, 'b>(x: &'a str, y: &'b str) -> &str {
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-03/snippet-08.ts}}
 ```
 
 입력 라이프타임이 하나가 아니므로 두 번째 규칙은 적용하지 않습니다.
@@ -560,6 +674,12 @@ fn longest<'a, 'b>(x: &'a str, y: &'b str) -> &str {
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-10-lifetimes-on-methods/src/main.rs:1st}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-10-lifetimes-on-methods/src/1st.ts}}
+```
+
 `impl` 뒤에서 라이프타임 매개변수를 선언하고
 타입명 뒤에서 사용하는 과정은 필수적이지만,
 첫 번째 생략 규칙으로 인해 `self` 참조자의 라이프타임을 명시할 필요는 없습니다.
@@ -568,6 +688,12 @@ fn longest<'a, 'b>(x: &'a str, y: &'b str) -> &str {
 
 ```rust
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-10-lifetimes-on-methods/src/main.rs:3rd}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-10-lifetimes-on-methods/src/3rd.ts}}
 ```
 
 두 개의 입력 라이프타임이 있으니, 러스트는 첫 번째 라이프타임 생략 규칙대로
@@ -583,6 +709,12 @@ fn longest<'a, 'b>(x: &'a str, y: &'b str) -> &str {
 
 ```rust
 let s: &'static str = "I have a static lifetime.";
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch10-03/snippet-03.ts}}
 ```
 
 이 문자열의 텍스트는 프로그램의 바이너리 내에
@@ -604,6 +736,12 @@ let s: &'static str = "I have a static lifetime.";
 
 ```rust
 {{#rustdoc_include ../listings/ch10-generic-types-traits-and-lifetimes/no-listing-11-generics-traits-and-lifetimes/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch10-generic-types-traits-and-lifetimes/no-listing-11-generics-traits-and-lifetimes/src/main.ts}}
 ```
 
 예제 10-21에서 본 두 개의 문자열 슬라이스 중 긴 쪽을 반환하는

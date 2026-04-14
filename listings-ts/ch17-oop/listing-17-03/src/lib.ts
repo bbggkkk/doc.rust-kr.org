@@ -1,0 +1,3 @@
+interface Draw {
+  draw(): void;
+}

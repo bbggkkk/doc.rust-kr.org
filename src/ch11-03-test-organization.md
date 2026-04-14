@@ -41,6 +41,12 @@
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-01/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch11-writing-automated-tests/listing-11-01/src/lib.ts}}
+```
+
 이 코드는 자동으로 생성된 테스트 모듈입니다.
 `cfg` 속성은 *설정 (configuration)* 을 의미하며,
 러스트는 이 아이템을 특정 설정 옵션 적용 시에만 포함합니다.
@@ -62,6 +68,12 @@
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-12/src/lib.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch11-writing-automated-tests/listing-11-12/src/lib.ts}}
 ```
 
 <span class="caption">예제 11-12: 비공개 함수 테스트하기</span>
@@ -121,6 +133,12 @@ adder
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/listing-11-13/tests/integration_test.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch11-writing-automated-tests/listing-11-13/tests/integration_test.ts}}
 ```
 
 <span class="caption">예제 11-13: `adder` 크레이트 내 함수를 테스트하는
@@ -201,6 +219,12 @@ adder
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/no-listing-12-shared-test-code-problem/tests/common.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch11-writing-automated-tests/no-listing-12-shared-test-code-problem/tests/common.ts}}
+```
+
 이제 테스트를 실행하면, 결과 출력에 새로운 절이 *common.rs* 파일 때문에
 생성된 모습을 볼 수 있습니다. *common.rs* 파일은 어떤 테스트 함수도 담고 있지 않고,
 다른 곳에서 `setup` 함수를 호출하지도 않았는데 말이죠.
@@ -245,6 +269,12 @@ adder
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch11-writing-automated-tests/no-listing-13-fix-shared-test-code-problem/tests/integration_test.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch11-writing-automated-tests/no-listing-13-fix-shared-test-code-problem/tests/integration_test.ts}}
 ```
 
 예제 7-21에서 배운 모듈 선언대로 `mod common;`를 선언했습니다.

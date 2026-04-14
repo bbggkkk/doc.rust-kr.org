@@ -72,6 +72,12 @@
 {{#rustdoc_include ../listings/ch17-oop/listing-17-03/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch17-oop/listing-17-03/src/lib.ts}}
+```
+
 <span class="caption">예제 17-3: `Draw` 트레이트의 정의</span>
 
 <details>
@@ -95,6 +101,12 @@
 {{#rustdoc_include ../listings/ch17-oop/listing-17-04/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch17-oop/listing-17-04/src/lib.ts}}
+```
+
 <span class="caption">예제 17-4: `Draw` 트레이트를 구현하는
 트레이트 객체들의 벡터 `components`를 필드로 가지고 있는 `Screen`
 구조체의 정의</span>
@@ -115,6 +127,12 @@
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch17-oop/listing-17-05/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch17-oop/listing-17-05/src/lib.ts}}
 ```
 
 <span class="caption">예제 17-5: 각 컴포넌트에 대해 `draw` 메서드를
@@ -141,6 +159,12 @@
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch17-oop/listing-17-06/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch17-oop/listing-17-06/src/lib.ts}}
 ```
 
 <span class="caption">예제 17-6: 제네릭과 트레이트 바운드를 사용한
@@ -180,6 +204,12 @@
 {{#rustdoc_include ../listings/ch17-oop/listing-17-07/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch17-oop/listing-17-07/src/lib.ts}}
+```
+
 <span class="caption">예제 17-7: `Draw` 트레이트를 구현하는
 `Button` 구조체</span>
 
@@ -212,6 +242,12 @@
 {{#rustdoc_include ../listings/ch17-oop/listing-17-08/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch17-oop/listing-17-08/src/main.ts}}
+```
+
 <span class="caption">예제 17-8: `gui`를 사용하고 `Draw` 트레이트를
 `SelectBox` 구조체에 구현한 또 다른 크레이트</span>
 
@@ -234,6 +270,12 @@
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch17-oop/listing-17-09/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch17-oop/listing-17-09/src/main.ts}}
 ```
 
 <span class="caption">예제 17-9: 트레이트 객체를 사용하여 동일한 트레이트를
@@ -277,6 +319,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch17-oop/listing-17-10/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch17-oop/listing-17-10/src/main.ts}}
 ```
 
 <span class="caption">예제 17-10: 트레이트 객체의 트레이트를 구현하지 않은

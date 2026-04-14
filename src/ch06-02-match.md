@@ -26,14 +26,11 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-03/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/listing-06-03.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/listing-06-03/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 6-3: 열거형과 열거형의 배리언트를 패턴으로 사용하는
 `match` 표현식</span>
@@ -71,6 +68,12 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-08-match-arm-multiple-lines/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-08-match-arm-multiple-lines/src/main.ts}}
+```
+
 ### 값을 바인딩하는 패턴
 
 매치 갈래의 또 다른 유용한 기능은 패턴과 매칭된
@@ -88,14 +91,11 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-04/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/listing-06-04.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/listing-06-04/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 6-4: `Quarter` 배리언트가 `UsState` 값도 담고
 있는 `Coin` 열거형</span>
@@ -114,14 +114,11 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-09-variable-in-pattern/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-09-variable-in-pattern.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-09-variable-in-pattern/src/main.ts}}
 ```
-
-</details>
 
 만일 우리가 `value_in_cents(Coin::Quarter(UsState::Alaska))`를 호출했다면, `coin`은
 `Coin::Quarter(UsState::Alaska)`가 되겠지요. 각각의 매치 갈래와 이 값을 비교하면,
@@ -150,14 +147,11 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-05/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/listing-06-05.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/listing-06-05/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 6-5: `Option<i32>` 상에서 `match`를 이용하는
 함수</span>
@@ -170,11 +164,23 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-05/src/main.rs:first_arm}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/listing-06-05/src/main-first_arm.ts}}
+```
+
 `Some(5)` 값은 패턴 `None`과 매칭되지 않으므로,
 다음 갈래로 계속 갑니다:
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-05/src/main.rs:second_arm}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/listing-06-05/src/main-second_arm.ts}}
 ```
 
 `Some(5)`가 `Some(i)`랑 매칭되나요? 그렇습니다! 동일한 배리언트를 갖고 있습니다.
@@ -187,6 +193,12 @@
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/listing-06-05/src/main.rs:first_arm}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/listing-06-05/src/main-first_arm.ts}}
 ```
 
 매칭되었군요! 더할 값이 없으므로, 프로그램은 멈추고 `=>`의
@@ -207,6 +219,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-10-non-exhaustive-match/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-10-non-exhaustive-match/src/main.ts}}
 ```
 
 여기서는 `None` 케이스를 다루지 않았고, 따라서 이 코드는 버그를 일으킬 것입니다. 다행히도
@@ -240,14 +258,11 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-15-binding-catchall/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-15-binding-catchall.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-15-binding-catchall/src/main.ts}}
 ```
-
-</details>
 
 처음 두 갈래에서의 패턴은 `3`과 `7` 리터럴 값입니다.
 나머지 모든 가능한 값을 다루는 마지막 갈래에 대한 패턴은
@@ -274,14 +289,11 @@
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-16-underscore-catchall/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch06-enums-and-pattern-matching/no-listing-16-underscore-catchall.js}}
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-16-underscore-catchall/src/main.ts}}
 ```
-
-</details>
 
 이 예제 또한 철저함에 대한 요구사항을 충족하는데, 마지막 갈래에서 나머지 모든 값에
 대해 명시적으로 무시하기 때문입니다; 우리는 아무것도 잊어버리지 않았습니다.
@@ -293,6 +305,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch06-enums-and-pattern-matching/no-listing-17-underscore-unit/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch06-enums-and-pattern-matching/no-listing-17-underscore-unit/src/main.ts}}
 ```
 
 여기에서는 러스트에게 명시적으로 앞의 갈래에 매칭되지 않은 어떠한

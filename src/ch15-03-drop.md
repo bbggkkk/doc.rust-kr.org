@@ -34,6 +34,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-14/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-14/main.ts}}
+```
+
 <span class="caption">예제 15-14: 메모리 정리 코드를 집어넣게 될
 `Drop` 트레이트를 구현한 `CustomSmartPointer` 구조체</span>
 
@@ -94,6 +100,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-15/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-15/main.ts}}
+```
+
 <span class="caption">예제 15-15: 메모리를 일찍 정리하기 위한 `Drop`
 트레이트의 `drop` 메서드의 수동 호출 시도하기</span>
 
@@ -127,6 +139,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-16/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-16/main.ts}}
 ```
 
 <span class="caption">예제 15-16: `std::mem::drop`을 호출하여

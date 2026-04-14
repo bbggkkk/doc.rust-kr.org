@@ -50,6 +50,12 @@ Elements of Reusable Object-Oriented Software, Addison-Wesley Professional, 1994
 {{#rustdoc_include ../listings/ch17-oop/listing-17-01/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch17-oop/listing-17-01/src/lib.ts}}
+```
+
 <span class="caption">예제 17-1: 컬렉션 내의 정수
 아이템들과 그의 평균값을 관리하는 `AveragedCollection`
 구조체</span>
@@ -73,6 +79,12 @@ Elements of Reusable Object-Oriented Software, Addison-Wesley Professional, 1994
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch17-oop/listing-17-02/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch17-oop/listing-17-02/src/lib.ts}}
 ```
 
 <span class="caption">예제 17-2: `AveragedCollection`의 공개 메서드 `add`,

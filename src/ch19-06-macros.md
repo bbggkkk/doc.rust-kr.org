@@ -69,6 +69,12 @@
 let v: Vec<u32> = vec![1, 2, 3];
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch19-06/snippet-01.ts}}
+```
+
 또한 `vec!` 매크로를 사용하여 두 개의 정수로 이루어진 벡터나 다섯 개의 문자열
 슬라이스로 이루어진 벡터를 만들 수도 있습니다. 값의 개수나 타입을 미리 알 수
 없으므로 함수를 사용하는 것으로는 동일한 작업을 수행할 수 없습니다.
@@ -79,6 +85,12 @@ let v: Vec<u32> = vec![1, 2, 3];
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-28/src/lib.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-28/lib.ts}}
 ```
 
 <span class="caption">예제 19-28: 간소화된 버전의 `vec!` 매크로
@@ -151,6 +163,12 @@ let v: Vec<u32> = vec![1, 2, 3];
 }
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch19-06/snippet-02.ts}}
+```
+
 이렇게 정의된 매크로는 아무 타입의 인수를 얼마든지 사용할 수 있고 특정한
 요소들을 담은 벡터를 생성하는 코드를 생성할 수 있습니다.
 
@@ -181,6 +199,12 @@ use proc_macro;
 #[some_attribute]
 pub fn some_name(input: TokenStream) -> TokenStream {
 }
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch19-06/snippet-03.ts}}
 ```
 
 <span class="caption">예제 19-29: 절차적 매크로 정의
@@ -217,6 +241,12 @@ pub fn some_name(input: TokenStream) -> TokenStream {
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-30/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-30/main.ts}}
+```
+
 <span class="caption">예제 19-30: 우리의 절차적 매크로를 사용할 때
 크레이트 사용자가 작성할 수 있게 될 코드</span>
 
@@ -235,11 +265,23 @@ $ cargo new hello_macro --lib
 {{#rustdoc_include ../listings/ch19-advanced-features/no-listing-20-impl-hellomacro-for-pancakes/hello_macro/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/no-listing-20-impl-hellomacro-for-pancakes/hello_macro/lib.ts}}
+```
+
 트레이트와 그 함수를 정의했습니다. 이 시점에서 크레이트 사용자는 다음과 같이
 트레이트를 구현하여 원하는 기능을 구현할 수 있습니다:
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch19-advanced-features/no-listing-20-impl-hellomacro-for-pancakes/pancakes/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/no-listing-20-impl-hellomacro-for-pancakes/pancakes/main.ts}}
 ```
 
 하지만 이렇게 하면 `hello_macro`와 함께 사용하고자 하는 각 타입에 대해
@@ -292,6 +334,12 @@ $ cargo new hello_macro_derive --lib
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-31/hello_macro/hello_macro_derive/src/lib.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-31/lib.ts}}
 ```
 
 <span class="caption">예제 19-31: 대부분의 절차적 매크로 크레이트가
@@ -350,6 +398,12 @@ DeriveInput {
 }
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch19-06/snippet-04.ts}}
+```
+
 <span class="caption">예제 19-32: 예제 19-30의 매크로 속성이
 있는 코드를 파싱했을 때 얻게 되는 `DeriveInput` 인스턴스</span>
 
@@ -381,6 +435,12 @@ DeriveInput {
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-33/hello_macro/hello_macro_derive/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-33/lib.ts}}
 ```
 
 <span class="caption">예제 19-33: 파싱된 러스트 코드를 사용하여
@@ -455,12 +515,24 @@ DeriveInput {
 fn index() {
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch19-06/snippet-05.ts}}
+```
+
 이 `#[route]` 속성은 절차적 매크로로써 프레임워크에 의해 정의된
 것입니다. 매크로 정의 함수의 시그니처는 다음과 같습니다:
 
 ```rust,ignore
 #[proc_macro_attribute]
 pub fn route(attr: TokenStream, item: TokenStream) -> TokenStream {
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch19-06/snippet-06.ts}}
 ```
 
 여기에는 `TokenStream` 타입의 매개변수 두 개가 있습니다. 첫 번째는
@@ -488,6 +560,12 @@ pub fn route(attr: TokenStream, item: TokenStream) -> TokenStream {
 let sql = sql!(SELECT * FROM posts WHERE id=1);
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch19-06/snippet-07.ts}}
+```
+
 이 매크로는 내부에 있는 SQL 문을 파싱하고 문법적으로 올바른지
 확인하는데, 이는 `macro_rules!` 매크로가 할 수 있는 것보다 훨씬
 더 복잡한 처리입니다. `sql!` 매크로는 다음과 같이 정의됩니다:
@@ -495,6 +573,12 @@ let sql = sql!(SELECT * FROM posts WHERE id=1);
 ```rust,ignore
 #[proc_macro]
 pub fn sql(input: TokenStream) -> TokenStream {
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch19-06/snippet-08.ts}}
 ```
 
 이 정의는 커스텀 파생 매크로의 시그니처와 유사합니다:

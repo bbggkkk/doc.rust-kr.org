@@ -25,6 +25,12 @@ you?’를 입력하세요.
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-04/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-04/src/main.ts}}
+```
+
 <span class="caption">예제 12-4: 두 번째 인수로 명시된 파일의
 내용물 읽기</span>
 

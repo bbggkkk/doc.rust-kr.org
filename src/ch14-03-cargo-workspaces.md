@@ -124,6 +124,12 @@ $ cargo new add_one --lib
 {{#rustdoc_include ../listings/ch14-more-about-cargo/no-listing-02-workspace-with-two-crates/add/add_one/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch14-more-about-cargo/no-listing-02-workspace-with-two-crates/add/add_one/src/lib.ts}}
+```
+
 이제 바이너리를 가지고 있는 `adder` 패키지와 이것이 의존하는 라이브러리를 갖고 있는
 `add_one` 패키지를 갖추었습니다. 먼저 *adder/Cargo.toml*에 `add_one`의 경로
 의존성을 추가할 필요가 있겠습니다.
@@ -146,6 +152,12 @@ $ cargo new add_one --lib
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-07/add/adder/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch14-more-about-cargo/listing-14-07/add/adder/src/main.ts}}
 ```
 
 <span class="caption">예제 14-7: `adder` 크레이트에서 `add_one` 라이브러리
@@ -290,6 +302,12 @@ error[E0432]: unresolved import `rand`
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch14-more-about-cargo/no-listing-04-workspace-with-tests/add/add_one/src/lib.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch14-more-about-cargo/no-listing-04-workspace-with-tests/add/add_one/src/lib.ts}}
 ```
 
 이제 최상위 *add* 디렉터리에서 `cargo test`를 실행해 보세요. 이런 구조의

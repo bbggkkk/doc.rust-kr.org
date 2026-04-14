@@ -17,14 +17,11 @@ enum Result<T, E> {
 }
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch09-error-handling/result-enum.js}}
+```ts
+{{#include ../listings-ts/inline/ch09-02/snippet-01.ts}}
 ```
-
-</details>
 
 `T`와 `E`는 제네릭 타입 매개변수입니다:
 제네릭은 10장에서 자세히 다루겠습니다.
@@ -42,6 +39,12 @@ enum Result<T, E> {
 
 ```rust
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-03/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch09-error-handling/listing-09-03/src/main.ts}}
 ```
 
 <span class="caption">예제 9-3: 파일 열기</span>
@@ -74,14 +77,11 @@ enum Result<T, E> {
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-04/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch09-error-handling/listing-09-04.js}}
+```ts
+{{#include ../listings-ts/ch09-error-handling/listing-09-04/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 9-4: `match` 표현식을 사용하여 반환 가능한
 `Result` 배리언트들을 처리하기</span>
@@ -125,14 +125,11 @@ tests to fail lol -->
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-05/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch09-error-handling/listing-09-05.js}}
+```ts
+{{#include ../listings-ts/ch09-error-handling/listing-09-05/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 9-5: 다른 종류의 에러를
 다른 방식으로 처리하기</span>
@@ -183,6 +180,12 @@ tests to fail lol -->
 > }
 > ```
 >
+> <span class="caption">TypeScript로 보면</span>
+>
+> ```ts
+> {{#include ../listings-ts/inline/ch09-02/snippet-02.ts}}
+> ```
+>
 > 이 코드는 예제 9-5와 완벽하게 똑같이 작동하지만, 
 > `match` 표현식을 전혀 사용하지 않았으며 더 깔끔하게 읽힙니다.
 > 13장을 읽고 이 예제로 돌아와서, 표준 라이브러리 문서에서
@@ -205,14 +208,11 @@ tests to fail lol -->
 {{#rustdoc_include ../listings/ch09-error-handling/no-listing-04-unwrap/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch09-error-handling/no-listing-04-unwrap.js}}
+```ts
+{{#include ../listings-ts/ch09-error-handling/no-listing-04-unwrap/src/main.ts}}
 ```
-
-</details>
 
 *hello.txt* 파일이 없는 상태에서 이 코드를 실행시키면, `unwrap` 메서드에 의해 호출된
 `panic!`으로부터의 에러 메시지를 보게 될 것입니다:
@@ -240,14 +240,11 @@ src/main.rs:4:49
 {{#rustdoc_include ../listings/ch09-error-handling/no-listing-05-expect/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch09-error-handling/no-listing-05-expect.js}}
+```ts
+{{#include ../listings-ts/ch09-error-handling/no-listing-05-expect/src/main.ts}}
 ```
-
-</details>
 
 `unwrap`과 똑같이 파일 핸들을 반환하거나 `panic!` 매크로를 호출하도록
 하는 데에 `expect`를 사용했습니다. `unwrap`은 `panic!`의 기본 메시지가
@@ -294,14 +291,11 @@ don't want to include it for rustdoc testing purposes. -->
 {{#include ../listings/ch09-error-handling/listing-09-06/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch09-error-handling/listing-09-06.js}}
+```ts
+{{#include ../listings-ts/ch09-error-handling/listing-09-06/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 9-6: `match`를 이용하여 호출 코드 쪽으로
 에러를 반환하는 함수</span>
@@ -373,14 +367,11 @@ don't want to include it for rustdoc testing purposes. -->
 {{#include ../listings/ch09-error-handling/listing-09-07/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch09-error-handling/listing-09-07.js}}
+```ts
+{{#include ../listings-ts/ch09-error-handling/listing-09-07/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 9-7: `?` 연산자를 이용하여 에러를 호출 코드 쪽으로
 반환하는 함수</span>
@@ -430,6 +421,12 @@ don't want to include it for rustdoc testing purposes. -->
 {{#include ../listings/ch09-error-handling/listing-09-08/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch09-error-handling/listing-09-08/src/main.ts}}
+```
+
 <span class="caption">예제 9-8: `?` 연산자 뒤에 메서드 호출을
 연결하기</span>
 
@@ -452,6 +449,12 @@ don't want to include it for rustdoc testing purposes. -->
 
 ```rust
 {{#include ../listings/ch09-error-handling/listing-09-09/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch09-error-handling/listing-09-09/src/main.ts}}
 ```
 
 <span class="caption">예제 9-9: 파일을 열고, 읽는 대신 `fs::read_to_string`을
@@ -482,6 +485,12 @@ don't want to include it for rustdoc testing purposes. -->
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-10/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch09-error-handling/listing-09-10/src/main.ts}}
 ```
 
 <span class="caption">예제 9-10: `()`를 반환하는 `main`에서의
@@ -520,14 +529,11 @@ don't want to include it for rustdoc testing purposes. -->
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-11/src/main.rs:here}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch09-error-handling/listing-09-11.js}}
+```ts
+{{#include ../listings-ts/ch09-error-handling/listing-09-11/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 9-11: `Option<T>` 값에 대한 `?` 연산자의
 사용</span>
@@ -574,14 +580,11 @@ don't want to include it for rustdoc testing purposes. -->
 {{#rustdoc_include ../listings/ch09-error-handling/listing-09-12/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch09-error-handling/listing-09-12.js}}
+```ts
+{{#include ../listings-ts/ch09-error-handling/listing-09-12/src/main.ts}}
 ```
-
-</details>
 
 <span class="caption">예제 9-12: `main`이 `Result<(), E>`를 반환하도록
 하여 `Result` 값에 대한 `?` 사용 가능하게 하기</span>

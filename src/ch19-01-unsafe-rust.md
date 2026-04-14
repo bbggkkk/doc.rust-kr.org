@@ -95,6 +95,12 @@
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-01/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-01/main.ts}}
+```
+
 <span class="caption">예제 19-1: 참조자로부터 원시 포인터 생성하기</span>
 
 <details>
@@ -128,6 +134,12 @@
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-02/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-02/main.ts}}
+```
+
 <span class="caption">예제 19-2: 임의 메모리 주소를 가리키는 원시
 포인터 생성하기</span>
 
@@ -137,6 +149,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-03/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-03/main.ts}}
 ```
 
 <span class="caption">예제 19-3: `unsafe` 블록 내에서 원시 포인터
@@ -180,6 +198,12 @@
 {{#rustdoc_include ../listings/ch19-advanced-features/no-listing-01-unsafe-fn/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/no-listing-01-unsafe-fn/main.ts}}
+```
+
 `dangerous` 함수는 반드시 분리된 `unsafe` 블록 내에서 호출되어야 합니다. `unsafe`
 블록 없이 `dangerous`를 호출하려고 시도하면 다음과 같은 에러가 발생합니다:
 
@@ -209,6 +233,12 @@
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-04/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-04/main.ts}}
+```
+
 <span class="caption">예제 19-4: 안전한 `split_at_mut` 함수
 사용하기</span>
 
@@ -228,6 +258,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-05/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-05/main.ts}}
 ```
 
 <span class="caption">예제 19-5: 안전한 러스트만 사용하여 `split_at_mut`
@@ -260,6 +296,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-06/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-06/main.ts}}
 ```
 
 <span class="caption">예제 19-6: `split_at_mut` 함수의 구현체에서
@@ -304,6 +346,12 @@
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-07/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-07/main.ts}}
+```
+
 <span class="caption">예제 19-7: 임의의 메모리 위치로부터 슬라이스
 생성하기</span>
 
@@ -329,6 +377,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-08/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-08/main.ts}}
 ```
 
 <span class="caption">예제 19-8: 다른 언어에 정의된 `extern` 함수의
@@ -372,6 +426,12 @@
 > }
 > ```
 >
+> <span class="caption">TypeScript로 보면</span>
+>
+> ```ts
+> {{#include ../listings-ts/inline/ch19-01/snippet-01.ts}}
+> ```
+>
 > 이러한 `extern`의 사용에는 `unsafe`가 필요 없습니다.
 
 ### 가변 정적 변수의 접근 혹은 수정하기
@@ -388,6 +448,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-09/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-09/main.ts}}
 ```
 
 <span class="caption">예제 19-9: 불변 정적 변수의 정의 및
@@ -425,6 +491,12 @@
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-10/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-10/main.ts}}
+```
+
 <span class="caption">예제 19-10: 가변 정적 변수를 읽거나 쓰는 것은
 안전하지 않습니다</span>
 
@@ -459,6 +531,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch19-advanced-features/listing-19-11/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch19-advanced-features/listing-19-11/main.ts}}
 ```
 
 <span class="caption">예제 19-11: 안전하지 않은 트레이트의

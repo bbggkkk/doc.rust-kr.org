@@ -82,6 +82,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/no-listing-01-cant-borrow-immutable-as-mutable/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/no-listing-01-cant-borrow-immutable-as-mutable/main.ts}}
+```
+
 이 코드를 컴파일 시도하면, 다음과 같은 에러를 얻게 됩니다:
 
 ```console
@@ -135,6 +141,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-20/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-20/lib.ts}}
+```
+
 <span class="caption">예제 15-20: 어떤 값이 최댓값에 얼마나 근접하는지를
 추적하고 특정 수준에 값이 있으면 경고해 주는 라이브러리</span>
 
@@ -160,6 +172,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-21/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-21/lib.ts}}
 ```
 
 <span class="caption">예제 15-21: 대여 검사기가 허용하지 않는
@@ -204,6 +222,12 @@
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-22/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-22/lib.ts}}
 ```
 
 <span class="caption">예제 15-22: `RefCell<T>`를 사용하여 바깥쪽에서는
@@ -264,6 +288,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-23/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-23/lib.ts}}
+```
+
 <span class="caption">예제 15-23: 두 개의 가변 참조자를 같은 스코프에서
 만들어서 `RefCell<T>`이 패닉을 일으키는 것을 보기</span>
 
@@ -311,6 +341,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-24/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-24/main.ts}}
 ```
 
 <span class="caption">예제 15-24: `Rc<RefCell<i32>>`를 사용하여

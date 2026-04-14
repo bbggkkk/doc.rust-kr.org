@@ -32,6 +32,12 @@
 {{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-01/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch14-more-about-cargo/listing-14-01/src/lib.ts}}
+```
+
 <span class="caption">예제 14-1: 함수에 대한 문서화
 주석</span>
 
@@ -130,6 +136,12 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 {{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-02/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch14-more-about-cargo/listing-14-02/src/lib.ts}}
+```
+
 <span class="caption">예제 14-2: `my_crate` 크레이트 전체에 대한
 문서</span>
 
@@ -187,6 +199,12 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 {{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-03/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch14-more-about-cargo/listing-14-03/src/lib.ts}}
+```
+
 <span class="caption">예제 14-3: `kinds`와 `utils` 모듈에 아이템을 구성한
 `art` 라이브러리</span>
 
@@ -213,6 +231,12 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 {{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-04/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch14-more-about-cargo/listing-14-04/src/main.ts}}
+```
+
 <span class="caption">예제 14-4: `art` 크레이트의 내부 구조에서 내보내진 
 아이템을 이용하는 크레이트</span>
 
@@ -233,6 +257,12 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-05/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch14-more-about-cargo/listing-14-05/src/lib.ts}}
 ```
 
 <span class="caption">예제 14-5: `pub use` 구문을 추가하여 아이템을 다시
@@ -264,6 +294,12 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-06/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch14-more-about-cargo/listing-14-06/src/main.ts}}
 ```
 
 <span class="caption">예제 14-6: `art` 크레이트의 다시 내보내진 아이템을 사용하는

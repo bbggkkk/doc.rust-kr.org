@@ -11,6 +11,12 @@
 // hello, world
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch03-04/snippet-01.ts}}
+```
+
 러스트에서 주석은 두개의 슬래시로 시작하며,
 이 주석은 해당 줄의 끝까지 계속됩니다. 한 줄을 넘기는
 주석의 경우에는 아래처럼 각 줄마다 `//`를 추가하면 됩니다:
@@ -21,6 +27,12 @@
 // 일어나고 있는지 설명할 수 있기를 바랍니다.
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch03-04/snippet-02.ts}}
+```
+
 또한 주석은 코드의 뒷 부분에 위치할 수도 있습니다:
 
 <span class="filename">파일명: src/main.rs</span>
@@ -29,14 +41,11 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-24-comments-end-of-line/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/no-listing-24-comments-end-of-line.js}}
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-24-comments-end-of-line/src/main.ts}}
 ```
-
-</details>
 
 하지만 아래와 같이 코드 앞줄에 따로 주석을 작성한 형태를
 더 자주 보게 될 겁니다.
@@ -47,26 +56,14 @@
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-25-comments-above-line/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/no-listing-25-comments-above-line.js}}
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-25-comments-above-line/src/main.ts}}
 ```
-
-</details>
 
 러스트는 문서화 주석 (documentation comment) 라고 불리는 또다른 주석 형태를
 가지고 있는데, 14장의 [‘Crates.io에 크레이트 배포하기’][publishing]<!-- ignore -->에서
 다루도록 하겠습니다.
-
-<details>
-<summary>JavaScript로 보기 — Rust의 /// 문서화 주석은 JS의 JSDoc /** */에 해당합니다</summary>
-
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/doc-comments.js}}
-```
-
-</details>
 
 [publishing]: ch14-02-publishing-to-crates-io.html

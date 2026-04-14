@@ -21,17 +21,14 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-25/src/main.rs}}
 ```
 
-<span class="caption">예제 15-25: `RefCell<T>`를 가지고 있어서
-`Cons` 배리언트가 참조하는 것을 변경할 수 있는 cons 리스트 정의</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기 — 순환 참조는 JS GC가 자동 처리합니다</summary>
-
-```javascript
-{{#include ../js-examples/ch15-smart-pointers/reference-cycles.js}}
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-25/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 15-25: `RefCell<T>`를 가지고 있어서
+`Cons` 배리언트가 참조하는 것을 변경할 수 있는 cons 리스트 정의</span>
 
 예제 15-5의 `List` 정의의 또 다른 변형이 이용되고 있습니다.
 이제 `Cons` 배리언트 내의 두 번째 요소는 `RefCell<Rc<List>>`인데,
@@ -50,6 +47,12 @@
 
 ```rust
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-26/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-26/main.ts}}
 ```
 
 <span class="caption">예제 15-26: 두 개의 `List` 값이 서로를 가리키는
@@ -162,6 +165,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-27/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-27/main.ts}}
+```
+
 `Node`가 자기 자식들을 소유하도록 하고, 이 소유권을 공유하여 트리의 각
 `Node`에 직접 접근할 수 있도록 하고 싶습니다. 이렇게 하기 위해 `Vec<T>`
 아이템이 `Rc<Node>` 타입의 값이 되도록 정의하였습니다. 또한 어떤 노드가
@@ -180,6 +189,12 @@
 
 <span class="caption">예제 15-27: 자식이 없는 `leaf` 노드와
 이 `leaf`를 자식으로 갖는 `branch` 노드 만들기</span>
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-27/src/main_there.ts}}
+```
 
 `leaf`의 `Rc<Node>`를 복제하여 이를 `branch` 내에 저장했는데, 이는 `leaf`에
 있는 `Node`의 소유자가 이제 둘이 되었다는 뜻입니다. `branch`로부터 `branch.children`를
@@ -212,6 +227,12 @@
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-28/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-28/main.ts}}
+```
+
 노드는 자신의 부모 노드를 참조할 수 있게 되겠지만 그 부모를 소유하지는 않습니다.
 예제 15-28에서는 `main`을 업데이트하여 이 새로운 정의를 사용하도록 해서 `leaf`
 노드가 자기 부모인 `branch`를 참조할 수 있는 방법을 갖도록 합니다:
@@ -225,14 +246,11 @@
 <span class="caption">예제 15-28: 부모 노드 `branch`의 약한 참조를
 갖는 `leaf` 노드</span>
 
-<details>
-<summary>JavaScript로 보기 — Weak&lt;T&gt;와 WeakRef</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch15-smart-pointers/weak-ref.js}}
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-28/src/main_there.ts}}
 ```
-
-</details>
 
 `leaf` 노드를 만드는 것이 `parent` 필드를 제외하고는 예제 15-27과
 비슷해 보입니다: `leaf`는 부모 없이 시작돼서, 새 비어있는 `Weak<Node>`
@@ -282,6 +300,12 @@ children: RefCell { value: [] } }] } })
 
 ```rust
 {{#rustdoc_include ../listings/ch15-smart-pointers/listing-15-29/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch15-smart-pointers/listing-15-29/main.ts}}
 ```
 
 <span class="caption">예제 15-29: 내부 스코프에서 `branch`를 만들고

@@ -41,6 +41,12 @@
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-15/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-15/src/lib.ts}}
+```
+
 <span class="caption">예제 12-15: 구현하고자 하는 `search` 함수를 위한
 실패하는 테스트 만들기</span>
 
@@ -62,6 +68,12 @@ productive."` 라인을 가지고 있는 벡터와 일치하지 않으므로 실
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-16/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-16/src/lib.ts}}
 ```
 
 <span class="caption">예제 12-16: 테스트가 딱 컴파일만 될 정도의
@@ -134,6 +146,12 @@ productive."` 라인을 가지고 있는 벡터와 일치하지 않으므로 실
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-17/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-17/src/lib.ts}}
+```
+
 <span class="caption">예제 12-17: `contents`의 각 줄에 대한 반복
 </span>
 
@@ -155,6 +173,12 @@ productive."` 라인을 가지고 있는 벡터와 일치하지 않으므로 실
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-18/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-18/src/lib.ts}}
+```
+
 <span class="caption">예제 12-18: 라인이 `query`의 문자열을 포함하는지
 알아보기 위한 기능 추가하기</span>
 
@@ -173,6 +197,12 @@ productive."` 라인을 가지고 있는 벡터와 일치하지 않으므로 실
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch12-an-io-project/listing-12-19/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/listing-12-19/src/lib.ts}}
 ```
 
 <span class="caption">예제 12-19: 매칭된 라인들을 저장하여 반환될 수
@@ -214,6 +244,12 @@ productive."` 라인을 가지고 있는 벡터와 일치하지 않으므로 실
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch12-an-io-project/no-listing-02-using-search-in-run/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch12-an-io-project/no-listing-02-using-search-in-run/src/lib.ts}}
 ```
 
 `search`로부터 반환된 각 라인에 대해 여전히 `for`를 사용하여 출력하고 있습니다.

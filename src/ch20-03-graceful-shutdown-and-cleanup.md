@@ -28,6 +28,12 @@
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-22/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-22/src/lib.ts}}
+```
+
 <span class="caption">예제 20-22: 스레드 풀이 스코프 밖으로 벗어날
 때 각 스레드 조인하기</span>
 
@@ -63,6 +69,12 @@
 {{#rustdoc_include ../listings/ch20-web-server/no-listing-04-update-worker-definition/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/no-listing-04-update-worker-definition/src/lib.ts}}
+```
+
 이제 컴파일러를 활용하여 변경이 필요한 다른 위치를 찾아봅시다.
 이 코드를 검사하면 두 가지 오류를 얻습니다:
 
@@ -80,6 +92,12 @@
 {{#rustdoc_include ../listings/ch20-web-server/no-listing-05-fix-worker-new/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/no-listing-05-fix-worker-new/src/lib.ts}}
+```
+
 첫 번째 에러는 `Drop` 구현체 안에 있습니다. 앞서 `Option` 값의 `take`를
 호출하여 `thread`를 `worker` 밖으로 빼내려고 했음을 언급했습니다. 다음과
 같이 변경하면 그렇게 됩니다:
@@ -88,6 +106,12 @@
 
 ```rust,ignore,not_desired_behavior
 {{#rustdoc_include ../listings/ch20-web-server/no-listing-06-fix-threadpool-drop/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/no-listing-06-fix-threadpool-drop/src/lib.ts}}
 ```
 
 17장에서 논의한 것처럼 `Option`의 `take` 메서드는 `Some` 배리언트를
@@ -121,6 +145,12 @@
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-23/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-23/src/lib.ts}}
+```
+
 <span class="caption">예제 20-23: 워커 스레드를 조인하기 전에
 명시적으로 `sender` 버리기</span>
 
@@ -136,6 +166,12 @@
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-24/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-24/src/lib.ts}}
+```
+
 <span class="caption">예제 20-24: `recv`가 에러를 반환한 경우
 명시적으로 루프 벗어나기</span>
 
@@ -148,17 +184,14 @@
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-25/src/main.rs:here}}
 ```
 
-<span class="caption">예제 20-25: 두 개의 요청을 처리한 후 루프를
-벗어나는 것으로 서버 종료하기</span>
+<span class="caption">TypeScript로 보면</span>
 
-<details>
-<summary>JavaScript로 보기</summary>
-
-```javascript
-{{#include ../js-examples/ch20-web-server/listing-20-25.js}}
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-25/src/main.ts}}
 ```
 
-</details>
+<span class="caption">예제 20-25: 두 개의 요청을 처리한 후 루프를
+벗어나는 것으로 서버 종료하기</span>
 
 실제 웹 서버가 두 개의 요청만 처리한 후 종료되는 것을 원하지는 않을
 것입니다. 이 코드는 그저 정상 종료 및 정리가 정상적으로 작동하고 있음을
@@ -228,20 +261,23 @@ Shutting down worker 3
 {{#rustdoc_include ../listings/ch20-web-server/no-listing-07-final-code/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/no-listing-07-final-code/src/main.ts}}
+```
+
 <span class="filename">파일명: src/lib.rs</span>
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch20-web-server/no-listing-07-final-code/src/lib.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch20-web-server/no-listing-07-final-code.js}}
+```ts
+{{#include ../listings-ts/ch20-web-server/no-listing-07-final-code/src/lib.ts}}
 ```
-
-</details>
 
 여기에 더 많은 작업을 할 수도 있습니다! 이 프로젝트를 계속 개선하고 싶으시다면,
 몇 가지 아이디어를 소개합니다:

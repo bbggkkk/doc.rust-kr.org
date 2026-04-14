@@ -21,6 +21,12 @@
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-10/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-10/src/main.ts}}
+```
+
 <span class="caption">예제 20-10: 5초 동안 슬립하여 느린 요청
 시뮬레이션하기</span>
 
@@ -121,6 +127,12 @@
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-11/src/main.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-11/src/main.ts}}
+```
+
 <span class="caption">예제 20-11: 각 스트림마다 새 스레드
 생성하기</span>
 
@@ -145,6 +157,12 @@
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-12/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-12/src/main.ts}}
 ```
 
 <span class="caption">예제 20-12: 이상적인 `ThreadPool` 인터페이스</span>
@@ -186,6 +204,12 @@
 {{#rustdoc_include ../listings/ch20-web-server/no-listing-01-define-threadpool-struct/src/lib.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/no-listing-01-define-threadpool-struct/src/lib.ts}}
+```
+
 그런 다음 *src/main.rs*의 상단에 아래 코드를 추가하도록 *main.rs* 파일을 수정하여
 라이브러리 크레이트에서 `ThreadPool`을 스코프에 가져오도록 합니다:
 
@@ -193,6 +217,12 @@
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch20-web-server/no-listing-01-define-threadpool-struct/src/main.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/no-listing-01-define-threadpool-struct/src/main.ts}}
 ```
 
 이 코드는 여전히 작동하지 않겠지만, 다음으로 해결해야 할 에러를
@@ -212,6 +242,12 @@
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch20-web-server/no-listing-02-impl-threadpool-new/src/lib.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/no-listing-02-impl-threadpool-new/src/lib.ts}}
 ```
 
 `size` 매개변수의 타입으로 `usize`를 선택한 이유는 음수 개수의
@@ -250,6 +286,12 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
         T: Send + 'static,
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch20-02/snippet-01.ts}}
+```
+
 `F` 타입 매개변수가 여기서 고려하는 그것입니다; `T` 타입 매개변수는 반환 값과
 관련이 있으며, 여기서는 고려하지 않고 있습니다. `spawn`이 `F`의 트레이트
 바운드로 `FnOnce`를 사용하는 것을 볼 수 있습니다. 이것이 아마도 우리가
@@ -268,6 +310,12 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch20-web-server/no-listing-03-define-execute/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/no-listing-03-define-execute/src/lib.ts}}
 ```
 
 여기에서 `FnOnce`는 매개변수가 없고 유닛 타입 `()`를 반환하는 클로저를
@@ -311,6 +359,12 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-13/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-13/src/lib.ts}}
+```
+
 <span class="caption">예제 20-13: `size`가 0이면 패닉을 일으키도록
 `ThreadPool::new` 구현하기</span>
 
@@ -331,6 +385,12 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
 pub fn build(size: usize) -> Result<ThreadPool, PoolCreationError> {
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch20-02/snippet-02.ts}}
+```
+
 #### 스레드를 저장할 공간 만들기
 
 이제 풀에 저장할 스레드의 유효한 개수가 입력된 것을 알 방법이 생겼으므로,
@@ -344,6 +404,12 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
         F: FnOnce() -> T,
         F: Send + 'static,
         T: Send + 'static,
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch20-02/snippet-01.ts}}
 ```
 
 `spawn` 함수는 `JoinHandle<T>`를 반환하는데, 여기서 `T`는 클로저가
@@ -361,6 +427,12 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
 
 ```rust,ignore,not_desired_behavior
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-14/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-14/src/lib.ts}}
 ```
 
 <span class="caption">예제 20-14: `ThreadPool`가 스레드를 담아둘
@@ -426,6 +498,12 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-15/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-15/src/lib.ts}}
 ```
 
 <span class="caption">예제 20-15: 스레드를 직접 가지는 대신 `Worker`
@@ -498,6 +576,12 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-16/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-16/src/lib.ts}}
+```
+
 <span class="caption">예제 20-16: `Job` 인스턴스를 보내는 채널의
 송신자를 저장하도록 `ThreadPool` 수정하기</span>
 
@@ -513,6 +597,12 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
 
 ```rust,ignore,does_not_compile
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-17/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-17/src/lib.ts}}
 ```
 
 <span class="caption">예제 20-17: 워커에게 수신자 넘기기</span>
@@ -549,6 +639,12 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-18/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-18/src/lib.ts}}
+```
+
 <span class="caption">예제 20-18: `Arc`와 `Mutex`를 사용하여
 여러 워커 간에 수신자 공유하기</span>
 
@@ -573,6 +669,12 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-19/src/lib.rs:here}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-19/src/lib.ts}}
+```
+
 <span class="caption">예제 20-19: 각 클로저를 담는 `Box`에 대한 `Job`
 타입 별칭을 만들어서 이 작업을 채널로 보내기</span>
 
@@ -595,6 +697,12 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
 
 ```rust,noplayground
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-20/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-20/src/lib.ts}}
 ```
 
 <span class="caption">예제 20-20: 워커의 스레드에서 작업을 받아서
@@ -683,6 +791,12 @@ Worker 2 got a job; executing.
 
 ```rust,ignore,not_desired_behavior
 {{#rustdoc_include ../listings/ch20-web-server/listing-20-21/src/lib.rs:here}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch20-web-server/listing-20-21/src/lib.ts}}
 ```
 
 <span class="caption">예제 20-21: `while let`을 사용한 `Worker::new`의

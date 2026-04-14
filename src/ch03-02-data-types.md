@@ -16,14 +16,11 @@
 let guess: u32 = "42".parse().expect("Not a number!");
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/type-annotation.js}}
+```ts
+{{#include ../listings-ts/inline/ch03-02/snippet-01.ts}}
 ```
-
-</details>
 
 여기에 `: u32`라는 타입 명시를 하지 않으면 러스트는 아래와 같은 에러를
 출력하는데, 이는 컴파일러에게 사용하고자 하는 타입이 무엇인지에 대한
@@ -150,14 +147,11 @@ let guess: u32 = "42".parse().expect("Not a number!");
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-06-floating-point/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/no-listing-06-floating-point.js}}
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-06-floating-point/src/main.ts}}
 ```
-
-</details>
 
 부동 소수점 숫자는 IEEE-754 표준을 따릅니다. `f32` 타입은 1배 수 정밀도 (single-precision) 인
 부동 소수점이고, `f64`는 2배 수 정밀도 (double-precision) 입니다.
@@ -175,14 +169,11 @@ let guess: u32 = "42".parse().expect("Not a number!");
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-07-numeric-operations/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/no-listing-07-numeric-operations.js}}
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-07-numeric-operations/src/main.ts}}
 ```
-
-</details>
 
 위의 구문에서 각 표현식은 수학 연산자를 사용하여 값을 평가한
 뒤, 그 값을 변수에 묶어 넣습니다. [부록 B][appendix_b]<!-- ignore -->에
@@ -201,14 +192,11 @@ let guess: u32 = "42".parse().expect("Not a number!");
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-08-boolean/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/no-listing-08-boolean.js}}
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-08-boolean/src/main.ts}}
 ```
-
-</details>
 
 부울린 값을 사용하는 주요 방식은 `if` 표현식과 같은 조건문에서 사용하는
 것입니다. 러스트에서 `if` 표현식이 동작하는 방식에 대해서는
@@ -223,6 +211,12 @@ let guess: u32 = "42".parse().expect("Not a number!");
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-09-char/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-09-char/src/main.ts}}
 ```
 
 문자열 리터럴이 큰따옴표를 쓰는 반면, `char` 타입은 작은따옴표를
@@ -258,6 +252,12 @@ let guess: u32 = "42".parse().expect("Not a number!");
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-10-tuples/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-10-tuples/src/main.ts}}
+```
+
 튜플은 하나의 복합 요소로 취급되므로 변수 `tup`은 튜플 전체가 바인딩됩니다.
 튜플로부터 개별 값을 얻어오려면 아래와 같이 패턴 매칭을 하여 튜플 값을
 해체하면 사용하면 됩니다:
@@ -268,14 +268,11 @@ let guess: u32 = "42".parse().expect("Not a number!");
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-11-destructuring-tuples/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/no-listing-11-destructuring-tuples.js}}
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-11-destructuring-tuples/src/main.ts}}
 ```
-
-</details>
 
 이 프로그램은 먼저 튜플을 만든 후 이를 변수 `tup`에 바인딩시킵니다.
 그다음 `let`을 이용하는 패턴을 사용하여 `tup`을 세 개의 분리된 변수 `x`, `y`,
@@ -290,6 +287,12 @@ let guess: u32 = "42".parse().expect("Not a number!");
 
 ```rust
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-12-tuple-indexing/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-12-tuple-indexing/src/main.ts}}
 ```
 
 위의 프로그램은 튜플 `x`를 만들고, 인덱스를 사용하여 이 튜플의
@@ -316,14 +319,11 @@ let guess: u32 = "42".parse().expect("Not a number!");
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-13-arrays/src/main.rs}}
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/no-listing-13-arrays.js}}
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-13-arrays/src/main.ts}}
 ```
-
-</details>
 
 여러분이 힙보다는 스택에 데이터를 할당하고 싶을 때나
 (힙과 스택은 [4장][stack-and-heap]<!-- ignore -->에서
@@ -344,11 +344,23 @@ let months = ["January", "February", "March", "April", "May", "June", "July",
               "August", "September", "October", "November", "December"];
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch03-02/snippet-02.ts}}
+```
+
 다음과 같이 대괄호 안에 요소의 타입을 쓰고 세미콜론을 쓴 뒤 요소의
 개수를 적는 식으로 배열의 타입을 작성할 수도 있습니다:
 
 ```rust
 let a: [i32; 5] = [1, 2, 3, 4, 5];
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/inline/ch03-02/snippet-03.ts}}
 ```
 
 여기서 `i32`는 각 요소의 타입입니다. 세미콜론 뒤의 숫자 `5`는
@@ -362,14 +374,11 @@ let a: [i32; 5] = [1, 2, 3, 4, 5];
 let a = [3; 5];
 ```
 
-<details>
-<summary>JavaScript로 보기</summary>
+<span class="caption">TypeScript로 보면</span>
 
-```javascript
-{{#include ../js-examples/ch03-common-programming-concepts/array-init.js}}
+```ts
+{{#include ../listings-ts/inline/ch03-02/snippet-04.ts}}
 ```
-
-</details>
 
 `a`라는 이름의 배열은 모두 `3`으로 채워진 `5`개의 요소를 갖게 될
 것입니다. 이는 `let a = [3, 3, 3, 3, 3];`이라고 쓴 것과 똑같지만
@@ -387,6 +396,12 @@ let a = [3; 5];
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-14-array-indexing/src/main.rs}}
 ```
 
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-14-array-indexing/src/main.ts}}
+```
+
 이 예제에서 `first`로 명명된 변수는 배열에서 인덱스 `[0]`의 값이므로
 `1`이 될 것입니다. `second`로 명명된 변수는 배열의 `[1]` 인덱스로부터
 얻어진 값 `2`가 되겠죠.
@@ -401,6 +416,12 @@ let a = [3; 5];
 
 ```rust,ignore,panics
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-15-invalid-array-access/src/main.rs}}
+```
+
+<span class="caption">TypeScript로 보면</span>
+
+```ts
+{{#include ../listings-ts/ch03-common-programming-concepts/no-listing-15-invalid-array-access/src/main.ts}}
 ```
 
 이 코드는 성공적으로 컴파일됩니다. `cargo run`으로 코드를 실행한 뒤
